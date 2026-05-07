@@ -1,0 +1,13 @@
+---
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const text = lang === 'ko'
+  ? '쿠팡파트너스 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다. 모든 추천은 협찬·광고비를 받지 않은 데이터 기반 비교에 기반합니다.'
+  : 'This article contains affiliate links. As an affiliate partner, we may earn from qualifying purchases. All recommendations are based on data-driven comparisons, not paid placements.';
+---
+
+<aside class="affiliate-disclosure" role="note" aria-label="Affiliate disclosure">
+  <strong class="block mb-1">
+    {lang === 'ko' ? '⚖️ 어필리에이트 디스클로저' : '⚖️ Affiliate Disclosure'}
+  </strong>
+  <p>{text}</p>
+</aside>

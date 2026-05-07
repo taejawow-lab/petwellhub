@@ -1,0 +1,65 @@
+---
+// v5.3 시각자료 #11 - 데이터 차트 (Chart.js)
+export interface Props {
+  id: string;
+  type: 'bar' | 'line' | 'pie' | 'doughnut' | 'radar';
+  data: any;
+  options?: any;
+  caption?: string;
+  source?: string;
+}
+
+const { id, type, data, options = {}, caption, source } = Astro.props;
+const dataString = JSON.stringify(data);
+const optionsString = JSON.stringify({
+  responsive: true,
+  maintainAspectRatio: true,
+  plugins: {
+    legend: { position: 'bottom' },
+    ...(options.plugins || {}),
+  },
+  ...options,
+});
+---
+
+<figure class="chart-container">
+  {caption && <figcaption class="mb-3 text-sm font-medium text-center">{caption}</figcaption>}
+  <canvas id={id} aria-label={caption || 'Data chart'}></canvas>
+  {source && (
+    <p class="mt-3 text-xs text-muted-foreground text-center">
+      Source: {source}
+    </p>
+  )}
+</figure>
+
+<script define:vars={{ id, type, dataString, optionsString }}>
+  import('chart.js/auto').then(({ default: Chart }) => {
+    const ctx = document.getElementById(id);
+    if (!ctx) return;
+
+    // 사이트 컬러 토큰을 차트에 자동 적용
+    const styles = getComputedStyle(document.documentElement);
+    const primary = styles.getPropertyValue('--color-primary').trim();
+    const accent = styles.getPropertyValue('--color-accent').trim();
+    const muted = styles.getPropertyValue('--color-muted-foreground').trim();
+
+    const data = JSON.parse(dataString);
+    // 데이터셋에 사이트 컬러 자동 적용
+    if (data.datasets) {
+      data.datasets.forEach((ds, i) => {
+        if (!ds.backgroundColor) {
+          ds.backgroundColor = i === 0 ? primary : accent;
+        }
+        if (!ds.borderColor) {
+          ds.borderColor = i === 0 ? primary : accent;
+        }
+      });
+    }
+
+    new Chart(ctx, {
+      type,
+      data,
+      options: JSON.parse(optionsString),
+    });
+  });
+</script>

@@ -1,0 +1,43 @@
+---
+// v5.3 시각자료 #10 - 비교표 컴포넌트
+export interface Props {
+  caption?: string;
+  headers: string[];
+  rows: Array<Array<string | { value: string; highlight?: boolean }>>;
+  highlightRow?: number; // 추천 옵션 행 강조
+}
+
+const { caption, headers, rows, highlightRow } = Astro.props;
+---
+
+<figure class="my-8">
+  {caption && (
+    <figcaption class="mb-3 text-sm font-medium text-muted-foreground text-center">
+      {caption}
+    </figcaption>
+  )}
+  <div class="overflow-x-auto">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          {headers.map((h) => <th>{h}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, rowIdx) => (
+          <tr class={rowIdx === highlightRow ? 'bg-accent/10 font-semibold' : ''}>
+            {row.map((cell) => {
+              const value = typeof cell === 'string' ? cell : cell.value;
+              const highlight = typeof cell === 'object' && cell.highlight;
+              return (
+                <td class={highlight ? 'text-accent font-bold' : ''}>
+                  {value}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</figure>

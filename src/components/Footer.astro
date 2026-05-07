@@ -1,0 +1,66 @@
+---
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const currentYear = new Date().getFullYear();
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+
+// 한국어/영어 디스클로저 자동 분기 (v5.4 #3 AI 사용 투명 명시)
+const aiDisclosure = lang === 'ko'
+  ? '본 사이트의 콘텐츠는 AI 도구의 보조를 받아 작성됩니다. 모든 데이터는 1차 자료에서 검증되며, 본문 인용 링크로 직접 확인할 수 있습니다.'
+  : 'Content on this site is produced with AI assistance. All data points are verified against primary sources, and all sources are linked inline for direct verification.';
+
+const affiliateDisclosure = lang === 'ko'
+  ? '쿠팡파트너스 활동의 일환으로 일정액의 수수료를 제공받습니다.'
+  : 'As an Amazon Associate and other affiliate partner, we earn from qualifying purchases.';
+---
+
+<footer class="border-t border-border bg-muted/30 mt-16">
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="font-bold text-lg mb-3" style="font-family: var(--font-heading)">{siteName}</h3>
+        <p class="text-sm text-muted-foreground">
+          {import.meta.env.PUBLIC_SITE_DESCRIPTION || ''}
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3 text-sm uppercase tracking-wider">About</h4>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li><a href="/about" class="hover:text-foreground transition-colors">About Us</a></li>
+          <li><a href="/editorial-process" class="hover:text-foreground transition-colors">Editorial Process</a></li>
+          <li><a href="/editorial-standards" class="hover:text-foreground transition-colors">Editorial Standards</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3 text-sm uppercase tracking-wider">Legal</h4>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li><a href="/affiliate-disclosure" class="hover:text-foreground transition-colors">Affiliate Disclosure</a></li>
+          <li><a href="/privacy" class="hover:text-foreground transition-colors">Privacy Policy</a></li>
+          <li><a href="/contact" class="hover:text-foreground transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3 text-sm uppercase tracking-wider">Follow</h4>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li><a href={import.meta.env.PUBLIC_SITE_PINTEREST || '#'} class="hover:text-foreground transition-colors">Pinterest</a></li>
+          <li><a href={import.meta.env.PUBLIC_SITE_INSTAGRAM || '#'} class="hover:text-foreground transition-colors">Instagram</a></li>
+          <li><a href={import.meta.env.PUBLIC_SITE_YOUTUBE || '#'} class="hover:text-foreground transition-colors">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v5.4 페널티 회피 #3: AI 사용 투명 디스클로저 -->
+    <div class="text-xs text-muted-foreground p-4 bg-background border border-border rounded-lg mb-4">
+      <strong class="block mb-1">AI Disclosure / AI 사용 명시</strong>
+      <p class="mb-2">{aiDisclosure}</p>
+      <p>{affiliateDisclosure}</p>
+    </div>
+
+    <div class="flex items-center justify-between text-sm text-muted-foreground">
+      <p>© {currentYear} {siteName}. All rights reserved.</p>
+      <p>Built with Astro + Tailwind</p>
+    </div>
+  </div>
+</footer>

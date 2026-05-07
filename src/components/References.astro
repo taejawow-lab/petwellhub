@@ -1,0 +1,36 @@
+---
+// v5.3 #8 - References 섹션 자동
+export interface Props {
+  sources: Array<{ title: string; url: string; author?: string; year?: string; publication?: string }>;
+}
+
+const { sources } = Astro.props;
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const heading = lang === 'ko' ? '참고 자료' : 'References';
+---
+
+<aside class="mt-12 pt-8 border-t border-border">
+  <h2 class="text-2xl font-bold mb-4" style="font-family: var(--font-heading)">
+    {heading}
+  </h2>
+  <ol class="space-y-3 text-sm">
+    {sources.map((source, i) => (
+      <li id={`ref-${i + 1}`} class="text-muted-foreground">
+        <span class="font-semibold text-foreground">[{i + 1}]</span>
+        {' '}
+        {source.author && <span>{source.author}</span>}
+        {source.year && <span> ({source.year})</span>}
+        {source.author || source.year ? '. ' : ''}
+        <a
+          href={source.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary hover:underline"
+        >
+          {source.title}
+        </a>
+        {source.publication && <span>. <em>{source.publication}</em></span>}
+      </li>
+    ))}
+  </ol>
+</aside>

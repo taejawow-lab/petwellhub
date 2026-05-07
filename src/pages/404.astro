@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+---
+
+<BaseLayout title="404" description="Page not found">
+  <section class="container mx-auto px-4 py-24 text-center">
+    <img src="/images/404-illustration.png" alt="" class="max-w-sm mx-auto mb-8" />
+    <h1 class="text-6xl font-bold mb-4" style="font-family: var(--font-heading)">404</h1>
+    <p class="text-xl text-muted-foreground mb-8">
+      {lang === 'ko' ? '페이지를 찾을 수 없습니다.' : 'Page not found.'}
+    </p>
+    <a href="/" class="btn-primary">
+      {lang === 'ko' ? '홈으로' : 'Back home'}
+    </a>
+  </section>
+</BaseLayout>

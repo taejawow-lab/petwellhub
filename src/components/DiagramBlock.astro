@@ -1,0 +1,39 @@
+---
+// v5.3 #12 - Mermaid 다이어그램 자동 렌더
+export interface Props {
+  code: string;
+  caption?: string;
+}
+
+const { code, caption } = Astro.props;
+const id = `mermaid-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<figure class="my-8">
+  <div class="mermaid-container p-6 bg-card border border-border rounded-lg">
+    <pre class="mermaid" id={id}>{code}</pre>
+  </div>
+  {caption && (
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center">
+      {caption}
+    </figcaption>
+  )}
+</figure>
+
+<script>
+  import('mermaid').then((mermaid) => {
+    const styles = getComputedStyle(document.documentElement);
+    const isDark = document.documentElement.classList.contains('dark');
+
+    mermaid.default.initialize({
+      startOnLoad: true,
+      theme: isDark ? 'dark' : 'default',
+      themeVariables: {
+        primaryColor: styles.getPropertyValue('--color-primary').trim(),
+        primaryTextColor: styles.getPropertyValue('--color-primary-foreground').trim(),
+        lineColor: styles.getPropertyValue('--color-border').trim(),
+        background: styles.getPropertyValue('--color-card').trim(),
+      },
+    });
+  });
+</script>

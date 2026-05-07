@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const posts = (await getCollection('posts'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featuredPosts = posts.slice(0, 3);
+const recentPosts = posts.slice(3, 12);
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const siteDescription = import.meta.env.PUBLIC_SITE_DESCRIPTION || '';
+const heroTitle = import.meta.env.PUBLIC_SITE_HERO_TITLE || siteName;
+const heroSubtitle = import.meta.env.PUBLIC_SITE_HERO_SUBTITLE || siteDescription;
+---
+
+<BaseLayout title="Home" description={siteDescription}>
+  <Hero
+    title={heroTitle}
+    subtitle={heroSubtitle}
+  />
+
+  {featuredPosts.length > 0 && (
+    <section class="container mx-auto px-4 py-16">
+      <div class="flex items-baseline justify-between mb-8">
+        <h2 class="text-3xl font-bold" style="font-family: var(--font-heading)">Featured</h2>
+        <a href="/posts" class="text-primary hover:underline">View all →</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {featuredPosts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            href={`/posts/${post.slug}`}
+            image={post.data.heroImage}
+            category={post.data.category}
+            pubDate={post.data.pubDate}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  {recentPosts.length > 0 && (
+    <section id="latest" class="container mx-auto px-4 py-16 bg-muted/30">
+      <h2 class="text-3xl font-bold mb-8" style="font-family: var(--font-heading)">Recent</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recentPosts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            href={`/posts/${post.slug}`}
+            image={post.data.heroImage}
+            category={post.data.category}
+            pubDate={post.data.pubDate}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

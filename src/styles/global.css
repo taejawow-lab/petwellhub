@@ -1,0 +1,150 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500&display=swap");
+
+/* CSS 표준상 @import는 다른 statement보다 먼저 와야 함 */
+/* 사이트별 디자인 토큰 자동 주입 */
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply tracking-tight;
+  }
+
+  h1 { @apply text-4xl md:text-5xl font-bold; }
+  h2 { @apply text-3xl md:text-4xl font-semibold mt-12 mb-4; }
+  h3 { @apply text-2xl md:text-3xl font-semibold mt-8 mb-3; }
+  h4 { @apply text-xl md:text-2xl font-semibold mt-6 mb-2; }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus visibility for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  /* Selection color follows accent */
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+}
+
+@layer components {
+  /* 마이크로 인터랙션 */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md
+           bg-primary text-primary-foreground font-medium
+           transition-all duration-200
+           hover:opacity-90 hover:scale-105
+           active:scale-95
+           focus-visible:outline-2 focus-visible:outline-ring;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md
+           border border-border bg-card text-card-foreground font-medium
+           transition-all duration-200
+           hover:bg-muted hover:scale-105
+           active:scale-95;
+  }
+
+  .card {
+    @apply bg-card text-card-foreground border border-border rounded-lg p-6
+           transition-all duration-200
+           hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Article prose enhancements */
+  .prose-article {
+    @apply prose prose-lg max-w-none;
+  }
+
+  .prose-article a {
+    @apply text-primary underline decoration-1 underline-offset-2
+           hover:opacity-80 transition-opacity;
+  }
+
+  .prose-article blockquote {
+    @apply border-l-4 border-accent pl-6 italic text-muted-foreground;
+  }
+
+  .prose-article code:not(pre code) {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  .prose-article pre {
+    @apply bg-muted rounded-lg p-4 overflow-x-auto;
+  }
+
+  /* Comparison table styling — v5.3 시각자료 #10 */
+  .comparison-table {
+    @apply w-full my-8 border-collapse rounded-lg overflow-hidden border border-border;
+  }
+
+  .comparison-table th {
+    @apply bg-primary text-primary-foreground px-4 py-3 text-left font-semibold;
+  }
+
+  .comparison-table td {
+    @apply px-4 py-3 border-t border-border;
+  }
+
+  .comparison-table tr:nth-child(even) {
+    @apply bg-muted/30;
+  }
+
+  /* Data chart container — v5.3 #11 */
+  .chart-container {
+    @apply my-8 p-6 bg-card border border-border rounded-lg;
+  }
+
+  /* Infographic container — v5.3 #9 */
+  .infographic {
+    @apply my-8 rounded-lg overflow-hidden shadow-lg;
+  }
+
+  /* Video embed — v5.3 #14 */
+  .video-embed {
+    @apply my-8 aspect-video rounded-lg overflow-hidden bg-muted;
+  }
+
+  /* Affiliate disclosure block */
+  .affiliate-disclosure {
+    @apply my-8 p-4 bg-muted/50 border-l-4 border-accent rounded-r-lg
+           text-sm text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Glass morphism (선택적, 현대 디자인 트렌드) */
+  .glass {
+    @apply bg-background/80 backdrop-blur-md border border-border/50;
+  }
+}

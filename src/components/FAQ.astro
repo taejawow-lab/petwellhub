@@ -1,0 +1,44 @@
+---
+// v5.4 #11 - FAQ 자동 + FAQPage schema
+export interface Props {
+  items: Array<{ question: string; answer: string }>;
+  title?: string;
+}
+
+const { items, title = 'Frequently Asked Questions' } = Astro.props;
+
+// FAQPage schema
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<section class="my-12">
+  <h2 class="text-3xl font-bold mb-6" style="font-family: var(--font-heading)">{title}</h2>
+  <div class="space-y-2">
+    {items.map((item) => (
+      <details class="group border border-border rounded-lg overflow-hidden">
+        <summary class="cursor-pointer p-4 font-semibold flex items-center justify-between hover:bg-muted/50 transition-colors list-none">
+          <span>{item.question}</span>
+          <svg class="h-5 w-5 transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </summary>
+        <div class="p-4 pt-0 text-muted-foreground">
+          <p set:html={item.answer} />
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

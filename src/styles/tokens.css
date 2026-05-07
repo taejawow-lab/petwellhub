@@ -1,0 +1,58 @@
+/**
+ * petwellhub.org 디자인 토큰
+ * 자동 생성됨 (2026-05-07T11:11:48.847Z)
+ * 출처: design-tokens.json
+ *
+ * 형식: RGB 채널 (예: "168 216 201")
+ * 사용: rgb(var(--color-primary) / 30%) → bg-primary/30 같은 Tailwind alpha 변형 가능
+ */
+
+:root {
+  --color-background: 255 250 242;
+  --color-foreground: 45 31 18;
+
+  --color-primary: 245 165 114;
+  --color-primary-foreground: 61 36 18;
+
+  --color-accent: 245 216 95;
+  --color-accent-foreground: 61 50 8;
+
+  --color-muted: 250 245 237;
+  --color-muted-foreground: 85 71 58;
+
+  --color-card: 255 250 242;
+  --color-card-foreground: 45 31 18;
+
+  --color-border: 125 111 98;
+  --color-input: 120 106 93;
+  --color-ring: 245 165 114;
+
+  --font-heading: "Quicksand", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --radius: 16px;
+
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='dark'] {
+  --color-background: 31 24 18;
+  --color-foreground: 245 237 221;
+
+  --color-primary: 230 138 79;
+  --color-primary-foreground: 61 36 18;
+
+  --color-accent: 245 216 95;
+  --color-accent-foreground: 61 50 8;
+
+  --color-muted: 39 32 26;
+  --color-muted-foreground: 215 207 191;
+
+  --color-card: 36 29 23;
+  --color-card-foreground: 245 237 221;
+
+  --color-border: 185 177 161;
+  --color-input: 180 172 156;
+}

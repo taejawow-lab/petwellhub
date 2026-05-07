@@ -1,0 +1,154 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TOC from '../components/TOC.astro';
+import References from '../components/References.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+  tags?: string[];
+  category?: string;
+  sources?: Array<{ title: string; url: string; author?: string; year?: string }>;
+  affiliate?: boolean;
+  visualsCount?: number;
+  hasVideo?: boolean;
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  tags = [],
+  category,
+  sources = [],
+  affiliate = false,
+  visualsCount = 0,
+  hasVideo = false,
+  headings = [],
+} = Astro.props;
+
+// Article schema (v5.4 #4)
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: heroImage,
+  datePublished: pubDate?.toISOString(),
+  dateModified: (updatedDate || pubDate)?.toISOString(),
+  author: {
+    '@type': 'Organization',
+    name: import.meta.env.PUBLIC_SITE_NAME + ' Editorial Team',
+    url: import.meta.env.PUBLIC_SITE_URL,
+  },
+  publisher: {
+    '@type': 'NewsMediaOrganization',
+    name: import.meta.env.PUBLIC_SITE_NAME,
+    url: import.meta.env.PUBLIC_SITE_URL,
+  },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={heroImage}
+  type="article"
+  publishedTime={pubDate?.toISOString()}
+  modifiedTime={(updatedDate || pubDate)?.toISOString()}
+  schema={schema}
+>
+  <article class="container mx-auto px-4 py-12 max-w-4xl">
+    <!-- Hero -->
+    <header class="mb-8">
+      {category && (
+        <a
+          href={`/category/${category.toLowerCase()}`}
+          class="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-wider rounded-full bg-accent text-accent-foreground"
+        >
+          {category}
+        </a>
+      )}
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-balance">{title}</h1>
+      <p class="text-xl text-muted-foreground text-pretty">{description}</p>
+
+      <div class="flex flex-wrap items-center gap-4 mt-6 text-sm text-muted-foreground">
+        <time datetime={pubDate?.toISOString()}>
+          Published {pubDate?.toLocaleDateString()}
+        </time>
+        {updatedDate && updatedDate.getTime() !== pubDate.getTime() && (
+          <time datetime={updatedDate.toISOString()} class="text-accent font-semibold">
+            Updated {updatedDate.toLocaleDateString()}
+          </time>
+        )}
+        <span>·</span>
+        <span>{sources.length} sources cited</span>
+        {visualsCount > 0 && (
+          <>
+            <span>·</span>
+            <span>{visualsCount} visuals</span>
+          </>
+        )}
+        {hasVideo && (
+          <>
+            <span>·</span>
+            <span class="text-accent">📹 Video summary</span>
+          </>
+        )}
+      </div>
+    </header>
+
+    {heroImage && (
+      <img
+        src={heroImage}
+        alt={title}
+        class="w-full rounded-lg shadow-lg mb-8 aspect-[16/9] object-cover"
+      />
+    )}
+
+    <!-- Affiliate disclosure (글 시작에 자동) -->
+    {affiliate && <AffiliateDisclosure />}
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
+      <!-- Main content -->
+      <div class="prose-article">
+        <slot />
+
+        <!-- References (v5.3 #8 — 글 끝 자동 삽입) -->
+        {sources.length > 0 && <References sources={sources} />}
+      </div>
+
+      <!-- TOC sidebar (v5.4 #11) -->
+      {headings.length > 0 && (
+        <aside class="hidden lg:block">
+          <div class="sticky top-8">
+            <TOC headings={headings} />
+          </div>
+        </aside>
+      )}
+    </div>
+
+    <!-- Tags -->
+    {tags.length > 0 && (
+      <footer class="mt-12 pt-8 border-t border-border">
+        <div class="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <a
+              href={`/tags/${tag}`}
+              class="px-3 py-1 text-sm rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              #{tag}
+            </a>
+          ))}
+        </div>
+      </footer>
+    )}
+  </article>
+</BaseLayout>

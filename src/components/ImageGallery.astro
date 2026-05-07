@@ -1,0 +1,27 @@
+---
+// v5.3 #13 - 제품 사진·일러스트 갤러리
+export interface Props {
+  images: Array<{ src: string; alt: string; caption?: string }>;
+  layout?: 'grid' | 'carousel';
+}
+
+const { images, layout = 'grid' } = Astro.props;
+---
+
+<div class={layout === 'grid' ? 'grid grid-cols-2 md:grid-cols-3 gap-4 my-8' : 'flex gap-4 overflow-x-auto my-8 snap-x snap-mandatory'}>
+  {images.map((img) => (
+    <figure class={layout === 'carousel' ? 'min-w-[280px] snap-center' : ''}>
+      <img
+        src={img.src}
+        alt={img.alt}
+        loading="lazy"
+        class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+      />
+      {img.caption && (
+        <figcaption class="mt-2 text-sm text-muted-foreground text-center">
+          {img.caption}
+        </figcaption>
+      )}
+    </figure>
+  ))}
+</div>

@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+---
+
+<BaseLayout title="Editorial Standards" description={`${siteName} editorial standards`}>
+  <article class="container mx-auto px-4 py-16 max-w-3xl prose-article">
+    {lang === 'ko' ? (
+      <>
+        <h1 style="font-family: var(--font-heading)">편집 기준</h1>
+
+        <h2>인용하는 출처</h2>
+        <ul>
+          <li>학술 데이터베이스: PubMed, Cochrane, SSRN, NBER</li>
+          <li>정부 공시: 보건복지부, 식약처, 통계청, 금감원, 한국소비자원</li>
+          <li>학회 가이드라인: 대한소아청소년과학회, 한국영양학회 등</li>
+          <li>제조사 공식 사양서</li>
+          <li>검증된 측정 매체: RTINGS, Wirecutter, Cook's Illustrated</li>
+        </ul>
+
+        <h2>인용하지 않는 출처</h2>
+        <ul>
+          <li>Wikipedia 본문 (다만 1차 자료 발견용 참고는 OK)</li>
+          <li>다른 블로그·체험기</li>
+          <li>인플루언서 리뷰</li>
+          <li>업체 홍보 자료 (사양서 외)</li>
+        </ul>
+
+        <h2>정정 정책</h2>
+        <p>오류 발견 시 24시간 내 수정. 본문에 "Updated YYYY-MM-DD: [변경 사항]" 명시.</p>
+
+        <h2>협찬·후원 정책</h2>
+        <p>광고비를 받은 추천은 없습니다. 어필리에이트 수수료(쿠팡파트너스 등)는 글 시작과 푸터에 명시합니다.</p>
+
+        <h2>AI 사용 정책</h2>
+        <p>모든 글은 AI 도구(Claude, ChatGPT)의 보조를 받아 작성됩니다. 모든 1차 자료는 사람이 검증합니다.</p>
+      </>
+    ) : (
+      <>
+        <h1 style="font-family: var(--font-heading)">Editorial Standards</h1>
+
+        <h2>Sources We Cite</h2>
+        <ul>
+          <li>Academic databases: PubMed, Cochrane, SSRN, NBER</li>
+          <li>Government data: BLS, FDA, EPA, FTC, CFPB, NHTSA, etc.</li>
+          <li>Industry standards: AVMA, AAFCO, NIST, ISO, IEEE, etc.</li>
+          <li>Manufacturer official specifications</li>
+          <li>Verified measurement publications: RTINGS, Wirecutter, Cook's Illustrated</li>
+        </ul>
+
+        <h2>Sources We Avoid</h2>
+        <ul>
+          <li>Wikipedia article body (acceptable as discovery for primary sources)</li>
+          <li>Other blogs, personal testimonials</li>
+          <li>Influencer reviews</li>
+          <li>Vendor marketing material (specifications excepted)</li>
+        </ul>
+
+        <h2>Corrections Policy</h2>
+        <p>Errors are corrected within 24 hours of discovery. Updates are logged inline as "Updated YYYY-MM-DD: [change]".</p>
+
+        <h2>Sponsorship Policy</h2>
+        <p>We never accept payment for recommendations. Affiliate fees (Amazon, etc.) are disclosed at the top of each article and in the footer.</p>
+
+        <h2>AI Usage Policy</h2>
+        <p>All articles are produced with AI assistance (Claude, ChatGPT). All primary sources are verified by humans before publication.</p>
+      </>
+    )}
+  </article>
+</BaseLayout>

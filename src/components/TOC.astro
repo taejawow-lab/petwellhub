@@ -1,0 +1,29 @@
+---
+// v5.4 #11 - 자동 TOC
+export interface Props {
+  headings: Array<{ depth: number; slug: string; text: string }>;
+}
+
+const { headings } = Astro.props;
+const filtered = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+
+{filtered.length > 0 && (
+  <nav aria-label="Table of contents" class="border border-border rounded-lg p-4">
+    <h4 class="text-sm font-semibold uppercase tracking-wider mb-3 text-muted-foreground">
+      Contents
+    </h4>
+    <ul class="space-y-2 text-sm">
+      {filtered.map((h) => (
+        <li class={h.depth === 3 ? 'ml-4' : ''}>
+          <a
+            href={`#${h.slug}`}
+            class="text-muted-foreground hover:text-primary transition-colors block py-1 border-l-2 border-transparent hover:border-primary pl-3"
+          >
+            {h.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}

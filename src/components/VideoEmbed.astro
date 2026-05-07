@@ -1,0 +1,28 @@
+---
+// v5.3 #14 - 요약 동영상 자동 임베드
+export interface Props {
+  src: string;
+  poster?: string;
+  caption?: string;
+}
+
+const { src, poster, caption } = Astro.props;
+---
+
+<figure class="video-embed">
+  <video
+    controls
+    preload="metadata"
+    poster={poster}
+    class="w-full h-full"
+    aria-label={caption || 'Article summary video'}
+  >
+    <source src={src} type="video/mp4" />
+    Your browser does not support video.
+  </video>
+  {caption && (
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center">
+      {caption}
+    </figcaption>
+  )}
+</figure>

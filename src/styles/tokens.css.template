@@ -1,0 +1,64 @@
+/**
+ * 사이트별 디자인 토큰 — 자동 셋업 스크립트가 사이트마다 자동 주입
+ * 이 파일은 템플릿. 사이트별로 ${VAR} 자리에 v5.5_디자인_시스템_매뉴얼.md §2 매트릭스 값이 들어감.
+ *
+ * 예시 (yookahplus 적용 후):
+ * --color-primary: #A8D8C9;  (mint)
+ * --color-accent: #F4A09A;   (apricot)
+ * --font-heading: "Pretendard", sans-serif;
+ * --font-body: "Noto Sans KR", sans-serif;
+ */
+
+:root {
+  /* Light mode (default) */
+  --color-background: ${COLOR_BG_LIGHT};
+  --color-foreground: ${COLOR_FG_LIGHT};
+
+  --color-primary: ${COLOR_PRIMARY};
+  --color-primary-foreground: ${COLOR_PRIMARY_FG};
+
+  --color-accent: ${COLOR_ACCENT};
+  --color-accent-foreground: ${COLOR_ACCENT_FG};
+
+  --color-muted: ${COLOR_MUTED};
+  --color-muted-foreground: ${COLOR_MUTED_FG};
+
+  --color-card: ${COLOR_CARD};
+  --color-card-foreground: ${COLOR_CARD_FG};
+
+  --color-border: ${COLOR_BORDER};
+  --color-input: ${COLOR_INPUT};
+  --color-ring: ${COLOR_PRIMARY};
+
+  /* Typography */
+  --font-heading: ${FONT_HEADING};
+  --font-body: ${FONT_BODY};
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Radius — 사이트 톤에 따라 (부드러운=12px, 미니멀=4px, 모던=8px) */
+  --radius: ${RADIUS};
+
+  /* Animation */
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='dark'] {
+  --color-background: ${COLOR_BG_DARK};
+  --color-foreground: ${COLOR_FG_DARK};
+
+  --color-primary: ${COLOR_PRIMARY_DARK};
+  --color-primary-foreground: ${COLOR_PRIMARY_FG_DARK};
+
+  --color-accent: ${COLOR_ACCENT_DARK};
+  --color-accent-foreground: ${COLOR_ACCENT_FG_DARK};
+
+  --color-muted: ${COLOR_MUTED_DARK};
+  --color-muted-foreground: ${COLOR_MUTED_FG_DARK};
+
+  --color-card: ${COLOR_CARD_DARK};
+  --color-card-foreground: ${COLOR_CARD_FG_DARK};
+
+  --color-border: ${COLOR_BORDER_DARK};
+  --color-input: ${COLOR_INPUT_DARK};
+}

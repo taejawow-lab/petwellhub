@@ -1,0 +1,38 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Editorial Process', href: '/editorial-process' },
+];
+
+// 로고 첫 글자 — 인라인 SVG 마크 (외부 파일 의존 X)
+const logoLetter = siteName.charAt(0).toUpperCase();
+---
+
+<header class="sticky top-0 z-50 glass border-b border-border">
+  <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 font-bold text-xl group">
+      <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground transition-transform group-hover:scale-110" aria-hidden="true">
+        <svg viewBox="0 0 36 36" class="w-5 h-5" fill="none">
+          <text x="18" y="24" text-anchor="middle" font-family="var(--font-heading)" font-size="18" font-weight="800" fill="currentColor">{logoLetter}</text>
+        </svg>
+      </span>
+      <span style="font-family: var(--font-heading)">{siteName}</span>
+    </a>
+
+    <div class="flex items-center gap-1">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-muted"
+        >
+          {item.label}
+        </a>
+      ))}
+      <ThemeToggle />
+    </div>
+  </nav>
+</header>

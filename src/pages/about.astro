@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const siteDescription = import.meta.env.PUBLIC_SITE_DESCRIPTION || '';
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+---
+
+<BaseLayout title="About" description={`About ${siteName}`}>
+  <article class="container mx-auto px-4 py-16 max-w-3xl prose-article">
+    <h1 style="font-family: var(--font-heading)">About {siteName}</h1>
+
+    <p class="text-xl">{siteDescription}</p>
+
+    {lang === 'ko' ? (
+      <>
+        <h2>운영 원칙</h2>
+        <p>
+          {siteName}는 단일 분야의 1차 자료(정부 통계, 학술 연구, 제조사 데이터, 검증된 매체)를
+          종합하는 큐레이션 매체입니다. 개별 작가의 경험·의견이 아니라, 인용 가능한
+          데이터와 출처로 모든 주장을 지지합니다.
+        </p>
+
+        <h2>편집부 가치</h2>
+        <ul>
+          <li><strong>데이터 우선</strong> — 모든 비교는 공식 자료에 기반합니다.</li>
+          <li><strong>협찬 X</strong> — 광고비를 받은 추천은 없습니다. 어필리에이트 수수료는 푸터에 명시.</li>
+          <li><strong>투명성</strong> — AI 도구의 보조를 받아 작성하며, 모든 데이터는 1차 자료에서 검증합니다.</li>
+          <li><strong>검증 가능성</strong> — 모든 출처는 본문 링크로 직접 확인할 수 있습니다.</li>
+        </ul>
+
+        <h2>제휴·협업·정정 요청</h2>
+        <p>이메일: editor@{siteName.toLowerCase()}.org</p>
+      </>
+    ) : (
+      <>
+        <h2>Editorial Mission</h2>
+        <p>
+          {siteName} is a curation publication that aggregates primary sources
+          (government statistics, peer-reviewed research, manufacturer data,
+          and verified industry sources) within a single subject domain.
+          We do not publish personal opinions or experience-based reviews —
+          every claim is backed by citable data with linked sources.
+        </p>
+
+        <h2>Our Editorial Values</h2>
+        <ul>
+          <li><strong>Data First</strong> — Every comparison is grounded in official sources.</li>
+          <li><strong>No Sponsored Placements</strong> — We never accept payment for recommendations. Affiliate disclosure in footer.</li>
+          <li><strong>Transparency</strong> — Content is produced with AI assistance; all data is verified against primary sources.</li>
+          <li><strong>Verifiability</strong> — Every source is linked inline for direct verification.</li>
+        </ul>
+
+        <h2>Contact for Corrections, Tips, or Partnerships</h2>
+        <p>Email: editor@{siteName.toLowerCase()}.org</p>
+      </>
+    )}
+  </article>
+</BaseLayout>
