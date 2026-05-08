@@ -3,68 +3,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
 const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const hasIllust = import.meta.env.PUBLIC_HAS_FEATURE_ILLUSTRATION === 'true';
+
+const stepsKo = [
+  { n: '01', title: '키워드·주제 선정', body: '분야별 검색 트렌드와 1-10위 글의 데이터 공백(인용되지 않은 1차 자료)을 분석해 주제를 선정합니다.' },
+  { n: '02', title: '1차 자료 수집', body: '학술 데이터베이스(PubMed·SSRN), 정부 공시, 제조사 사양서, 검증된 측정 매체(RTINGS·Wirecutter)에서 글당 8건 이상의 1차 자료를 수집합니다.' },
+  { n: '03', title: 'AI 보조 초안 작성', body: '수집된 1차 자료를 바탕으로 AI 도구의 보조를 받아 초안을 작성합니다. 운영자의 개인 경험·의견은 본문에 들어가지 않습니다.' },
+  { n: '04', title: '출처 자동 검증', body: '본문에 인용된 모든 외부 URL을 자동 fetch해 페이지 존재·인용 수치 일치를 확인합니다. 1건이라도 실패하면 발행 보류.' },
+  { n: '05', title: 'AI 디텍터 통과', body: 'self-hosted Roberta 모델 점수 30% 미만이어야 발행. 미달 시 자동 리라이팅.' },
+  { n: '06', title: '시각 자료 자동 생성', body: '인포그래픽·비교표·데이터 차트·다이어그램·제품 일러스트 5종 + 30-60초 요약 동영상이 글마다 자동 생성됩니다.' },
+  { n: '07', title: '분기 갱신·재검증', body: '분기마다(3·6·9·12월) 모든 발행 글의 인용 자료를 재검증합니다. 가격·통계·정책 변경 시 자동 갱신.' },
+  { n: '08', title: '정정 정책', body: '오류 발견 시 24시간 내 수정 + 본문에 변경 이력 명시. 독자 정정 제보는 editor@ 이메일로.' }
+];
+const stepsEn = [
+  { n: '01', title: 'Topic Selection', body: 'We analyze category-specific search trends and identify "data gaps" in top-10 SERPs — primary sources that competitors aren\'t citing.' },
+  { n: '02', title: 'Primary Source Collection', body: 'For every article we collect 8+ primary sources from academic databases (PubMed, SSRN), government filings, manufacturer specifications, and verified measurement publications.' },
+  { n: '03', title: 'AI-Assisted Drafting', body: 'Drafts are written with AI assistance grounded in the collected sources. We do not insert personal opinions or experience-based testimonials.' },
+  { n: '04', title: 'Automated Source Verification', body: 'Every external URL is fetched automatically; cited statistics are cross-checked against the source page. Any failure puts the article on hold.' },
+  { n: '05', title: 'AI Detector Threshold', body: 'Articles must score below 30% on a self-hosted Roberta detector to publish. Above threshold triggers automatic rewriting.' },
+  { n: '06', title: 'Auto-Generated Visuals', body: 'Every article includes 5 visual assets (infographic, comparison table, data chart, diagram, product illustration) plus a 30-60 second summary video.' },
+  { n: '07', title: 'Quarterly Re-Verification', body: 'Every quarter (Mar·Jun·Sep·Dec) all published articles are re-verified for source freshness. Price changes and updated statistics trigger automatic updates.' },
+  { n: '08', title: 'Corrections Policy', body: 'Errors are corrected within 24 hours of discovery, with the correction logged inline. Reader corrections to editor@.' }
+];
+const steps = lang === 'ko' ? stepsKo : stepsEn;
+const heading = lang === 'ko' ? '편집 프로세스' : 'Editorial Process';
+const lede = lang === 'ko' ? `${siteName}는 다음 8단계로 모든 글을 발행합니다.` : `${siteName} publishes every article through this 8-step process.`;
 ---
 
 <BaseLayout title="Editorial Process" description={`How ${siteName} produces content`}>
-  <article class="container mx-auto px-4 py-16 max-w-3xl prose-article">
-    {lang === 'ko' ? (
-      <>
-        <h1 style="font-family: var(--font-heading)">편집 프로세스</h1>
-        <p>{siteName}는 다음 8단계로 모든 글을 발행합니다.</p>
+  <article class="container mx-auto px-6 md:px-10 py-16 md:py-24">
+    <!-- editorial header -->
+    <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 items-end mb-16 md:mb-24">
+      <div class="col-span-12 md:col-span-7">
+        <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-4">¶ Method · 8 Steps</p>
+        <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.92] tracking-[-0.025em] mb-6 text-balance" style="font-family: var(--font-display);">
+          {heading}
+        </h1>
+        <p class="text-lg md:text-xl text-foreground/70 max-w-xl leading-relaxed">
+          {lede}
+        </p>
+      </div>
+      {hasIllust && (
+        <div class="col-span-12 md:col-span-5 mt-10 md:mt-0 md:-ml-8 lg:-ml-16 relative">
+          <div class="absolute inset-0 bg-primary/15 -rotate-2 rounded-sm" aria-hidden="true"></div>
+          <img src="/images/illustrations/feature.png" alt="" class="relative w-full h-auto rounded-sm rotate-[1.5deg] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.25)]" loading="eager" />
+        </div>
+      )}
+    </div>
 
-        <h2>1. 키워드·주제 선정</h2>
-        <p>분야별 검색 트렌드와 1-10위 글의 데이터 공백(인용되지 않은 1차 자료)을 분석해 주제를 선정합니다.</p>
-
-        <h2>2. 1차 자료 수집</h2>
-        <p>학술 데이터베이스(PubMed·SSRN), 정부 공시, 제조사 사양서, 검증된 측정 매체(RTINGS·Wirecutter)에서 글당 8건 이상의 1차 자료를 수집합니다.</p>
-
-        <h2>3. AI 보조 초안 작성</h2>
-        <p>수집된 1차 자료를 바탕으로 AI 도구(Claude, ChatGPT)의 보조를 받아 초안을 작성합니다. 운영자의 개인 경험·의견은 본문에 들어가지 않습니다.</p>
-
-        <h2>4. 출처 자동 검증</h2>
-        <p>본문에 인용된 모든 외부 URL을 자동 fetch해 페이지 존재·인용 수치 일치를 확인합니다. 1건이라도 실패하면 발행 보류.</p>
-
-        <h2>5. AI 디텍터 통과</h2>
-        <p>Originality.ai 점수 30% 미만이어야 발행. 미달 시 자동 리라이팅.</p>
-
-        <h2>6. 시각 자료 자동 생성</h2>
-        <p>인포그래픽·비교표·데이터 차트·다이어그램·제품 일러스트 5종 + 30-60초 요약 동영상이 글마다 자동 생성됩니다.</p>
-
-        <h2>7. 분기 갱신·재검증</h2>
-        <p>분기마다(3·6·9·12월) 모든 발행 글의 인용 자료를 재검증합니다. 가격·통계·정책 변경 시 자동 갱신.</p>
-
-        <h2>8. 정정 정책</h2>
-        <p>오류 발견 시 24시간 내 수정 + 본문에 변경 이력 명시. 독자 정정 제보는 editor@ 이메일로.</p>
-      </>
-    ) : (
-      <>
-        <h1 style="font-family: var(--font-heading)">Editorial Process</h1>
-        <p>{siteName} publishes every article through this 8-step process.</p>
-
-        <h2>1. Topic Selection</h2>
-        <p>We analyze category-specific search trends and identify "data gaps" in top-10 SERPs — primary sources that competitors aren't citing.</p>
-
-        <h2>2. Primary Source Collection</h2>
-        <p>For every article we collect 8+ primary sources from academic databases (PubMed, SSRN), government filings, manufacturer specifications, and verified measurement publications (RTINGS, Wirecutter).</p>
-
-        <h2>3. AI-Assisted Drafting</h2>
-        <p>Drafts are written with AI assistance (Claude, ChatGPT) grounded in the collected sources. We do not insert personal opinions or experience-based testimonials.</p>
-
-        <h2>4. Automated Source Verification</h2>
-        <p>Every external URL is fetched automatically; cited statistics are cross-checked against the source page. Any failure puts the article on hold.</p>
-
-        <h2>5. AI Detector Threshold</h2>
-        <p>Articles must score below 30% on Originality.ai to publish. Above threshold triggers automatic rewriting.</p>
-
-        <h2>6. Auto-Generated Visuals</h2>
-        <p>Every article includes 5 visual assets (infographic, comparison table, data chart, diagram, product illustration) plus a 30-60 second summary video — all auto-generated.</p>
-
-        <h2>7. Quarterly Re-Verification</h2>
-        <p>Every quarter (Mar·Jun·Sep·Dec) all published articles are re-verified for source freshness. Price changes, updated statistics, and policy shifts trigger automatic updates.</p>
-
-        <h2>8. Corrections Policy</h2>
-        <p>Errors are corrected within 24 hours of discovery, with the correction logged inline. Reader corrections to editor@.</p>
-      </>
-    )}
+    <!-- numbered steps grid -->
+    <div class="space-y-12 md:space-y-16">
+      {steps.map((s) => (
+        <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 pb-12 md:pb-16 border-b border-border last:border-b-0">
+          <div class="col-span-12 md:col-span-3">
+            <p class="text-7xl md:text-8xl font-bold leading-none tracking-[-0.04em] text-accent" style="font-family: var(--font-display);">
+              {s.n}
+            </p>
+          </div>
+          <div class="col-span-12 md:col-span-9 mt-4 md:mt-2">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.01em] mb-4" style="font-family: var(--font-display);">
+              {s.title}
+            </h2>
+            <p class="text-[17px] leading-[1.7] text-foreground/75 max-w-3xl">{s.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
   </article>
 </BaseLayout>

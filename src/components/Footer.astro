@@ -1,9 +1,11 @@
 ---
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const description = import.meta.env.PUBLIC_SITE_DESCRIPTION || '';
+const edition = import.meta.env.PUBLIC_SITE_EDITION || '';
+const tagline = import.meta.env.PUBLIC_SITE_TAGLINE || '';
 const currentYear = new Date().getFullYear();
 const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
 
-// 한국어/영어 디스클로저 자동 분기 (v5.4 #3 AI 사용 투명 명시)
 const aiDisclosure = lang === 'ko'
   ? '본 사이트의 콘텐츠는 AI 도구의 보조를 받아 작성됩니다. 모든 데이터는 1차 자료에서 검증되며, 본문 인용 링크로 직접 확인할 수 있습니다.'
   : 'Content on this site is produced with AI assistance. All data points are verified against primary sources, and all sources are linked inline for direct verification.';
@@ -13,54 +15,101 @@ const affiliateDisclosure = lang === 'ko'
   : 'As an Amazon Associate and other affiliate partner, we earn from qualifying purchases.';
 ---
 
-<footer class="border-t border-border bg-muted/30 mt-16">
-  <div class="container mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-      <div>
-        <h3 class="font-bold text-lg mb-3" style="font-family: var(--font-heading)">{siteName}</h3>
-        <p class="text-sm text-muted-foreground">
-          {import.meta.env.PUBLIC_SITE_DESCRIPTION || ''}
+<footer class="border-t border-border mt-24 md:mt-32 relative overflow-hidden">
+  <!-- 미세 grain texture -->
+  <div class="absolute inset-0 pointer-events-none opacity-[0.04]" aria-hidden="true"
+       style="background-image: linear-gradient(to right, rgb(var(--color-foreground)) 1px, transparent 1px); background-size: 64px 100%;"></div>
+
+  <div class="container mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-12 relative">
+    <!-- masthead — 거대 wordmark -->
+    <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 mb-16 md:mb-20 items-end">
+      <div class="col-span-12 md:col-span-8">
+        {edition && (
+          <p class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono mb-4">
+            {edition} · Colophon
+          </p>
+        )}
+        <h2
+          class="text-[18vw] md:text-[12vw] lg:text-[10vw] font-bold leading-[0.85] tracking-[-0.03em] mb-4"
+          style="font-family: var(--font-display);"
+        >
+          {siteName}
+        </h2>
+        {tagline && (
+          <p class="text-base md:text-lg text-muted-foreground max-w-md">
+            {tagline}
+          </p>
+        )}
+      </div>
+      <div class="col-span-12 md:col-span-4 md:text-right mt-8 md:mt-0">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono mb-2">
+          MMXXVI
+        </p>
+        <p class="text-sm text-muted-foreground max-w-xs md:ml-auto">
+          {description}
         </p>
       </div>
+    </div>
 
+    <!-- nav 그리드 — 더 미니멀 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 pt-12 md:pt-16 border-t border-border">
       <div>
-        <h4 class="font-semibold mb-3 text-sm uppercase tracking-wider">About</h4>
-        <ul class="space-y-2 text-sm text-muted-foreground">
-          <li><a href="/about" class="hover:text-foreground transition-colors">About Us</a></li>
-          <li><a href="/editorial-process" class="hover:text-foreground transition-colors">Editorial Process</a></li>
-          <li><a href="/editorial-standards" class="hover:text-foreground transition-colors">Editorial Standards</a></li>
+        <h4 class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono mb-5">Sections</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/" class="hover:underline underline-offset-4 decoration-from-font">Home</a></li>
+          <li><a href="/about" class="hover:underline underline-offset-4 decoration-from-font">About</a></li>
         </ul>
       </div>
-
       <div>
-        <h4 class="font-semibold mb-3 text-sm uppercase tracking-wider">Legal</h4>
-        <ul class="space-y-2 text-sm text-muted-foreground">
-          <li><a href="/affiliate-disclosure" class="hover:text-foreground transition-colors">Affiliate Disclosure</a></li>
-          <li><a href="/privacy" class="hover:text-foreground transition-colors">Privacy Policy</a></li>
-          <li><a href="/contact" class="hover:text-foreground transition-colors">Contact</a></li>
+        <h4 class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono mb-5">Editorial</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/editorial-process" class="hover:underline underline-offset-4 decoration-from-font">Editorial Process</a></li>
+          <li><a href="/editorial-standards" class="hover:underline underline-offset-4 decoration-from-font">Editorial Standards</a></li>
         </ul>
       </div>
-
       <div>
-        <h4 class="font-semibold mb-3 text-sm uppercase tracking-wider">Follow</h4>
-        <ul class="space-y-2 text-sm text-muted-foreground">
-          <li><a href={import.meta.env.PUBLIC_SITE_PINTEREST || '#'} class="hover:text-foreground transition-colors">Pinterest</a></li>
-          <li><a href={import.meta.env.PUBLIC_SITE_INSTAGRAM || '#'} class="hover:text-foreground transition-colors">Instagram</a></li>
-          <li><a href={import.meta.env.PUBLIC_SITE_YOUTUBE || '#'} class="hover:text-foreground transition-colors">YouTube</a></li>
+        <h4 class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono mb-5">Legal</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/affiliate-disclosure" class="hover:underline underline-offset-4 decoration-from-font">Affiliate</a></li>
+          <li><a href="/privacy" class="hover:underline underline-offset-4 decoration-from-font">Privacy</a></li>
+          <li><a href="/contact" class="hover:underline underline-offset-4 decoration-from-font">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono mb-5">Follow</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href={import.meta.env.PUBLIC_SITE_PINTEREST || '#'} class="hover:underline underline-offset-4">Pinterest →</a></li>
+          <li><a href={import.meta.env.PUBLIC_SITE_INSTAGRAM || '#'} class="hover:underline underline-offset-4">Instagram →</a></li>
+          <li><a href={import.meta.env.PUBLIC_SITE_YOUTUBE || '#'} class="hover:underline underline-offset-4">YouTube →</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- v5.4 페널티 회피 #3: AI 사용 투명 디스클로저 -->
-    <div class="text-xs text-muted-foreground p-4 bg-background border border-border rounded-lg mb-4">
-      <strong class="block mb-1">AI Disclosure / AI 사용 명시</strong>
-      <p class="mb-2">{aiDisclosure}</p>
-      <p>{affiliateDisclosure}</p>
+    <!-- AI disclosure — editorial styled -->
+    <div class="mt-16 pt-8 border-t border-border">
+      <div class="grid grid-cols-12 gap-6 md:gap-8">
+        <div class="col-span-12 md:col-span-4">
+          <p class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono">
+            ¶ Disclosure
+          </p>
+        </div>
+        <div class="col-span-12 md:col-span-8 space-y-3 text-sm text-foreground/70 leading-relaxed">
+          <p>{aiDisclosure}</p>
+          <p>{affiliateDisclosure}</p>
+        </div>
+      </div>
     </div>
 
-    <div class="flex items-center justify-between text-sm text-muted-foreground">
-      <p>© {currentYear} {siteName}. All rights reserved.</p>
-      <p>Built with Astro + Tailwind</p>
+    <!-- bottom rail -->
+    <div class="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono">
+      <span>© {currentYear} {siteName} · All rights reserved</span>
+      <span>Set in {' '}
+        <span style="font-family: var(--font-display);" class="normal-case tracking-tight text-sm">
+          {/* fontDisplay 이름은 CSS variable이라 표시 어려우니 일반 표기 */}
+          serif &amp; sans
+        </span>
+        {' '} · Built with Astro
+      </span>
     </div>
   </div>
 </footer>
