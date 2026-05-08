@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://example.com';
+const domain = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+const editorEmail = `editor@${domain}`;
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const lastUpdated = '2026-05-08';
+---
+
+<BaseLayout
+  title={lang === 'ko' ? '제휴 마케팅 공지' : lang === 'ja' ? 'アフィリエイト開示' : 'Affiliate Disclosure'}
+  description={lang === 'ko' ? `${siteName}의 제휴 마케팅 정책 및 수수료 공지` : lang === 'ja' ? `${siteName}のアフィリエイト・プログラムについて` : `${siteName}'s affiliate program disclosure and policy`}
+>
+  <article class="container mx-auto px-6 md:px-10 py-16 md:py-24 max-w-3xl">
+    <div class="mb-12 md:mb-16">
+      <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-4">¶ Legal · Affiliate</p>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-[-0.025em] mb-4" style="font-family: var(--font-display);">
+        {lang === 'ko' ? '제휴 마케팅 공지' : lang === 'ja' ? 'アフィリエイト開示' : 'Affiliate Disclosure'}
+      </h1>
+      <p class="text-sm font-mono text-muted-foreground">
+        {lang === 'ko' ? '최종 갱신: ' : lang === 'ja' ? '最終更新: ' : 'Last updated: '}{lastUpdated}
+      </p>
+    </div>
+
+    <div class="prose-article space-y-8 text-[16px] leading-[1.75]">
+      {lang === 'ko' && (
+        <>
+          <section>
+            <p class="text-lg leading-relaxed border-l-4 border-accent pl-5 italic text-foreground/80">
+              {siteName}는 일부 콘텐츠에 제휴(affiliate) 링크를 포함합니다. 독자가 해당 링크를 통해 제품·서비스를 구매하면, 본 매체는 판매자로부터 일정한 수수료를 받을 수 있습니다. <strong>이 수수료는 독자가 지불하는 가격에 영향을 주지 않습니다.</strong>
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. 참여 제휴 프로그램</h2>
+            <p>본 매체는 다음 제휴 네트워크에 참여하고 있거나 참여할 수 있습니다.</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li><strong>쿠팡 파트너스</strong> — 쿠팡 상품 추천 시 수수료 발생</li>
+              <li><strong>Amazon Associates</strong> — 해외 도서·제품 추천 시</li>
+              <li><strong>기타 제휴사</strong> — 콘텐츠 주제와 관련된 검증된 사업자 (예: AliExpress, ShareASale)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. 추천 독립성 보장</h2>
+            <p>본 매체의 모든 제품·서비스 추천은 다음 원칙을 따릅니다.</p>
+            <ul class="list-disc pl-6 space-y-2 mt-3">
+              <li><strong>광고비를 받은 추천 X</strong> — 비용을 지불한 사업자가 별도로 추천을 받는 일은 없습니다.</li>
+              <li><strong>데이터 우선</strong> — 모든 추천은 1차 자료(공식 사양, 학술 연구, 공인 기관 데이터)에 근거합니다.</li>
+              <li><strong>비추천 명시</strong> — 검토한 결과 추천하지 않는 제품도 그 이유와 함께 명시합니다.</li>
+              <li><strong>편집부 독립성</strong> — 제휴 사업자는 본 매체의 편집·평가에 영향을 미치지 않습니다.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. 표시 방법</h2>
+            <p>제휴 링크가 포함된 글에는 본문 또는 글머리에 안내가 표시됩니다. 또한 모든 페이지의 푸터에는 다음 문구가 항상 노출됩니다.</p>
+            <blockquote class="border-l-4 border-muted pl-5 my-4 text-foreground/70 italic">
+              "쿠팡파트너스 활동의 일환으로 일정액의 수수료를 제공받습니다."
+            </blockquote>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. 가격·재고 정보</h2>
+            <p>제휴 링크에 표시된 가격·할인·재고 정보는 게시 시점 기준이며, 실제 구매 페이지에서 다를 수 있습니다. 최종 가격·조건은 반드시 판매처에서 직접 확인하시기 바랍니다.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">5. 환불·교환·고객지원</h2>
+            <p>제휴 링크를 통해 구매한 제품의 환불·교환·고객지원은 해당 판매처(쿠팡·Amazon 등)의 정책을 따릅니다. 본 매체는 판매처가 아니므로 직접 처리하지 않습니다.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">6. 문의</h2>
+            <p>제휴 정책에 관한 문의는 <a href={`mailto:${editorEmail}`} class="underline font-medium">{editorEmail}</a>으로 보내주시기 바랍니다.</p>
+          </section>
+        </>
+      )}
+
+      {lang === 'ja' && (
+        <>
+          <section>
+            <p class="text-lg leading-relaxed border-l-4 border-accent pl-5 italic text-foreground/80">
+              {siteName}は一部のコンテンツにアフィリエイトリンクを含みます。読者がこれらのリンクを経由して製品・サービスを購入された場合、本媒体は販売者から一定の手数料を受け取ることがあります。<strong>この手数料は読者の購入価格に影響しません。</strong>
+            </p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. 参加プログラム</h2>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li><strong>Amazonアソシエイト</strong> — 適格購入による収入</li>
+              <li><strong>楽天アフィリエイト</strong> — 紹介に応じた手数料</li>
+              <li><strong>その他</strong> — トピックに関連するパートナー</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. 推奨の独立性</h2>
+            <ul class="list-disc pl-6 space-y-2 mt-3">
+              <li><strong>有料広告による推奨なし</strong></li>
+              <li><strong>データに基づく推奨</strong> — 一次資料に依拠</li>
+              <li><strong>非推奨の明示</strong> — 推奨しない場合も理由を明記</li>
+              <li><strong>編集の独立性</strong> — パートナーは編集に影響しません</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. 価格・在庫</h2>
+            <p>記載の価格・割引・在庫は掲載時点のもので、購入時に異なる場合があります。最終条件は販売店で確認してください。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. お問い合わせ</h2>
+            <p>アフィリエイトに関するご質問は <a href={`mailto:${editorEmail}`} class="underline font-medium">{editorEmail}</a> まで。</p>
+          </section>
+        </>
+      )}
+
+      {lang !== 'ko' && lang !== 'ja' && (
+        <>
+          <section>
+            <p class="text-lg leading-relaxed border-l-4 border-accent pl-5 italic text-foreground/80">
+              {siteName} includes affiliate links in some content. When readers purchase products or services through these links, the Editorial may receive a commission from the seller. <strong>This commission does not affect the price you pay.</strong>
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. Affiliate Programs We Participate In</h2>
+            <p>{siteName} is a participant in or may participate in the following affiliate programs:</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li><strong>Amazon Associates Program</strong> — As an Amazon Associate, we earn from qualifying purchases.</li>
+              <li><strong>Skimlinks / VigLink / Sovrn Commerce</strong> — Aggregated affiliate networks for retail products</li>
+              <li><strong>Direct affiliate partners</strong> — Topic-relevant brands that meet our editorial standards</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. Editorial Independence</h2>
+            <p>All product and service recommendations follow these principles:</p>
+            <ul class="list-disc pl-6 space-y-2 mt-3">
+              <li><strong>No paid recommendations</strong> — Brands cannot pay to be featured.</li>
+              <li><strong>Data-first</strong> — Every recommendation cites primary sources (official specs, peer-reviewed research, regulator data).</li>
+              <li><strong>Negative findings included</strong> — When we do not recommend a product, we say so and explain why.</li>
+              <li><strong>Editorial independence</strong> — Affiliate partners do not influence our editorial process or evaluations.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. FTC Compliance</h2>
+            <p>This disclosure is provided in accordance with the U.S. Federal Trade Commission's <a href="https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers" class="underline">Endorsement Guides (16 CFR Part 255)</a>. The disclosure also appears in the footer of every page:</p>
+            <blockquote class="border-l-4 border-muted pl-5 my-4 text-foreground/70 italic">
+              "As an Amazon Associate and other affiliate partner, we earn from qualifying purchases."
+            </blockquote>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. Pricing and Availability</h2>
+            <p>Prices, discounts, and availability shown in affiliate links reflect the time of publication and may differ at the merchant's checkout page. Always verify final pricing and terms directly on the seller's site.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">5. Returns and Customer Support</h2>
+            <p>Returns, exchanges, and customer support for products purchased through affiliate links are handled by the seller (Amazon, Walmart, etc.) according to their own policies. {siteName} is not the merchant and does not process orders directly.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">6. Questions</h2>
+            <p>For affiliate-related questions, contact <a href={`mailto:${editorEmail}`} class="underline font-medium">{editorEmail}</a>.</p>
+          </section>
+        </>
+      )}
+    </div>
+  </article>
+</BaseLayout>

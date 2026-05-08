@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://example.com';
+const domain = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+const editorEmail = `editor@${domain}`;
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const lastUpdated = '2026-05-08';
+---
+
+<BaseLayout
+  title={lang === 'ko' ? '개인정보처리방침' : lang === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}
+  description={lang === 'ko' ? `${siteName}의 개인정보 수집·이용·보관 정책` : lang === 'ja' ? `${siteName}の個人情報の取扱いについて` : `How ${siteName} collects, uses, and protects information`}
+>
+  <article class="container mx-auto px-6 md:px-10 py-16 md:py-24 max-w-3xl">
+    <!-- editorial header -->
+    <div class="mb-12 md:mb-16">
+      <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-4">¶ Legal · Privacy</p>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-[-0.025em] mb-4" style="font-family: var(--font-display);">
+        {lang === 'ko' ? '개인정보처리방침' : lang === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}
+      </h1>
+      <p class="text-sm font-mono text-muted-foreground">
+        {lang === 'ko' ? '최종 갱신: ' : lang === 'ja' ? '最終更新: ' : 'Last updated: '}{lastUpdated}
+      </p>
+    </div>
+
+    <div class="prose-article space-y-8 text-[16px] leading-[1.75]">
+      {lang === 'ko' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. 개요</h2>
+            <p>{siteName}(이하 '본 매체')는 이용자의 개인정보를 소중히 다루며, 「개인정보 보호법」 등 관련 법령을 준수합니다. 본 방침은 본 매체가 어떤 정보를 수집하고, 어떻게 사용·보관·공유하는지 설명합니다.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. 수집하는 정보</h2>
+            <p>본 매체는 회원가입·로그인 기능을 운영하지 않으므로 <strong>이름·이메일·전화번호 등 직접적 식별 정보를 수집하지 않습니다</strong>. 다만 사이트 개선 목적으로 다음 자동 정보가 수집될 수 있습니다.</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li>접속 로그 (IP 주소 일부, 브라우저 종류, OS, 접속 시각)</li>
+              <li>페이지 이동·체류 시간 (Google Analytics 4, 익명 처리)</li>
+              <li>쿠키 (세션 식별, 분석, 광고 — 사용자가 브라우저에서 거부 가능)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. 사용 목적</h2>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>콘텐츠 품질 개선 (어떤 글이 도움이 되는지 측정)</li>
+              <li>기술적 문제 진단·트래픽 부하 분산</li>
+              <li>광고 노출 최적화 (Google AdSense — 비활성 시 미수집)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. 제3자 서비스</h2>
+            <p>본 매체는 다음 제3자 서비스를 이용합니다. 각 서비스는 자체 개인정보 정책을 따릅니다.</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li><strong>Google Analytics 4</strong> — 익명 트래픽 분석 (<a href="https://policies.google.com/privacy" class="underline">정책</a>)</li>
+              <li><strong>Cloudflare</strong> — CDN·보안 (<a href="https://www.cloudflare.com/privacypolicy/" class="underline">정책</a>)</li>
+              <li><strong>Google AdSense</strong> — 광고 (활성 시, <a href="https://policies.google.com/technologies/ads" class="underline">정책</a>)</li>
+              <li><strong>제휴사 (쿠팡 파트너스, Amazon Associates 등)</strong> — 추천 링크 클릭 추적</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">5. 보관 기간</h2>
+            <p>본 매체가 직접 보관하는 정보는 없습니다. 제3자 서비스(Google Analytics 등)의 데이터 보관 기간은 해당 서비스의 설정을 따르며, 본 매체는 GA4 표준 보관 기간(14개월) 이후 자동 삭제 옵션을 적용합니다.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">6. 이용자 권리</h2>
+            <p>이용자는 다음 권리를 행사할 수 있습니다.</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li>쿠키 거부·삭제 (브라우저 설정에서 직접 가능)</li>
+              <li>Google Analytics 데이터 수집 거부 (<a href="https://tools.google.com/dlpage/gaoptout" class="underline">opt-out 부가 기능</a>)</li>
+              <li>본 매체에 보관된 정보 열람·정정·삭제 요청 → <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">7. 아동 정보</h2>
+            <p>본 매체는 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 만약 부모·보호자가 아동의 개인정보가 수집됐다고 판단하시면 위 이메일로 알려주시기 바랍니다. 즉시 삭제 조치하겠습니다.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">8. 정책 변경</h2>
+            <p>본 방침이 변경되는 경우 이 페이지에 변경 내용·시행일을 명시합니다. 중요한 변경 사항은 사이트 메인 또는 푸터를 통해 사전 안내합니다.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">9. 문의</h2>
+            <p>개인정보 처리에 관한 문의는 <a href={`mailto:${editorEmail}`} class="underline font-medium">{editorEmail}</a>으로 보내주시기 바랍니다. 영업일 기준 5일 이내 답변드립니다.</p>
+          </section>
+        </>
+      )}
+
+      {lang === 'ja' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. 概要</h2>
+            <p>{siteName}（以下「本媒体」）は、利用者のプライバシーを尊重し、関連法令を遵守します。本ポリシーは、収集する情報、利用方法、保管・共有について説明します。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. 収集する情報</h2>
+            <p>本媒体は会員登録・ログイン機能を提供しておらず、<strong>氏名・メール・電話番号などの直接識別情報を収集しません</strong>。改善目的で以下の情報が自動収集されます。</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li>アクセスログ（IPアドレスの一部、ブラウザ種別、OS、アクセス時刻）</li>
+              <li>ページ遷移・滞在時間（Google Analytics 4、匿名化）</li>
+              <li>クッキー（セッション、分析、広告 — ブラウザで拒否可能）</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. 利用目的</h2>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>コンテンツ品質の改善</li>
+              <li>技術的問題の診断・負荷分散</li>
+              <li>広告の最適化（Google AdSense — 無効時は収集しない）</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. 第三者サービス</h2>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li><strong>Google Analytics 4</strong> — 匿名トラフィック分析</li>
+              <li><strong>Cloudflare</strong> — CDN・セキュリティ</li>
+              <li><strong>Google AdSense</strong> — 広告（有効時）</li>
+              <li><strong>アフィリエイト</strong> — Amazonアソシエイトなど</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">5. 利用者の権利</h2>
+            <p>利用者は以下を行使できます。</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li>クッキー拒否・削除（ブラウザ設定で）</li>
+              <li>Google Analytics データ収集拒否（<a href="https://tools.google.com/dlpage/gaoptout" class="underline">opt-outアドオン</a>）</li>
+              <li>本媒体に保管された情報の照会・訂正・削除依頼 → <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">6. 子どもの情報</h2>
+            <p>本媒体は16歳未満の子どもの個人情報を意図的に収集しません。保護者の方が子どもの情報が収集されたとお考えの場合、上記メールにご連絡ください。直ちに削除します。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">7. お問い合わせ</h2>
+            <p>プライバシーに関するお問い合わせは <a href={`mailto:${editorEmail}`} class="underline font-medium">{editorEmail}</a> までお願いします。営業日5日以内に回答します。</p>
+          </section>
+        </>
+      )}
+
+      {lang !== 'ko' && lang !== 'ja' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. Overview</h2>
+            <p>{siteName} ("the Editorial") respects your privacy and complies with applicable laws including the GDPR (EU) and CCPA (California). This policy explains what information we collect, how we use it, and your rights.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. Information We Collect</h2>
+            <p>We do not operate user accounts or login systems, so <strong>we do not directly collect names, email addresses, or phone numbers</strong>. The following information may be collected automatically:</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li>Access logs (truncated IP address, browser type, OS, timestamp)</li>
+              <li>Page navigation and dwell time (Google Analytics 4, anonymized)</li>
+              <li>Cookies (session, analytics, advertising — you can disable in your browser)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. Purpose of Use</h2>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Improve content quality (measure which articles are useful)</li>
+              <li>Diagnose technical issues, balance traffic load</li>
+              <li>Optimize ad delivery (Google AdSense — when active)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. Third-Party Services</h2>
+            <p>We use the following third-party services. Each has its own privacy policy.</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li><strong>Google Analytics 4</strong> — Anonymous traffic analytics (<a href="https://policies.google.com/privacy" class="underline">policy</a>)</li>
+              <li><strong>Cloudflare</strong> — CDN and security (<a href="https://www.cloudflare.com/privacypolicy/" class="underline">policy</a>)</li>
+              <li><strong>Google AdSense</strong> — Advertising (when enabled, <a href="https://policies.google.com/technologies/ads" class="underline">policy</a>)</li>
+              <li><strong>Affiliate networks</strong> — Amazon Associates, Skimlinks, etc. for tracking referral clicks</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">5. Data Retention</h2>
+            <p>The Editorial does not directly store user information. Third-party services like Google Analytics retain data per their own settings; we apply GA4's standard 14-month auto-deletion option.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">6. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li>Reject or delete cookies (via browser settings)</li>
+              <li>Opt out of Google Analytics (<a href="https://tools.google.com/dlpage/gaoptout" class="underline">opt-out add-on</a>)</li>
+              <li>Request access to, correction of, or deletion of any personal data → <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a></li>
+              <li><strong>EU/UK residents (GDPR)</strong>: data portability, right to object, lodge complaint with supervisory authority</li>
+              <li><strong>California residents (CCPA)</strong>: right to know, delete, and opt out of sale of personal information (we do not sell personal information)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">7. Children's Privacy</h2>
+            <p>The Editorial does not knowingly collect personal information from children under 13 (US/COPPA) or under 16 (EU/GDPR). If a parent or guardian believes their child has provided personal data, please contact us at the email above and we will delete it promptly.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">8. Policy Updates</h2>
+            <p>If this policy changes, the new version and effective date will be posted on this page. Material changes will be highlighted on the homepage or footer.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">9. Contact</h2>
+            <p>For privacy-related questions, contact <a href={`mailto:${editorEmail}`} class="underline font-medium">{editorEmail}</a>. We respond within 5 business days.</p>
+          </section>
+        </>
+      )}
+    </div>
+  </article>
+</BaseLayout>
