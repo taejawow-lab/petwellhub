@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'site';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://example.com';
+const domain = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+const editorEmail = `editor@${domain}`;
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const category = import.meta.env.PUBLIC_SITE_CATEGORY || 'general';
+const lastUpdated = '2026-05-09';
+
+// Determine disclaimer flavor by category
+const isMedical = ['health', 'medical', 'pet', 'parenting', 'wellness'].some(k => category.toLowerCase().includes(k));
+const isFinancial = ['finance', 'money', 'invest', 'cash'].some(k => category.toLowerCase().includes(k));
+const isLegal = ['legal', 'security', 'privacy'].some(k => category.toLowerCase().includes(k));
+---
+
+<BaseLayout
+  title={lang === 'ko' ? '면책 공지' : lang === 'ja' ? '免責事項' : 'Disclaimer'}
+  description={lang === 'ko' ? `${siteName} 콘텐츠의 한계와 면책 사항` : lang === 'ja' ? `${siteName}コンテンツの免責事項` : `${siteName} content disclaimer and limitations`}
+>
+  <article class="container mx-auto px-6 md:px-10 py-16 md:py-24 max-w-3xl">
+    <div class="mb-12 md:mb-16">
+      <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-4">¶ Legal · Disclaimer</p>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-[-0.025em] mb-4" style="font-family: var(--font-display);">
+        {lang === 'ko' ? '면책 공지' : lang === 'ja' ? '免責事項' : 'Disclaimer'}
+      </h1>
+      <p class="text-sm font-mono text-muted-foreground">
+        {lang === 'ko' ? '최종 갱신: ' : lang === 'ja' ? '最終更新: ' : 'Last updated: '}{lastUpdated}
+      </p>
+    </div>
+
+    <div class="prose-article space-y-8 text-[16px] leading-[1.75]">
+      {lang === 'ko' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">일반 정보 제공 목적</h2>
+            <p>{siteName}의 모든 콘텐츠는 <strong>일반적인 정보 제공을 목적</strong>으로 하며, 개인 상황을 고려한 맞춤형 조언이 아닙니다. 본 매체는 출판 시점의 최신 데이터·연구·공식 자료를 기반으로 작성하지만, 정보가 변경될 수 있으며 모든 상황에 적용되지 않을 수 있습니다.</p>
+          </section>
+
+          {isMedical && (
+            <section>
+              <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">의학적 면책 사항</h2>
+              <p>본 매체의 콘텐츠는 <strong>의학적 진단·치료·처방을 대체하지 않습니다</strong>. 건강 우려 사항이 있거나 증상이 지속되면 반드시 자격을 갖춘 의료 전문가(소아과 의사·내과 의사 등)와 상의하세요. 응급 상황은 즉시 119 또는 가까운 응급실에 연락하세요.</p>
+              <p class="mt-3">본 매체에서 인용하는 단체(AAP, 소청과학회, CDC, WHO 등)의 가이드라인은 일반 권고이며, 자녀·반려동물의 개별 의료 상황은 담당 의료진의 판단을 따라야 합니다.</p>
+            </section>
+          )}
+
+          {isFinancial && (
+            <section>
+              <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">재무적 면책 사항</h2>
+              <p>본 매체의 콘텐츠는 <strong>투자 자문·재무 자문·세무 자문이 아닙니다</strong>. 401(k)·Roth IRA·인덱스 펀드·세금 계산 등 모든 정보는 일반적 교육 목적이며, 개별 투자 결정 시 자격을 갖춘 재무설계사(CFP), 세무사(CPA), 투자자문업자와 상의하세요.</p>
+              <p class="mt-3">과거 성과는 미래 수익을 보장하지 않으며, 모든 투자에는 원금 손실 위험이 있습니다. 시장 데이터와 세제는 시간이 지남에 따라 변경됩니다.</p>
+            </section>
+          )}
+
+          {isLegal && (
+            <section>
+              <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">법적·보안 면책 사항</h2>
+              <p>본 매체의 콘텐츠는 <strong>법률 자문이 아닙니다</strong>. 패스워드 매니저·보안 도구 추천은 일반적 비교 정보이며, 기업·조직의 보안 결정 시 IT 보안 전문가와 상의하세요. 본 매체는 추천 도구의 보안 결함이나 데이터 유출에 대해 책임지지 않습니다.</p>
+            </section>
+          )}
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">정확성에 대한 노력</h2>
+            <p>본 매체는 출판 시점에 가장 정확한 정보를 제공하기 위해 학술 출처·정부 데이터·공식 가이드라인을 인용합니다. 그러나 인간이 작성하는 콘텐츠에는 오류 가능성이 있으며, 발견 시 <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>으로 알려주시면 감사하겠습니다. 정정된 콘텐츠는 페이지 하단 갱신일과 함께 표시됩니다.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">외부 링크 및 권고 도구</h2>
+            <p>본 매체는 외부 사이트·도구·서비스를 인용·추천할 수 있습니다. 외부 콘텐츠의 정확성·정책·가용성에 대해 본 매체는 책임지지 않습니다.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">제휴 마케팅</h2>
+            <p>본 매체는 일부 외부 도구·제품 추천 시 제휴 수수료를 받을 수 있습니다. 이는 콘텐츠 제작 비용을 충당하기 위한 것이며, 추천 객관성에 영향을 주지 않습니다. 자세한 내용은 <a href="/affiliate-disclosure" class="underline">제휴 공지</a>를 참조하세요.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">문의</h2>
+            <p>면책 사항에 대한 질문은 <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>으로 연락 주세요.</p>
+          </section>
+        </>
+      )}
+
+      {lang === 'ja' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">一般的な情報提供を目的</h2>
+            <p>{siteName}のすべてのコンテンツは<strong>一般的な情報提供を目的</strong>とし、個別の状況に応じた助言ではありません。当媒体は出版時点の最新のデータ・研究・公式資料に基づいて作成していますが、情報は変更される可能性があり、すべての状況に当てはまるとは限りません。</p>
+          </section>
+
+          {isMedical && (
+            <section>
+              <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">医学的免責事項</h2>
+              <p>当媒体のコンテンツは<strong>医学的な診断・治療・処方に代わるものではありません</strong>。健康上の懸念や症状が続く場合は、必ず資格を有する医療専門家にご相談ください。緊急時は救急サービスにご連絡ください。</p>
+            </section>
+          )}
+
+          {isFinancial && (
+            <section>
+              <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">財務的免責事項</h2>
+              <p>当媒体のコンテンツは<strong>投資・財務・税務助言ではありません</strong>。すべての情報は教育目的であり、個別の投資判断には有資格のファイナンシャルプランナーまたは税理士にご相談ください。過去の運用成績は将来の利益を保証するものではありません。</p>
+            </section>
+          )}
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">正確性への努力</h2>
+            <p>当媒体は出版時点で最も正確な情報を提供するため、学術出典・政府データ・公式ガイドラインを引用します。誤りを発見された場合は<a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>までお知らせください。</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">アフィリエイト</h2>
+            <p>当媒体は一部の外部ツール・製品推奨時にアフィリエイト報酬を受け取ることがあります。詳細は<a href="/affiliate-disclosure" class="underline">アフィリエイト開示</a>をご覧ください。</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">お問い合わせ</h2>
+            <p>免責事項に関するご質問は<a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>までご連絡ください。</p>
+          </section>
+        </>
+      )}
+
+      {lang === 'en' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">General Information Only</h2>
+            <p>All content on {siteName} is provided <strong>for general informational purposes</strong> and is not personalized advice. We base our content on the latest data, research, and official sources at publication, but information may change and may not apply to every situation.</p>
+          </section>
+
+          {isMedical && (
+            <section>
+              <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">Medical Disclaimer</h2>
+              <p>Content on {siteName} is <strong>not a substitute for professional medical diagnosis, treatment, or prescription</strong>. If you have health concerns or persistent symptoms, please consult a qualified medical professional (pediatrician, veterinarian, internist, etc.). For emergencies, contact your local emergency services immediately.</p>
+              <p class="mt-3">Guidelines we cite (AAP, AVMA, CDC, WHO, etc.) are general recommendations. Individual medical situations require the judgment of your treating clinician.</p>
+            </section>
+          )}
+
+          {isFinancial && (
+            <section>
+              <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">Financial Disclaimer</h2>
+              <p>Content on {siteName} is <strong>not investment, financial, or tax advice</strong>. Information about 401(k), Roth IRA, index funds, and tax topics is for general educational purposes. For individual investment decisions, consult a qualified financial planner (CFP), certified public accountant (CPA), or licensed investment advisor.</p>
+              <p class="mt-3">Past performance does not guarantee future returns. All investments carry risk of loss. Market data and tax rules change over time.</p>
+            </section>
+          )}
+
+          {isLegal && (
+            <section>
+              <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">Legal and Security Disclaimer</h2>
+              <p>Content on {siteName} is <strong>not legal advice</strong>. Password manager and security tool recommendations are general comparative information. For organizational security decisions, consult IT security professionals. We are not liable for vulnerabilities or data breaches in recommended tools.</p>
+            </section>
+          )}
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">Accuracy Effort</h2>
+            <p>{siteName} cites academic sources, government data, and official guidelines to provide the most accurate information at publication. However, human-written content can contain errors. If you find one, please email <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>. Corrected content is marked with the update date at the bottom of each article.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">External Links and Recommended Tools</h2>
+            <p>{siteName} may cite or recommend external sites, tools, and services. We are not responsible for the accuracy, policies, or availability of external content.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">Affiliate Marketing</h2>
+            <p>This site may receive affiliate commissions from some external tool/product recommendations. This helps cover content production costs and does not influence our editorial objectivity. See our <a href="/affiliate-disclosure" class="underline">Affiliate Disclosure</a> for details.</p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">Contact</h2>
+            <p>Questions about this disclaimer? Email <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>.</p>
+          </section>
+        </>
+      )}
+    </div>
+  </article>
+</BaseLayout>
