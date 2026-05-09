@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'site';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://example.com';
+const domain = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+const editorEmail = `editor@${domain}`;
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const lastUpdated = '2026-05-09';
+---
+
+<BaseLayout
+  title={lang === 'ko' ? '이용약관' : lang === 'ja' ? '利用規約' : 'Terms of Service'}
+  description={lang === 'ko' ? `${siteName} 이용약관` : lang === 'ja' ? `${siteName}の利用規約` : `${siteName} Terms of Service and Use`}
+>
+  <article class="container mx-auto px-6 md:px-10 py-16 md:py-24 max-w-3xl">
+    <div class="mb-12 md:mb-16">
+      <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-4">¶ Legal · Terms</p>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-[-0.025em] mb-4" style="font-family: var(--font-display);">
+        {lang === 'ko' ? '이용약관' : lang === 'ja' ? '利用規約' : 'Terms of Service'}
+      </h1>
+      <p class="text-sm font-mono text-muted-foreground">
+        {lang === 'ko' ? '최종 갱신: ' : lang === 'ja' ? '最終更新: ' : 'Last updated: '}{lastUpdated}
+      </p>
+    </div>
+
+    <div class="prose-article space-y-8 text-[16px] leading-[1.75]">
+      {lang === 'ko' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. 약관의 동의</h2>
+            <p>{siteName}(이하 '본 매체')의 웹사이트({siteUrl})를 이용함으로써 이용자는 본 약관에 동의한 것으로 간주됩니다. 본 약관은 사전 통지 없이 갱신될 수 있으며, 갱신된 약관은 사이트 게시 시점부터 효력이 발생합니다.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. 콘텐츠의 성격</h2>
+            <p>본 매체의 모든 콘텐츠는 <strong>일반적인 정보 제공 목적</strong>으로 작성되었으며, 전문적인 진단·조언·상담을 대체하지 않습니다. 이용자는 자신의 개별 상황에 맞는 결정을 내리기 위해 자격을 갖춘 전문가(의사·변호사·세무사·재무설계사 등)와 상의해야 합니다.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. 저작권</h2>
+            <p>본 매체에 게재된 텍스트·일러스트·디자인 요소는 본 매체의 저작권 또는 정당한 사용 권리에 따라 보호됩니다. 무단 복제·재배포·상업적 이용은 금지되며, 인용 시 출처를 명시해야 합니다.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. 외부 링크</h2>
+            <p>본 매체는 외부 자료의 신뢰성을 높이기 위해 학술 출처·정부 기관·공식 데이터셋 등으로 링크를 제공합니다. 외부 사이트의 콘텐츠·정확성·정책에 대해 본 매체는 책임지지 않습니다.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">5. 책임의 제한</h2>
+            <p>본 매체는 콘텐츠의 정확성을 위해 노력하지만, 정보 사용으로 발생하는 직간접적 손해에 대해 책임지지 않습니다. 이용자는 본 매체의 정보를 자신의 판단과 책임 하에 사용해야 합니다.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">6. 광고 및 제휴 마케팅</h2>
+            <p>본 매체는 Google AdSense·쿠팡 파트너스·Amazon Associates 등 제휴 프로그램에 참여할 수 있습니다. 자세한 내용은 <a href="/affiliate-disclosure" class="underline">제휴 공지</a>를 참조하세요.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">7. 준거법</h2>
+            <p>본 약관은 대한민국 법률에 따라 해석되며, 분쟁은 서울중앙지방법원을 1심 관할로 합니다.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">8. 문의</h2>
+            <p>본 약관에 대한 질문은 <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>으로 연락 주세요.</p>
+          </section>
+        </>
+      )}
+
+      {lang === 'ja' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. 規約への同意</h2>
+            <p>{siteName}（以下「当媒体」）のウェブサイト（{siteUrl}）を利用することにより、利用者は本規約に同意したものとみなされます。本規約は予告なく改定される場合があり、改定後はサイト掲載時点から効力を生じます。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. コンテンツの性質</h2>
+            <p>当媒体のすべてのコンテンツは<strong>一般的な情報提供を目的</strong>とし、専門的な診断・助言・相談に代わるものではありません。利用者は個別の状況に応じた判断のために、有資格の専門家（医師・弁護士・税理士・ファイナンシャルプランナー等）に相談してください。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. 著作権</h2>
+            <p>当媒体に掲載されたテキスト・イラスト・デザイン要素は当媒体の著作権または正当な使用権により保護されています。無断複製・再配布・商業利用は禁止され、引用時は出典を明示してください。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. 外部リンク</h2>
+            <p>当媒体は外部資料の信頼性を高めるため、学術出典・政府機関・公式データセット等へのリンクを提供します。外部サイトのコンテンツ・正確性・ポリシーについて当媒体は責任を負いません。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">5. 責任の制限</h2>
+            <p>当媒体はコンテンツの正確性に努めますが、情報の使用により生じる直接・間接的な損害について責任を負いません。利用者は当媒体の情報を自己の判断と責任において使用してください。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">6. 広告およびアフィリエイト</h2>
+            <p>当媒体はGoogle AdSenseやAmazon アソシエイト等のアフィリエイトプログラムに参加することがあります。詳細は<a href="/affiliate-disclosure" class="underline">アフィリエイト開示</a>をご覧ください。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">7. 準拠法</h2>
+            <p>本規約は日本法に従って解釈され、紛争は東京地方裁判所を第一審の管轄とします。</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">8. お問い合わせ</h2>
+            <p>本規約に関するご質問は<a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>までご連絡ください。</p>
+          </section>
+        </>
+      )}
+
+      {lang === 'en' && (
+        <>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">1. Acceptance</h2>
+            <p>By using {siteName}'s website ({siteUrl}), you agree to these Terms of Service. We may update these Terms without prior notice; updates take effect when posted.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">2. Nature of Content</h2>
+            <p>All content on {siteName} is provided for <strong>general informational purposes</strong> and is not a substitute for professional diagnosis, advice, or consultation. You should consult qualified professionals (physicians, attorneys, financial advisors, etc.) for decisions specific to your situation.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">3. Intellectual Property</h2>
+            <p>Text, illustrations, and design elements on this site are protected by {siteName}'s copyright or licensed use rights. Unauthorized reproduction, redistribution, or commercial use is prohibited. Citations must include attribution.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">4. External Links</h2>
+            <p>We link to academic sources, government agencies, and official datasets to support our claims. {siteName} is not responsible for the content, accuracy, or policies of external sites.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">5. Limitation of Liability</h2>
+            <p>{siteName} strives for accuracy but is not liable for direct or indirect damages arising from use of our information. Use information at your own discretion and risk.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">6. Advertising and Affiliates</h2>
+            <p>This site may participate in Google AdSense, Amazon Associates, and other affiliate programs. See our <a href="/affiliate-disclosure" class="underline">Affiliate Disclosure</a> for details.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">7. Governing Law</h2>
+            <p>These Terms are governed by the laws applicable to the operating entity, and disputes are subject to the exclusive jurisdiction of the relevant courts.</p>
+          </section>
+          <section>
+            <h2 class="text-2xl font-bold mb-3" style="font-family: var(--font-display);">8. Contact</h2>
+            <p>Questions about these Terms? Email <a href={`mailto:${editorEmail}`} class="underline">{editorEmail}</a>.</p>
+          </section>
+        </>
+      )}
+    </div>
+  </article>
+</BaseLayout>
