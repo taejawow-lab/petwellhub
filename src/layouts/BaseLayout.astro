@@ -74,6 +74,21 @@ const finalSchema = schema || defaultSchema;
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={fullImageUrl} />
 
+
+    <!-- Google Search Console verification (set PUBLIC_GSC_VERIFICATION env var) -->
+    {import.meta.env.PUBLIC_GSC_VERIFICATION && (
+      <meta name="google-site-verification" content={import.meta.env.PUBLIC_GSC_VERIFICATION} />
+    )}
+
+    <!-- Bing Webmaster verification (set PUBLIC_BING_VERIFICATION env var) -->
+    {import.meta.env.PUBLIC_BING_VERIFICATION && (
+      <meta name="msvalidate.01" content={import.meta.env.PUBLIC_BING_VERIFICATION} />
+    )}
+
+    <!-- Naver Search Advisor verification (set PUBLIC_NAVER_VERIFICATION env var) -->
+    {import.meta.env.PUBLIC_NAVER_VERIFICATION && (
+      <meta name="naver-site-verification" content={import.meta.env.PUBLIC_NAVER_VERIFICATION} />
+    )}
     <!-- Theme color (사이트 primary 자동) -->
     <meta name="theme-color" content="var(--color-primary)" />
 
