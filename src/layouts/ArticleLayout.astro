@@ -1,4 +1,4 @@
----
+--
 import BaseLayout from './BaseLayout.astro';
 import TOC from '../components/TOC.astro';
 import References from '../components/References.astro';
@@ -17,6 +17,7 @@ export interface Props {
   visualsCount?: number;
   hasVideo?: boolean;
   headings?: Array<{ depth: number; slug: string; text: string }>;
+  faq?: Array<{ question: string; answer: string }>;
 }
 
 const {
@@ -32,11 +33,10 @@ const {
   visualsCount = 0,
   hasVideo = false,
   headings = [],
+  faq = [],
 } = Astro.props;
 
-// Article schema (v5.4 #4)
-const schema = {
-  '@context': 'https://schema.org',
+const articleSchema = {
   '@type': 'Article',
   headline: title,
   description,
@@ -54,6 +54,30 @@ const schema = {
     url: import.meta.env.PUBLIC_SITE_URL,
   },
 };
+
+const faqSchema = faq.length > 0 ? {
+  '@type': 'FAQPage',
+  mainEntity: faq.map((q) => ({
+    '@type': 'Question',
+    name: q.question,
+    acceptedAnswer: { '@type': 'Answer', text: q.answer },
+  })),
+} : null;
+
+const schema = faqSchema ? {
+  '@context': 'https://schema.org',
+  '@graph': [articleSchema, faqSchema],
+} : { '@context': 'https://schema.org', ...articleSchema };
+
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const localeMap: Record<string, string> = { ko: 'ko-KR', ja: 'ja-JP', en: 'en-US' };
+const tMap: Record<string, { published: string; updated: string; sources: string; visuals: string; video: string }> = {
+  ko: { published: '발행일', updated: '갱신', sources: '건 1차 자료', visuals: '종 시각 자료', video: '영상 요약' },
+  ja: { published: '公開', updated: '更新', sources: '件の出典', visuals: '点のビジュアル', video: '動画要約' },
+  en: { published: 'Published', updated: 'Updated', sources: 'sources cited', visuals: 'visuals', video: 'Video summary' },
+};
+const t = tMap[lang] || tMap.en;
+const locale = localeMap[lang] || 'en-US';
 ---
 
 <BaseLayout
@@ -66,7 +90,6 @@ const schema = {
   schema={schema}
 >
   <article class="container mx-auto px-4 py-12 max-w-4xl">
-    <!-- Hero -->
     <header class="mb-8">
       {category && (
         <a
@@ -81,25 +104,25 @@ const schema = {
 
       <div class="flex flex-wrap items-center gap-4 mt-6 text-sm text-muted-foreground">
         <time datetime={pubDate?.toISOString()}>
-          Published {pubDate?.toLocaleDateString()}
+          {t.published} {pubDate?.toLocaleDateString(locale)}
         </time>
         {updatedDate && updatedDate.getTime() !== pubDate.getTime() && (
           <time datetime={updatedDate.toISOString()} class="text-accent font-semibold">
-            Updated {updatedDate.toLocaleDateString()}
+            {t.updated} {updatedDate.toLocaleDateString(locale)}
           </time>
         )}
         <span>·</span>
-        <span>{sources.length} sources cited</span>
+        <span>{sources.length} {t.sources}</span>
         {visualsCount > 0 && (
           <>
             <span>·</span>
-            <span>{visualsCount} visuals</span>
+            <span>{visualsCount} {t.visuals}</span>
           </>
         )}
         {hasVideo && (
           <>
             <span>·</span>
-            <span class="text-accent">📹 Video summary</span>
+            <span class="text-accent">📹 {t.video}</span>
           </>
         )}
       </div>
@@ -113,19 +136,14 @@ const schema = {
       />
     )}
 
-    <!-- Affiliate disclosure (글 시작에 자동) -->
     {affiliate && <AffiliateDisclosure />}
 
     <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
-      <!-- Main content -->
       <div class="prose-article">
         <slot />
-
-        <!-- References (v5.3 #8 — 글 끝 자동 삽입) -->
         {sources.length > 0 && <References sources={sources} />}
       </div>
 
-      <!-- TOC sidebar (v5.4 #11) -->
       {headings.length > 0 && (
         <aside class="hidden lg:block">
           <div class="sticky top-8">
@@ -135,7 +153,6 @@ const schema = {
       )}
     </div>
 
-    <!-- Tags -->
     {tags.length > 0 && (
       <footer class="mt-12 pt-8 border-t border-border">
         <div class="flex flex-wrap gap-2">
@@ -152,3 +169,4 @@ const schema = {
     )}
   </article>
 </BaseLayout>
+
