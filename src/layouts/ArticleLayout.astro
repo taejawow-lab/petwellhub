@@ -18,6 +18,7 @@ export interface Props {
   hasVideo?: boolean;
   headings?: Array<{ depth: number; slug: string; text: string }>;
   faq?: Array<{ question: string; answer: string }>;
+  internalLinks?: string[];
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   hasVideo = false,
   headings = [],
   faq = [],
+  internalLinks = [],
 } = Astro.props;
 
 const articleSchema = {
@@ -71,10 +73,10 @@ const schema = faqSchema ? {
 
 const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
 const localeMap: Record<string, string> = { ko: 'ko-KR', ja: 'ja-JP', en: 'en-US' };
-const tMap: Record<string, { published: string; updated: string; sources: string; visuals: string; video: string }> = {
+const tMap: Record<string, { published: string; updated: string; sources: string; visuals: string; video: string; related: string }> = {
   ko: { published: '발행일', updated: '갱신', sources: '건 1차 자료', visuals: '종 시각 자료', video: '영상 요약' },
   ja: { published: '公開', updated: '更新', sources: '件の出典', visuals: '点のビジュアル', video: '動画要約' },
-  en: { published: 'Published', updated: 'Updated', sources: 'sources cited', visuals: 'visuals', video: 'Video summary' },
+  en: { published: 'Published', updated: 'Updated', sources: 'sources cited', visuals: 'visuals', video: 'Video summary', related: 'Related Reading' },
 };
 const t = tMap[lang] || tMap.en;
 const locale = localeMap[lang] || 'en-US';
@@ -152,6 +154,21 @@ const locale = localeMap[lang] || 'en-US';
         </aside>
       )}
     </div>
+
+    {internalLinks.length > 0 && (
+      <section class="mt-12 pt-8 border-t border-border">
+        <h2 class="text-2xl font-bold mb-4">{t.related || 'Related Reading'}</h2>
+        <ul class="space-y-2">
+          {internalLinks.map((link) => (
+            <li>
+              <a href={link} class="text-primary hover:underline font-mono text-sm">
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     {tags.length > 0 && (
       <footer class="mt-12 pt-8 border-t border-border">
