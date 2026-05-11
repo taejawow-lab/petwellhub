@@ -80,6 +80,9 @@ faq:
 draft: false
 ---
 
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
+
 Cat litter is one of the highest-impact daily decisions for cat health and household happiness. The wrong choice creates a cascade: cat avoids the box, eliminates elsewhere, owner frustration, the relationship suffers. Cornell Feline Health Center, AAFP (American Association of Feline Practitioners), and AAHA all publish guidelines, and Wirecutter conducts the most thorough independent testing. This article cross-references the data and identifies what works across litter types, dust levels, and cat preferences.
 
 The core insight from AAFP surveys: **most cats prefer fine, sand-textured, unscented clumping litter.** That's the floor. The variations beyond that — silica crystals for low-dust households, pellets for cats who tolerate them, plant-based for environmental preference — are valid choices for specific situations but represent minorities of cats' actual preferences.
@@ -278,3 +281,57 @@ Variations matter for specific situations:
 - **Multi-cat:** clay + N+1 box rule
 
 For other cat health topics, see [cat water intake guide](/posts/cat-water-intake-guide).
+
+## Top litter picks based on the data above
+
+Across clumping speed, dust control, and odor neutralization tests, three brands consistently outrank store-brand alternatives. The clumping-clay options dominate for multi-cat households; the plant-based pick is for cats with allergy issues or owners avoiding silica dust.
+
+<ProductBox
+  name="Dr. Elsey's Precious Cat Ultra Clumping Litter (40 lb)"
+  priceHint="$24-30 — Wirecutter top pick for 8+ years"
+  pros={[
+    "Best-in-class clumping speed and tight clump integrity",
+    "99.9% dust-free formula, low tracking outside the box",
+    "Unscented option works for cats sensitive to fragrance"
+  ]}
+  cons={[
+    "Heavy (40 lb bag) — order online to save the carry",
+    "Sodium bentonite clay is heavier than plant-based alternatives"
+  ]}
+  href="https://www.amazon.com/dp/B0009X29WK"
+  region="us"
+/>
+
+<ProductBox
+  name="World's Best Cat Litter Multi-Cat (28 lb)"
+  priceHint="$30-40 — plant-based premium pick"
+  pros={[
+    "Whole-kernel corn base — flushable in small amounts (check local rules)",
+    "Naturally light weight, easy to carry and pour",
+    "Strong clumping for a non-clay litter, lasts ~30 days for one cat"
+  ]}
+  cons={[
+    "Pricier per pound than clay alternatives",
+    "Some cats reject the texture initially — transition slowly"
+  ]}
+  href="https://www.amazon.com/dp/B000WG8JKM"
+  region="us"
+/>
+
+<ProductBox
+  name="Tidy Cats Lightweight Free & Clean Clumping Litter"
+  priceHint="$15-22 — budget pick with weight savings"
+  pros={[
+    "Half the weight of regular clay litter for the same volume",
+    "Fragrance-free, baking soda for odor control",
+    "Widely stocked — emergency Amazon Prime reorders never out of stock"
+  ]}
+  cons={[
+    "More dust than Dr. Elsey's despite the 'free' label",
+    "Clump integrity slightly weaker than premium clay"
+  ]}
+  href="https://www.amazon.com/s?k=Tidy+Cats+Lightweight+Free+Clean+clumping"
+  region="us"
+/>
+
+For most one or two-cat households, Dr. Elsey's at the 40 lb price point wins on cost-per-month and clump quality. Switch to World's Best only if your cat has a respiratory issue or you want flushable convenience.
