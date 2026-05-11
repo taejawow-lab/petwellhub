@@ -146,6 +146,11 @@ const locale = localeMap[lang] || 'en-US';
       <img
         src={heroImage}
         alt={title}
+        width="1280"
+        height="720"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
         class="w-full rounded-lg shadow-lg mb-8 aspect-[16/9] object-cover"
       />
     )}
