@@ -59,7 +59,7 @@ sources:
 visualsCount: 8
 hasVideo: false
 wordCount: 2880
-affiliate: false
+affiliate: true
 faq:
   - question: "How much water should my cat drink per day?"
     answer: "AAFCO and Cornell Feline Health Center guidelines specify approximately 60-80 ml of water per kilogram of body weight per day. For a typical 4 kg (9 lb) cat, that's 240-320 ml (about 1-1.3 cups) total daily — including moisture from food. Cats on wet food only get most of this from their meals."
@@ -78,6 +78,9 @@ internalLinks:
   - "/about"
 draft: false
 ---
+
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
 
 The myth: cats don't need much water. The reality, drawn from AAFCO nutrient profiles, AAHA fluid therapy guidelines, and Cornell Feline Health Center research: cats need precisely the same hydration as any mammal of comparable size — they're just very bad at recognizing thirst.
 
@@ -199,3 +202,57 @@ From Cornell Feline Health, AAHA, and WSAVA combined:
 6. **Wet food primary** — Aim for 50%+ of calories from wet food. Mandatory for cats with kidney or urinary history.
 
 This is not optimization — these are the baseline recommendations from the three primary feline nutrition authorities in North America. Following this setup correlates with documented reductions in FLUTD, kidney issues, and dehydration episodes in domestic cats over 10 years of age.
+
+## Recommended water fountains for finicky drinkers
+
+Veterinary internal medicine consensus: cats with chronic kidney disease drink 30-50% more from a circulating fountain than from a still bowl. These three picks cover most household sizes and noise tolerances.
+
+<ProductBox
+  name="PetSafe Drinkwell Platinum Pet Fountain (168 oz)"
+  priceHint="$60-80 — large household pick"
+  pros={[
+    "168 oz capacity — fills once every 4-7 days for one cat",
+    "Free-falling stream encourages drinking; replaceable carbon filter",
+    "Adjustable flow rate to match cat preference"
+  ]}
+  cons={[
+    "Mid-sized footprint — measure your counter space",
+    "Pump requires weekly rinse to prevent biofilm"
+  ]}
+  href="https://www.amazon.com/dp/B000R0OQYM"
+  region="us"
+/>
+
+<ProductBox
+  name="Catit Flower Cat Drinking Fountain (100 oz)"
+  priceHint="$25-35 — best value, three-stream design"
+  pros={[
+    "Three flow modes (gentle stream, bubbling top, calm pool)",
+    "Quietest pump in the under-$40 category",
+    "Replaceable triple-action filter (carbon + ion exchange)"
+  ]}
+  cons={[
+    "Smaller 100 oz capacity — refill every 3-4 days for one cat",
+    "Plastic build — some cats prefer ceramic / stainless"
+  ]}
+  href="https://www.amazon.com/dp/B005H99TQ8"
+  region="us"
+/>
+
+<ProductBox
+  name="Veken Pet Fountain (84 oz, stainless steel top)"
+  priceHint="$35-50 — stainless steel for hygiene-conscious owners"
+  pros={[
+    "Stainless steel top resists chin acne better than plastic",
+    "Ultra-quiet pump (~25 dB at typical setting)",
+    "Includes 3 replacement filters in the box"
+  ]}
+  cons={[
+    "Smallest capacity of the three (84 oz)",
+    "Stainless top can amplify pump vibration if placed on hardwood"
+  ]}
+  href="https://www.amazon.com/s?k=Veken+pet+fountain+stainless+steel"
+  region="us"
+/>
+
+If your cat has had a chin acne flare, prioritize the Veken stainless model. For one-cat homes with a senior cat showing early CKD signs, the Drinkwell Platinum's larger reservoir is worth the price premium for fewer refills.
