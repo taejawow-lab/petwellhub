@@ -80,6 +80,9 @@ faq:
 draft: false
 ---
 
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
+
 Periodontal disease is the most common clinical condition in adult dogs — more prevalent than obesity, arthritis, or diabetes. Per AVMA data, over 80% of dogs show signs by age 3; by age 5, nearly 90%. Despite this prevalence, dental care is the routine maintenance owners skip most. This article walks through AVMA prevention guidelines, the VOHC-approved product list, and the brushing protocol that actually works.
 
 The TL;DR: brushing 3-4 times per week with veterinary toothpaste is the single highest-impact intervention. VOHC-approved chews and dental diets supplement but don't replace brushing. Annual oral exam by a vet identifies when professional cleaning is needed.
@@ -313,3 +316,57 @@ Three-tier dental care:
 For high-risk breeds or dogs with established disease, add dental diet. For most healthy adult dogs, the three-tier protocol prevents the cascade of plaque → tartar → periodontal disease.
 
 For complementary pet care, see [dog food AAFCO quality data](/posts/dog-food-aafco-quality-data) and [cat water intake guide](/posts/cat-water-intake-guide).
+
+## VOHC-accepted dental products worth keeping in rotation
+
+Per the Veterinary Oral Health Council (VOHC) registry, only specific products show clinically meaningful tartar and plaque reduction in controlled trials. These three carry current VOHC seals and are widely available:
+
+<ProductBox
+  name="Greenies Original Dental Treats (Regular, 36 oz)"
+  priceHint="$30-40 — VOHC-accepted for tartar"
+  pros={[
+    "VOHC seal for tartar control with consistent daily use",
+    "Wedge shape designed to scrape teeth at the gum line",
+    "Sized variants for tiny, regular, and large dogs"
+  ]}
+  cons={[
+    "High calorie — count as ~75 kcal each, adjust meal portions",
+    "Some dogs with grain sensitivities react to the wheat base"
+  ]}
+  href="https://www.amazon.com/dp/B000PSHE4S"
+  region="us"
+/>
+
+<ProductBox
+  name="Whimzees Daily Dental Chews (Variety Pack)"
+  priceHint="$25-35 — grain-free VOHC alternative"
+  pros={[
+    "VOHC-accepted, grain-free, no artificial colors or flavors",
+    "Five shapes provide texture variety; long chew time",
+    "Lower calorie per chew than Greenies (~50-65 kcal)"
+  ]}
+  cons={[
+    "Pricier per chew than Greenies",
+    "Some dogs swallow large pieces — supervise the first few sessions"
+  ]}
+  href="https://www.amazon.com/dp/B007GLO52C"
+  region="us"
+/>
+
+<ProductBox
+  name="Oravet Dental Hygiene Chews (Medium, 30 ct)"
+  priceHint="$30-40 — for dogs with heavy biofilm"
+  pros={[
+    "Contains delmopinol — clinically shown to reduce plaque biofilm",
+    "VOHC seal for both tartar AND plaque (rare combo)",
+    "Veterinarian-distributed brand, strong evidence base"
+  ]}
+  cons={[
+    "Higher cost per chew vs Greenies / Whimzees",
+    "Wheat and soy base — not for sensitive dogs"
+  ]}
+  href="https://www.amazon.com/s?k=Oravet+dental+hygiene+chews+medium"
+  region="us"
+/>
+
+The dental data is unambiguous: daily VOHC-accepted chews + once-or-twice-weekly brushing is the only at-home protocol that reduces vet dental cleanings frequency by a measurable margin. Pick whichever product your dog accepts and use consistently.
