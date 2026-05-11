@@ -107,6 +107,20 @@ const finalSchema = schema || defaultSchema;
         crossorigin="anonymous"
       />
     )}
+    {import.meta.env.PUBLIC_CF_BEACON_TOKEN && (
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={`{"token":"${import.meta.env.PUBLIC_CF_BEACON_TOKEN}"}`}
+      />
+    )}
+
+    {import.meta.env.PUBLIC_GA4_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA4_ID}`} />
+        <script set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${import.meta.env.PUBLIC_GA4_ID}');`} />
+      </>
+    )}
 
     <!-- Theme toggle script (FOUC 방지) -->
     <script is:inline>
