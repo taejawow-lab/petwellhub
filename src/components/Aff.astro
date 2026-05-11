@@ -1,12 +1,12 @@
 ---
-// Affiliate-aware link component with click tracking via ascsubtag.
-// Usage:
-//   <Aff href="https://amazon.com/dp/B07XXXXX" region="us">Nest Thermostat</Aff>
-//   <Aff href="https://amazon.com/dp/B07XXXXX" region="us" subtag="custom-id">Buy</Aff>
+// Affiliate-aware link component v3.
+// v2: auto-injects Amazon ascsubtag for click attribution.
+// v3: exposes data-aff-* attributes for future client-side analytics
+//     (GTM, Plausible outbound, Umami, custom CF Worker collector, etc.)
 //
-// Auto-appends affiliate tag based on PUBLIC_AMAZON_TAG_{REGION} env var.
-// Auto-appends ascsubtag for click attribution (<site>-<page>[-<subtag>]).
-// Adds rel="sponsored noopener" for FTC/Google compliance.
+// Usage:
+//   <Aff href="https://amazon.com/dp/B07XXXXX" region="us">Buy</Aff>
+//   <Aff href="https://amazon.com/dp/B07XXXXX" region="us" subtag="custom-id">Buy</Aff>
 
 export interface Props {
   href: string;
@@ -32,47 +32,61 @@ const tagEnvMap: Record<string, string> = {
   in: 'PUBLIC_AMAZON_TAG_IN',
 };
 
-// Build page-derived subtag base: <site>-<last-path-segment>
-function pageBase(): string {
+function pageBase(): { site: string; page: string; combined: string } {
+  let host = '';
+  let segment = 'home';
   try {
     const path = (Astro.url && Astro.url.pathname) ? Astro.url.pathname : '';
-    const segment = path.replace(/^\//, '').replace(/\/$/, '').split('/').pop() || 'home';
-    let host = '';
+    segment = path.replace(/^\//, '').replace(/\/$/, '').split('/').pop() || 'home';
     if (Astro.site) {
       const u = new URL(Astro.site.toString());
       host = u.hostname.replace(/^www\./, '').split('.')[0];
     }
-    return host ? `${host}-${segment}` : segment;
-  } catch {
-    return 'site';
-  }
+  } catch {}
+  return {
+    site: host || 'site',
+    page: segment,
+    combined: host ? `${host}-${segment}` : segment,
+  };
 }
 
 function sanitizeSubtag(s: string): string {
-  // Amazon ascsubtag: alphanumeric, dash, underscore, period. Max 100 chars.
   return s.replace(/[^a-zA-Z0-9._-]/g, '').slice(0, 80);
 }
 
-function buildAffUrl(url: string, reg: string): string {
+const base = pageBase();
+const composedSubtag = subtag ? `${base.combined}-${subtag}` : base.combined;
+const finalSubtag = sanitizeSubtag(composedSubtag);
+
+function buildAffUrl(url: string, reg: string, asc: string): string {
   if (!url.includes('amazon.')) return url;
   try {
     const u = new URL(url);
     const tagEnv = tagEnvMap[reg];
     const tag = tagEnv ? (import.meta.env[tagEnv] as string | undefined) : undefined;
     if (tag) u.searchParams.set('tag', tag);
-    const base = pageBase();
-    const composed = subtag ? `${base}-${subtag}` : base;
-    const final = sanitizeSubtag(composed);
-    if (final) u.searchParams.set('ascsubtag', final);
+    if (asc) u.searchParams.set('ascsubtag', asc);
     return u.toString();
   } catch {
     return url;
   }
 }
 
-const finalHref = buildAffUrl(href, region);
+const finalHref = buildAffUrl(href, region, finalSubtag);
+const productSubtag = subtag || '';
 ---
 
-<a href={finalHref} rel={rel} target={target} class={cls}>
+<a
+  href={finalHref}
+  rel={rel}
+  target={target}
+  class={cls}
+  data-aff="1"
+  data-aff-site={base.site}
+  data-aff-page={base.page}
+  data-aff-product={productSubtag}
+  data-aff-region={region}
+  data-aff-subtag={finalSubtag}
+>
   <slot />
 </a>
