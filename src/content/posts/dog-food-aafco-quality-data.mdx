@@ -80,6 +80,9 @@ faq:
 draft: false
 ---
 
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
+
 The dog food market is loud with marketing — "natural," "human-grade," "ancestral diet," "grain-free." The veterinary nutrition consensus, anchored by AAFCO regulations, WSAVA guidelines, and ACVN expert recommendations, is much narrower. This article walks through what AAFCO certification actually guarantees, the WSAVA criteria for brand quality, and how to read a dog food label past the marketing claims.
 
 The TL;DR from veterinary nutritionists: any food meeting AAFCO for the appropriate life stage from a WSAVA-tier brand (Hill's, Royal Canin, Purina Pro Plan, Iams, Eukanuba) is appropriate for most healthy adult dogs. The marketing premium for "boutique" brands rarely correlates with measurable nutritional improvement and sometimes correlates with documented harm.
@@ -291,3 +294,57 @@ For most healthy adult dogs:
 For specific medical conditions (kidney disease, urinary issues, allergies, weight management), use prescription diets from the same brands under veterinary guidance.
 
 For complementary pet content, see [cat water intake](/posts/cat-water-intake-guide).
+
+## AAFCO-compliant dog food picks across price tiers
+
+The AAFCO statement matters less than feeding-trial backing and ingredient quality. These three brands all carry "AAFCO complete and balanced" labels AND have feeding-trial substantiation, which separates them from formulation-only competitors:
+
+<ProductBox
+  name="Hill's Science Diet Adult Dry Dog Food (Chicken & Barley)"
+  priceHint="$60-90 for 30 lb bag — feeding-trial substantiated"
+  pros={[
+    "Feeding-trial backed AAFCO claim (gold standard vs formulation-only)",
+    "Research-driven nutrient profile, consistent batch quality",
+    "Veterinarian-recommended for adult dogs without special needs"
+  ]}
+  cons={[
+    "Higher per-pound cost than supermarket brands",
+    "Chicken-first ingredient — rotate or skip for chicken-sensitive dogs"
+  ]}
+  href="https://www.amazon.com/s?k=Hills+Science+Diet+Adult+Chicken+Barley+30+lb"
+  region="us"
+/>
+
+<ProductBox
+  name="Purina Pro Plan Sport All Life Stages 30/20 (37.5 lb)"
+  priceHint="$70-90 — active and working dog formulation"
+  pros={[
+    "30% protein / 20% fat for working and high-activity dogs",
+    "Feeding-trial substantiated, WSAVA-compliant manufacturer",
+    "Stable formulation, widely stocked, strong batch consistency"
+  ]}
+  cons={[
+    "Calorie-dense — over-feeding low-activity dogs leads to weight gain",
+    "Chicken byproduct meal early in ingredient list (acceptable but divides opinion)"
+  ]}
+  href="https://www.amazon.com/s?k=Purina+Pro+Plan+Sport+30+20+37.5+lb"
+  region="us"
+/>
+
+<ProductBox
+  name="Royal Canin Size Health Nutrition (Adult Medium)"
+  priceHint="$70-110 — breed-size-specific formulation"
+  pros={[
+    "Size-and-life-stage optimized formula (medium / large variants)",
+    "Feeding-trial backed, owned by Mars Petcare (large QA infrastructure)",
+    "Kibble size and shape engineered to encourage chewing"
+  ]}
+  cons={[
+    "Premium pricing — among the highest in mainstream brands",
+    "Some specialty SKUs use chicken by-product meal as primary protein"
+  ]}
+  href="https://www.amazon.com/s?k=Royal+Canin+Size+Health+Nutrition+adult+medium"
+  region="us"
+/>
+
+For most adult dogs in normal body condition, any of these three is a defensible choice over boutique brands lacking feeding trials. Pick based on price, activity level, and which protein source your dog tolerates best — not marketing claims about "grain-free" or "ancestral diet."
