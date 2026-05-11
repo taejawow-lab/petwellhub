@@ -1,0 +1,55 @@
+---
+// Affiliate-aware link component
+// Usage:
+//   <Aff href="https://amazon.com/dp/B07XXXXX" region="us">Nest Thermostat</Aff>
+//   <Aff href="https://amazon.co.kr/dp/B07XXXXX" region="kr">Yeti Tumbler</Aff>
+//
+// Auto-appends affiliate tag based on PUBLIC_AMAZON_TAG_{REGION} env var.
+// Falls back to plain link if env var not set (still tracked via Web Analytics).
+// Adds rel="sponsored noopener" for FTC/Google compliance.
+
+export interface Props {
+  href: string;
+  region?: 'us' | 'uk' | 'kr' | 'jp' | 'ca' | 'de' | 'fr' | 'it' | 'es' | 'in';
+  rel?: string;
+  class?: string;
+  target?: string;
+}
+
+const { href, region = 'us', rel = 'sponsored noopener nofollow', class: cls = '', target = '_blank' } = Astro.props;
+
+// Map region → env var name
+const tagEnvMap: Record<string, string> = {
+  us: 'PUBLIC_AMAZON_TAG_US',
+  uk: 'PUBLIC_AMAZON_TAG_UK',
+  kr: 'PUBLIC_AMAZON_TAG_KR',
+  jp: 'PUBLIC_AMAZON_TAG_JP',
+  ca: 'PUBLIC_AMAZON_TAG_CA',
+  de: 'PUBLIC_AMAZON_TAG_DE',
+  fr: 'PUBLIC_AMAZON_TAG_FR',
+  it: 'PUBLIC_AMAZON_TAG_IT',
+  es: 'PUBLIC_AMAZON_TAG_ES',
+  in: 'PUBLIC_AMAZON_TAG_IN',
+};
+
+// Build affiliate URL if env var present
+function buildAffUrl(url: string, reg: string): string {
+  const tagEnv = tagEnvMap[reg];
+  const tag = tagEnv ? (import.meta.env[tagEnv] as string | undefined) : undefined;
+  if (!tag) return url;
+  if (!url.includes('amazon.')) return url;
+  try {
+    const u = new URL(url);
+    u.searchParams.set('tag', tag);
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
+const finalHref = buildAffUrl(href, region);
+---
+
+<a href={finalHref} rel={rel} target={target} class={cls}>
+  <slot />
+</a>
