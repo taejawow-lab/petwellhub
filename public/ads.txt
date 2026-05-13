@@ -1,0 +1,8 @@
+# ads.txt — Authorized Digital Sellers
+# https://iabtechlab.com/ads-txt/
+#
+# IMPORTANT: After AdSense approval, replace the line below with your actual publisher ID:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# Until then, this file declares no authorized sellers.
+# Empty ads.txt = no digital ad sales authorized through programmatic networks.
