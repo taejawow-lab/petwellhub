@@ -121,6 +121,9 @@ const finalSchema = schema || defaultSchema;
         <script set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${import.meta.env.PUBLIC_GA4_ID}');`} />
       </>
     )}
+    <!-- taekm33 first-party analytics (privacy-preserving JSONL dashboard) -->
+    <script defer src="https://taekm33.org/assets/taekm33-analytics-v3.js"></script>
+
 
     <!-- Theme toggle script (FOUC 방지) -->
     <script is:inline>
