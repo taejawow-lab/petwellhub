@@ -9,7 +9,13 @@ export async function getStaticPaths() {
   posts.forEach((p) => (p.data.tags || []).forEach((t) => tagSet.add(t)));
   const tags = [...tagSet];
   return tags.map((tag) => {
-    const slug = tag.toLowerCase().trim().replace(/\s+/g, '-');
+    const slug = tag
+      .toLowerCase()
+      .trim()
+      .replace(/[\/\\&%?#=]/g, '-')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '');
     const tagPosts = posts
       .filter((p) => (p.data.tags || []).includes(tag))
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
