@@ -38,7 +38,6 @@ const defaultSchema = {
   description,
 };
 const finalSchema = schema || defaultSchema;
-import BackToTop from '../components/BackToTop.astro';
 ---
 
 <!doctype html>
@@ -142,6 +141,5 @@ import BackToTop from '../components/BackToTop.astro';
       <slot />
     </main>
     <Footer />
-      <BackToTop />
   </body>
 </html>
