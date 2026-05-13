@@ -42,7 +42,7 @@ const categories = Object.keys(byCategory).sort();
           <div class="mt-6 flex flex-wrap gap-2">
             {categories.map((cat) => (
               <a
-                href={`#cat-${cat}`}
+                href={`/category/${cat.toLowerCase().trim().replace(/\s+/g, '-')}/`}
                 class="inline-block text-xs uppercase tracking-[0.15em] font-mono border border-border px-3 py-1.5 hover:border-foreground hover:bg-foreground hover:text-background transition-colors"
               >
                 {cat} ({byCategory[cat].length})
