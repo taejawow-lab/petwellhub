@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || '';
+const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const isKo = lang === 'ko';
+const isJa = lang === 'ja';
+
+const title = isKo ? '쿠키 정책' : isJa ? 'Cookieポリシー' : 'Cookie Policy';
+const description = isKo
+  ? `${siteName} 쿠키 사용에 관한 정책 — 분석·광고·기능 쿠키 종류와 옵션`
+  : isJa
+  ? `${siteName}のCookie使用ポリシー — 分析・広告・機能Cookieの種類とオプション`
+  : `${siteName} cookie usage policy — analytics, advertising, and functional cookies explained`;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="container mx-auto px-6 md:px-10 py-16 md:py-24 max-w-3xl">
+    <header class="mb-12 border-b border-border pb-8">
+      <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-3">¶ Policy</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: var(--font-display);">
+        {title}
+      </h1>
+      <p class="text-sm uppercase tracking-[0.15em] font-mono text-foreground/60">
+        Last updated: 2026-05-13
+      </p>
+    </header>
+
+    {isKo ? (
+      <div class="prose prose-lg max-w-none">
+        <p>{siteName}는 사이트 기능 향상, 분석, 광고 게재를 위해 쿠키를 사용합니다. 이 정책은 사용되는 쿠키 종류와 관리 방법을 설명합니다.</p>
+
+        <h2>1. 쿠키란?</h2>
+        <p>쿠키는 웹사이트가 방문자의 브라우저에 저장하는 작은 텍스트 파일입니다. 사이트가 사용자를 기억하고, 사용 패턴을 분석하며, 맞춤형 콘텐츠를 제공하는 데 사용됩니다.</p>
+
+        <h2>2. 사용 중인 쿠키 종류</h2>
+        <h3>2.1 필수 쿠키 (Essential)</h3>
+        <ul>
+          <li>다크/라이트 모드 선택 저장</li>
+          <li>언어 설정</li>
+          <li>사이트 기본 기능 유지</li>
+        </ul>
+
+        <h3>2.2 분석 쿠키 (Analytics)</h3>
+        <ul>
+          <li>Google Analytics 4 (선택적, GA4_ID 설정 시)</li>
+          <li>Cloudflare Web Analytics (개인정보 보존, 익명)</li>
+          <li>방문자 수, 페이지뷰, 체류 시간 측정</li>
+        </ul>
+
+        <h3>2.3 광고 쿠키 (Advertising)</h3>
+        <ul>
+          <li>Amazon Associates 추적 (제휴 링크 클릭 attribution)</li>
+          <li>Google AdSense 광고 (가입 후, 개인화 광고)</li>
+          <li>광고 효과 측정 + 빈도 제한</li>
+        </ul>
+
+        <h2>3. 쿠키 관리 방법</h2>
+        <p>모든 주요 브라우저는 쿠키 설정 제어를 제공합니다:</p>
+        <ul>
+          <li><strong>Chrome</strong>: 설정 → 개인정보 보호 및 보안 → 쿠키</li>
+          <li><strong>Safari</strong>: 환경설정 → 개인정보 보호 → 쿠키 차단</li>
+          <li><strong>Firefox</strong>: 설정 → 개인정보 보호 및 보안</li>
+          <li><strong>Edge</strong>: 설정 → 쿠키 및 사이트 권한</li>
+        </ul>
+
+        <p>쿠키를 차단해도 사이트 콘텐츠를 볼 수 있지만, 일부 기능(다크 모드 등)이 작동하지 않을 수 있습니다.</p>
+
+        <h2>4. 제3자 서비스</h2>
+        <p>다음 제3자 서비스가 쿠키를 사용할 수 있습니다:</p>
+        <ul>
+          <li>Google (Analytics, AdSense)</li>
+          <li>Cloudflare (CDN, Analytics)</li>
+          <li>Amazon (제휴 추적)</li>
+        </ul>
+        <p>각 서비스의 개인정보 정책은 해당 사이트에서 확인하세요.</p>
+
+        <h2>5. 정책 변경</h2>
+        <p>본 정책은 변경될 수 있습니다. 변경 시 본 페이지의 "마지막 업데이트" 날짜가 갱신됩니다.</p>
+
+        <h2>6. 문의</h2>
+        <p>쿠키 정책에 관한 문의는 <a href="/contact/">연락처 페이지</a>를 통해 보내주세요.</p>
+      </div>
+    ) : isJa ? (
+      <div class="prose prose-lg max-w-none">
+        <p>{siteName}は、サイト機能の向上、分析、広告配信のためにCookieを使用しています。本ポリシーは使用するCookieの種類と管理方法を説明します。</p>
+
+        <h2>1. Cookieとは</h2>
+        <p>Cookieはウェブサイトが訪問者のブラウザに保存する小さなテキストファイルです。サイトがユーザーを記憶し、使用パターンを分析し、カスタマイズされたコンテンツを提供するために使用されます。</p>
+
+        <h2>2. 使用中のCookieの種類</h2>
+        <h3>2.1 必須Cookie</h3>
+        <ul>
+          <li>ダーク/ライトモード設定の保存</li>
+          <li>言語設定</li>
+          <li>サイトの基本機能の維持</li>
+        </ul>
+
+        <h3>2.2 分析Cookie</h3>
+        <ul>
+          <li>Google Analytics 4(任意、GA4_ID設定時)</li>
+          <li>Cloudflare Web Analytics(個人情報保護、匿名)</li>
+          <li>訪問者数、ページビュー、滞在時間の測定</li>
+        </ul>
+
+        <h3>2.3 広告Cookie</h3>
+        <ul>
+          <li>Amazon Associates追跡(アフィリエイトリンクのクリック貢献)</li>
+          <li>Google AdSense広告(承認後、パーソナライズ広告)</li>
+          <li>広告効果測定と頻度制限</li>
+        </ul>
+
+        <h2>3. Cookieの管理方法</h2>
+        <p>主要なブラウザはすべてCookie設定の制御を提供しています。</p>
+        <p>Cookieをブロックしてもサイトコンテンツは閲覧できますが、一部の機能(ダークモードなど)が動作しない場合があります。</p>
+
+        <h2>4. お問い合わせ</h2>
+        <p>本ポリシーに関するお問い合わせは<a href="/contact/">連絡先ページ</a>からお願いします。</p>
+      </div>
+    ) : (
+      <div class="prose prose-lg max-w-none">
+        <p>{siteName} uses cookies to enhance site functionality, analyze traffic, and serve advertising. This policy explains what cookies we use and how you can manage them.</p>
+
+        <h2>1. What are cookies?</h2>
+        <p>Cookies are small text files stored by your browser when you visit a website. They help the site remember you, analyze usage patterns, and deliver personalized content.</p>
+
+        <h2>2. Cookies we use</h2>
+        <h3>2.1 Essential cookies</h3>
+        <ul>
+          <li>Dark/light mode preference</li>
+          <li>Language settings</li>
+          <li>Core site functionality</li>
+        </ul>
+
+        <h3>2.2 Analytics cookies</h3>
+        <ul>
+          <li>Google Analytics 4 (when configured)</li>
+          <li>Cloudflare Web Analytics (privacy-preserving, anonymous)</li>
+          <li>Visitor counts, page views, and session duration</li>
+        </ul>
+
+        <h3>2.3 Advertising cookies</h3>
+        <ul>
+          <li>Amazon Associates tracking (affiliate link attribution)</li>
+          <li>Google AdSense (after approval; personalized ads)</li>
+          <li>Ad performance measurement and frequency capping</li>
+        </ul>
+
+        <h2>3. Managing cookies</h2>
+        <p>All major browsers offer cookie controls:</p>
+        <ul>
+          <li><strong>Chrome</strong>: Settings → Privacy and security → Cookies</li>
+          <li><strong>Safari</strong>: Preferences → Privacy → Block all cookies</li>
+          <li><strong>Firefox</strong>: Settings → Privacy &amp; Security</li>
+          <li><strong>Edge</strong>: Settings → Cookies and site permissions</li>
+        </ul>
+        <p>You can browse with cookies disabled, but some features (e.g., dark mode) may not function correctly.</p>
+
+        <h2>4. Third-party services</h2>
+        <p>The following third parties may set cookies on this site:</p>
+        <ul>
+          <li>Google (Analytics, AdSense)</li>
+          <li>Cloudflare (CDN, Analytics)</li>
+          <li>Amazon (affiliate tracking)</li>
+        </ul>
+        <p>Review each provider's privacy policy on their respective sites for details.</p>
+
+        <h2>5. Policy changes</h2>
+        <p>This policy may be updated. The "Last updated" date at the top reflects the most recent revision.</p>
+
+        <h2>6. Contact</h2>
+        <p>For questions about this cookie policy, please use our <a href="/contact/">contact page</a>.</p>
+      </div>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .prose h2 { margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700; }
+  .prose h3 { margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 600; }
+  .prose p { margin-bottom: 1rem; line-height: 1.75; }
+  .prose ul { margin-bottom: 1rem; padding-left: 1.5rem; list-style-type: disc; }
+  .prose li { margin-bottom: 0.25rem; line-height: 1.7; }
+  .prose a { color: var(--color-accent, #f59e0b); text-decoration: underline; }
+</style>
