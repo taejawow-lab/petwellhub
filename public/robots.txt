@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Search engine bots — explicit allow
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow internal build/API paths
+Disallow: /api/
+Disallow: /_astro/
+
+# Sitemap location
+Sitemap: https://petwellhub.org/sitemap-index.xml
