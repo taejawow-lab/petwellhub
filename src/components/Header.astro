@@ -13,45 +13,61 @@ const navItems = [
 ];
 ---
 
-<!-- editorial magazine 헤더: 큰 wordmark + 가는 nav + edition 메타 -->
-<header class="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border">
-  <!-- 윗 단: edition meta strip -->
+<!-- modern editorial header: token-driven, mobile discoverable, no client JS -->
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-background/90 border-b border-border/70 shadow-[0_1px_0_rgba(15,23,42,0.03)]">
   {edition && (
-    <div class="border-b border-border/60">
-      <div class="container mx-auto px-6 md:px-10 h-7 flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono">
-        <span>{edition}</span>
+    <div class="border-b border-border/50 bg-muted/25">
+      <div class="container mx-auto px-4 sm:px-6 md:px-10 min-h-8 flex items-center justify-between gap-3 text-[10px] uppercase tracking-[0.22em] text-muted-foreground font-mono">
+        <span class="truncate">{edition}</span>
         <span class="hidden sm:inline">A data-grounded publication</span>
       </div>
     </div>
   )}
 
-  <!-- 본 단: 큰 wordmark + nav -->
-  <div class="container mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between gap-6">
-    <a href="/" class="group flex items-baseline gap-3">
+  <div class="container mx-auto px-4 sm:px-6 md:px-10 min-h-[68px] md:min-h-20 flex items-center justify-between gap-4">
+    <a href="/" class="group flex min-w-0 items-center gap-3 rounded-md py-2 focus-visible:outline-ring" aria-label={`${siteName} home`}>
+      <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm ring-1 ring-border/30" aria-hidden="true">
+        <span class="text-sm font-bold" style="font-family: var(--font-display);">{siteName.slice(0, 1).toUpperCase()}</span>
+      </span>
       <span
-        class="text-2xl md:text-3xl font-bold tracking-[-0.02em] leading-none transition-colors group-hover:text-primary"
+        class="truncate text-2xl md:text-3xl font-bold tracking-[-0.025em] leading-none transition-colors group-hover:text-primary"
         style="font-family: var(--font-display);"
       >
         {siteName}
       </span>
-      <span class="hidden md:inline-block w-1.5 h-1.5 rounded-full bg-accent"></span>
     </a>
 
-    <div class="flex items-center gap-5 md:gap-8">
-      <ul class="hidden md:flex items-center gap-5 lg:gap-7 text-xs lg:text-sm uppercase tracking-[0.12em]">
-        {navItems.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              class="relative text-foreground/70 hover:text-foreground transition-colors py-2"
-            >
-              {item.label}
-              <span class="absolute left-0 bottom-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div class="flex items-center gap-3 md:gap-6">
+      <nav aria-label="Primary navigation" class="hidden md:block">
+        <ul class="flex items-center gap-1 text-xs lg:text-sm uppercase tracking-[0.12em]">
+          {navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="rounded-full px-3 py-2 text-foreground/72 hover:bg-muted hover:text-foreground focus-visible:outline-ring transition-colors"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <a href="/search/" class="hidden sm:inline-flex md:hidden min-h-10 items-center rounded-full border border-border bg-card px-4 text-xs font-semibold uppercase tracking-[0.12em] text-foreground/80 shadow-sm">
+        Search
+      </a>
       <ThemeToggle />
     </div>
   </div>
+
+  <nav aria-label="Mobile primary navigation" class="md:hidden border-t border-border/55 bg-background/95">
+    <ul class="container mx-auto flex gap-2 overflow-x-auto px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] [-webkit-overflow-scrolling:touch]">
+      {navItems.map((item) => (
+        <li class="shrink-0">
+          <a href={item.href} class="inline-flex min-h-10 items-center rounded-full border border-border/70 bg-card px-4 text-foreground/75 shadow-sm transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-ring">
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 </header>

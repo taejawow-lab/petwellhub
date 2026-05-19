@@ -17,49 +17,45 @@ const dateline = pubDate.toLocaleDateString('en-US', { month: 'short', day: 'num
 const itemNum = String(index + 1).padStart(2, '0');
 ---
 
-<article class={`group block ${variant === 'feature' ? '' : ''}`}>
-  <a href={href} class="block">
-    <!-- 매거진 메타 라벨 — 위쪽 small label rail -->
-    <div class="flex items-center gap-3 mb-4 text-[10px] uppercase tracking-[0.2em] font-mono text-muted-foreground">
+<article class={`group h-full ${variant === 'feature' ? 'md:col-span-2' : ''}`}>
+  <a href={href} class="editorial-card block h-full rounded-[1.35rem] border border-border/70 bg-card/88 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 focus-visible:outline-ring sm:p-5">
+    <div class="flex items-center gap-3 mb-4 text-[10px] uppercase tracking-[0.18em] font-mono text-muted-foreground">
       <span>№ {itemNum}</span>
-      <span class="w-6 h-px bg-border"></span>
+      <span class="h-px w-6 bg-border"></span>
       {category && (
-        <span class="text-accent font-semibold">{category}</span>
+        <span class="rounded-full bg-primary/10 px-2 py-1 text-primary font-semibold">{category}</span>
       )}
     </div>
 
     {image && (
-      <div class="aspect-[4/5] overflow-hidden mb-5 relative">
-        <!-- accent block (feature only) -->
+      <div class={`${variant === 'feature' ? 'aspect-[16/10]' : 'aspect-[4/3]'} overflow-hidden mb-5 relative rounded-2xl bg-muted ring-1 ring-border/50`}>
         {variant === 'feature' && (
-          <div class="absolute inset-0 bg-accent/15 -rotate-1 scale-95" aria-hidden="true"></div>
+          <div class="absolute inset-0 bg-accent/10 -rotate-1 scale-95" aria-hidden="true"></div>
         )}
         <img
           src={image}
           alt={title}
           loading="lazy"
-          class="relative w-full h-full object-cover transition-all duration-700 group-hover:scale-[1.03]"
+          decoding="async"
+          class="relative w-full h-full object-cover transition-all duration-700 group-hover:scale-[1.035]"
         />
       </div>
     )}
 
-    <!-- title — display serif, oversized -->
     <h3
-      class={`${variant === 'feature' ? 'text-3xl md:text-4xl' : 'text-xl md:text-2xl'} font-bold mb-3 leading-[1.1] tracking-[-0.01em] text-balance group-hover:text-primary transition-colors duration-500`}
+      class={`${variant === 'feature' ? 'text-3xl md:text-4xl' : 'text-xl md:text-2xl'} font-bold mb-3 leading-[1.12] tracking-[-0.015em] text-balance group-hover:text-primary transition-colors duration-300`}
       style="font-family: var(--font-display);"
     >
       {title}
     </h3>
 
-    <!-- description -->
-    <p class="text-foreground/65 leading-relaxed mb-5 line-clamp-3 text-[15px]">
+    <p class="text-foreground/70 leading-relaxed mb-5 line-clamp-3 text-[15px]">
       {description}
     </p>
 
-    <!-- 하단 dateline + read more -->
-    <div class="flex items-center justify-between text-[11px] uppercase tracking-[0.18em] font-mono text-muted-foreground pt-4 border-t border-border">
+    <div class="mt-auto flex items-center justify-between gap-3 text-[11px] uppercase tracking-[0.16em] font-mono text-muted-foreground pt-4 border-t border-border/70">
       <time datetime={pubDate.toISOString()}>{dateline}</time>
-      <span class="inline-flex items-center gap-2 text-foreground/80 group-hover:gap-3 transition-all">
+      <span class="inline-flex min-h-9 items-center gap-2 rounded-full bg-muted px-3 text-foreground/80 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
         Read <span aria-hidden="true">→</span>
       </span>
     </div>

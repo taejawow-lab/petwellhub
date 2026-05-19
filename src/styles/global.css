@@ -147,3 +147,49 @@
     @apply bg-background/80 backdrop-blur-md border border-border/50;
   }
 }
+
+/* Portfolio UX modernization: accessible editorial rhythm, cards, and mobile ergonomics */
+@layer base {
+  body {
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+
+  a, button {
+    text-underline-offset: 0.18em;
+  }
+}
+
+@layer components {
+  .editorial-card {
+    background-image:
+      linear-gradient(135deg, rgb(var(--color-primary) / 0.055), transparent 34%),
+      linear-gradient(180deg, rgb(var(--color-card) / 0.98), rgb(var(--color-card) / 0.9));
+  }
+
+  .prose-article {
+    @apply mx-auto max-w-[74ch] text-[1.05rem] leading-8 md:text-[1.1rem];
+  }
+
+  .prose-article :where(h2, h3, h4) {
+    @apply scroll-mt-28 text-balance;
+  }
+
+  .prose-article :where(p, ul, ol, blockquote, table, figure) {
+    @apply my-6;
+  }
+
+  .prose-article img {
+    @apply rounded-2xl border border-border/60 shadow-lg;
+  }
+
+  .affiliate-disclosure {
+    @apply mx-auto max-w-3xl rounded-2xl border border-accent/20 bg-accent/5 shadow-sm;
+  }
+}
+
+@layer utilities {
+  .focus-ring-soft {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  }
+}
