@@ -5,9 +5,11 @@ const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
 const edition = import.meta.env.PUBLIC_SITE_EDITION || '';
 
 const navItems = [
+  { label: 'Posts', href: '/posts/' },
+  { label: 'Categories', href: '/categories/' },
+  { label: 'Search', href: '/search/' },
   { label: 'About', href: '/about' },
   { label: 'Editorial', href: '/editorial-process' },
-  { label: 'Standards', href: '/editorial-standards' },
 ];
 ---
 
@@ -35,8 +37,8 @@ const navItems = [
       <span class="hidden md:inline-block w-1.5 h-1.5 rounded-full bg-accent"></span>
     </a>
 
-    <div class="flex items-center gap-6 md:gap-10">
-      <ul class="hidden md:flex items-center gap-7 lg:gap-9 text-sm uppercase tracking-[0.12em]">
+    <div class="flex items-center gap-5 md:gap-8">
+      <ul class="hidden md:flex items-center gap-5 lg:gap-7 text-xs lg:text-sm uppercase tracking-[0.12em]">
         {navItems.map((item) => (
           <li>
             <a

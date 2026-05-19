@@ -1,0 +1,93 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('posts'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || '';
+const searchIndex = posts.map((post) => ({
+  title: post.data.title,
+  description: post.data.description,
+  category: post.data.category || 'general',
+  tags: post.data.tags || [],
+  url: `/posts/${post.slug}`,
+  date: post.data.pubDate?.toISOString?.().slice(0, 10) || '',
+}));
+---
+
+<BaseLayout title="Search" description={`Search ${siteName} articles by title, summary, category, or tag.`}>
+  <section class="container mx-auto px-6 md:px-10 py-16 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 mb-12 md:mb-16 border-b border-border pb-12">
+      <div class="col-span-12 md:col-span-4">
+        <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-3">¶ Search</p>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-[-0.02em]" style="font-family: var(--font-display);">
+          Search
+        </h1>
+        <p class="text-sm uppercase tracking-[0.15em] font-mono text-foreground/60 mt-4">
+          {posts.length} indexed articles
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6 md:pt-4">
+        <p class="text-base md:text-lg text-foreground/70 leading-relaxed max-w-xl">
+          Type a topic, product, category, or tag to filter the full {siteName} archive locally in your browser.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-3xl">
+      <label for="site-search" class="block text-xs uppercase tracking-[0.2em] font-mono text-foreground/60 mb-3">Search query</label>
+      <input
+        id="site-search"
+        type="search"
+        placeholder="Search articles..."
+        autocomplete="off"
+        class="w-full border border-border bg-background px-4 py-3 text-lg outline-none focus:border-foreground"
+      />
+      <p id="search-count" class="mt-4 text-sm uppercase tracking-[0.15em] font-mono text-foreground/50">Showing latest articles</p>
+    </div>
+
+    <div id="search-results" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" aria-live="polite"></div>
+
+    <script type="application/json" id="search-index" set:html={JSON.stringify(searchIndex)} />
+    <script is:inline>
+      const searchInput = document.getElementById('site-search');
+      const results = document.getElementById('search-results');
+      const count = document.getElementById('search-count');
+      const index = JSON.parse(document.getElementById('search-index').textContent || '[]');
+
+      function render(items, query) {
+        results.innerHTML = items.map((item) => `
+          <a href="${item.url}" class="group block border border-border p-6 hover:border-foreground transition-colors">
+            <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-4">${item.category}${item.date ? ` · ${item.date}` : ''}</p>
+            <h2 class="text-xl font-bold group-hover:text-primary transition-colors" style="font-family: var(--font-display);">${item.title}</h2>
+            <p class="mt-4 text-sm text-foreground/65 leading-relaxed">${item.description || ''}</p>
+          </a>
+        `).join('');
+        count.textContent = query ? `${items.length} matching articles` : 'Showing latest articles';
+      }
+
+      function normalize(value) {
+        return String(value || '').toLowerCase();
+      }
+
+      function search() {
+        const query = normalize(searchInput.value).trim();
+        if (!query) {
+          render(index.slice(0, 12), '');
+          return;
+        }
+        const terms = query.split(/\s+/).filter(Boolean);
+        const matches = index.filter((item) => {
+          const haystack = normalize([item.title, item.description, item.category, ...(item.tags || [])].join(' '));
+          return terms.every((term) => haystack.includes(term));
+        });
+        render(matches, query);
+      }
+
+      searchInput.addEventListener('input', search);
+      render(index.slice(0, 12), '');
+    </script>
+  </section>
+</BaseLayout>

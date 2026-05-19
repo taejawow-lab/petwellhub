@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const categorySlug = (category: string) => category.toLowerCase().trim().replace(/\s+/g, '-');
+
+const posts = (await getCollection('posts'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || '';
+const byCategory = posts.reduce((acc, post) => {
+  const category = post.data.category || 'general';
+  if (!acc[category]) acc[category] = [];
+  acc[category].push(post);
+  return acc;
+}, {} as Record<string, typeof posts>);
+
+const categories = Object.entries(byCategory)
+  .map(([category, categoryPosts]) => ({ category, posts: categoryPosts, latest: categoryPosts[0] }))
+  .sort((a, b) => a.category.localeCompare(b.category));
+---
+
+<BaseLayout title="Categories" description={`Browse ${siteName} articles by category.`}>
+  <section class="container mx-auto px-6 md:px-10 py-16 md:py-24">
+    <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 mb-12 md:mb-16 border-b border-border pb-12">
+      <div class="col-span-12 md:col-span-4">
+        <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-3">¶ Categories</p>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-[-0.02em]" style="font-family: var(--font-display);">
+          Categories
+        </h1>
+        <p class="text-sm uppercase tracking-[0.15em] font-mono text-foreground/60 mt-4">
+          {categories.length} sections · {posts.length} articles
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6 md:pt-4">
+        <p class="text-base md:text-lg text-foreground/70 leading-relaxed max-w-xl">
+          Browse every {siteName} category, then jump into the newest article or the full category archive.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="/posts/" class="inline-block text-xs uppercase tracking-[0.15em] font-mono border border-border px-3 py-1.5 hover:border-foreground hover:bg-foreground hover:text-background transition-colors">All posts</a>
+          <a href="/search/" class="inline-block text-xs uppercase tracking-[0.15em] font-mono border border-border px-3 py-1.5 hover:border-foreground hover:bg-foreground hover:text-background transition-colors">Search</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {categories.map(({ category, posts: categoryPosts, latest }) => (
+        <a href={`/category/${categorySlug(category)}/`} class="group block border border-border p-6 hover:border-foreground transition-colors">
+          <p class="text-[10px] uppercase tracking-[0.25em] font-mono text-accent mb-4">{categoryPosts.length} articles</p>
+          <h2 class="text-2xl font-bold capitalize group-hover:text-primary transition-colors" style="font-family: var(--font-display);">{category}</h2>
+          {latest && (
+            <p class="mt-4 text-sm text-foreground/65 leading-relaxed">
+              Latest: {latest.data.title}
+            </p>
+          )}
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
