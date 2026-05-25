@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+<title id="title">Hot car greenhouse effect illustration</title><desc id="desc">A parked car under sun with rising thermometer and pet safety warning icons.</desc>
+<rect width="1000" height="620" fill="#fff3df"/>
+<circle cx="825" cy="115" r="78" fill="#ffb04d"/><g stroke="#ffb04d" stroke-width="10" stroke-linecap="round"><path d="M825 12V0M825 230v42M707 115h-45M943 115h45M740 30l-32-32M910 30l32-32M740 200l-32 32M910 200l32 32"/></g>
+<text x="60" y="70" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#3e2723">Parked cars become ovens</text>
+<text x="60" y="108" font-family="Arial, sans-serif" font-size="21" fill="#5d4037">Cracked windows do not make a car a safe waiting room.</text>
+<g transform="translate(135 220)">
+<path d="M110 155 L190 55 H505 L615 155 Z" fill="#5aa6c8" stroke="#244a5c" stroke-width="8"/>
+<rect x="55" y="148" width="620" height="145" rx="30" fill="#457f9b" stroke="#244a5c" stroke-width="8"/>
+<path d="M220 76 H370 L390 150 H162Z" fill="#d9f3ff" opacity=".82"/><path d="M395 76 H500 L584 150 H410Z" fill="#d9f3ff" opacity=".82"/>
+<circle cx="180" cy="296" r="49" fill="#2c3e50"/><circle cx="180" cy="296" r="22" fill="#cfd8dc"/><circle cx="552" cy="296" r="49" fill="#2c3e50"/><circle cx="552" cy="296" r="22" fill="#cfd8dc"/>
+<g transform="translate(330 170)"><circle cx="45" cy="45" r="42" fill="#8d6e63"/><circle cx="32" cy="40" r="5"/><circle cx="58" cy="40" r="5"/><path d="M30 62 C45 50 60 50 72 62" stroke="#3e2723" stroke-width="5" fill="none"/></g>
+</g>
+<g transform="translate(770 265)"><rect x="35" y="20" width="48" height="220" rx="24" fill="#fff" stroke="#c0392b" stroke-width="7"/><circle cx="59" cy="250" r="42" fill="#e74c3c" stroke="#c0392b" stroke-width="7"/><rect x="48" y="74" width="22" height="140" rx="11" fill="#e74c3c"/><text x="118" y="98" font-family="Arial" font-size="24" font-weight="700" fill="#c0392b">rises</text><text x="118" y="130" font-family="Arial" font-size="24" font-weight="700" fill="#c0392b">quickly</text></g>
+<path d="M107 528 H895" stroke="#8d6e63" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 16"/>
+</svg>

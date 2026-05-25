@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+<title id="title">Pavement paw check diagram</title><desc id="desc">A hand testing pavement, paw prints, and shaded route showing safer summer walking choices.</desc>
+<rect width="1000" height="620" fill="#f8fbf2"/>
+<text x="60" y="70" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#253b2f">Pavement and paw safety</text>
+<text x="60" y="110" font-family="Arial, sans-serif" font-size="21" fill="#52645a">If the surface is uncomfortable for your hand, choose grass, shade, boots, or wait.</text>
+<rect x="0" y="330" width="1000" height="290" fill="#595959"/>
+<path d="M0 404 C120 378 210 440 336 398 S555 360 704 399 879 430 1000 386" fill="none" stroke="#98c379" stroke-width="74" opacity=".85"/>
+<g fill="#f3d6a3" stroke="#6d4c41" stroke-width="5" transform="translate(150 240)"><path d="M65 90 C60 42 128 42 122 92 L116 180 C112 238 23 238 20 178 Z"/><path d="M111 63 c23-34 75-7 54 37 l-38 75"/><path d="M42 72 C20 34-32 63-5 104 l38 68"/></g>
+<g fill="#ffd7b1" stroke="#7b4f34" stroke-width="4" transform="translate(612 385)">
+<ellipse cx="40" cy="42" rx="20" ry="28"/><ellipse cx="88" cy="42" rx="20" ry="28"/><ellipse cx="136" cy="42" rx="20" ry="28"/><ellipse cx="184" cy="42" rx="20" ry="28"/><path d="M72 110 C72 58 153 58 154 111 C155 160 71 160 72 110Z"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="22" font-weight="700"><rect x="560" y="170" width="330" height="92" rx="18" fill="#ffffff" stroke="#8aa17f" stroke-width="5"/><text x="590" y="207" fill="#253b2f">Better walk windows</text><text x="590" y="238" font-size="19" font-weight="400" fill="#52645a">Early morning or after sunset</text></g>
+<circle cx="142" cy="480" r="22" fill="#ffcc80" opacity=".75"/><circle cx="215" cy="532" r="14" fill="#ffcc80" opacity=".75"/><circle cx="305" cy="455" r="18" fill="#ffcc80" opacity=".75"/>
+</svg>
