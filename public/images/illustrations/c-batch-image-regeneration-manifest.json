@@ -1,0 +1,40 @@
+{
+  "generated_at_utc": "2026-05-25T08:04:38Z",
+  "method": "PIL deterministic editorial PNG fallback; GTI13/ComfyUI unavailable",
+  "size": [
+    1600,
+    900
+  ],
+  "assets": [
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-safety-hero.png",
+      "bytes": 51693
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-risk-ladder.png",
+      "bytes": 51207
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-car-safety.png",
+      "bytes": 52124
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-pavement-paw-check.png",
+      "bytes": 42950
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-first-aid-flow.png",
+      "bytes": 51236
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-walk-checklist.png",
+      "bytes": 52755
+    }
+  ]
+}
