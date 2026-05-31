@@ -2,12 +2,12 @@
 // Affiliate-ready product display box.
 // Usage in mdx:
 //   <ProductBox
-//     name="Nest Learning Thermostat"
-//     image="/images/products/nest-thermostat.png"
+//     name="Example Product"
+//     image="accurate product image path" // optional; omit when no accurate product image is available
 //     priceHint="$249"
-//     pros={["Auto-learns schedule", "Works with Alexa/HomeKit"]}
-//     cons={["Premium price", "Requires C-wire"]}
-//     href="https://amazon.com/dp/B0131RG6VK"
+//     pros={["Clear use case", "Good value for the target reader"]}
+//     cons={["Check fit/specs before buying"]}
+//     href="https://www.amazon.com/s?k=example+product"
 //     region="us"
 //   />
 
@@ -47,6 +47,23 @@ const labels = {
 const gridClass = image
   ? 'grid grid-cols-1 md:grid-cols-[180px_1fr] gap-5 md:gap-6'
   : 'grid grid-cols-1 gap-5 md:gap-6';
+
+function productSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 56) || 'product';
+}
+
+const productSubtag = productSlug(name);
+const note = lang === 'ko'
+  ? '가격·재고·평점은 변동될 수 있으니 구매 전 상세 페이지에서 다시 확인하세요.'
+  : lang === 'ja'
+    ? '価格・在庫・評価は変動するため、購入前に詳細ページで再確認してください。'
+    : 'Price, availability, and ratings can change; verify details on the retailer page before buying.';
+
 ---
 
 <div class="product-box my-8 rounded-xl border border-border bg-card/40 p-5 md:p-6 not-prose">
@@ -82,9 +99,10 @@ const gridClass = image
         )}
       </div>
       <div class="mt-auto pt-2">
-        <Aff href={href} region={region} class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-base shadow-md hover:shadow-lg transition-all bg-amber-400 text-stone-900 hover:bg-amber-500">
+        <Aff href={href} region={region} subtag={productSubtag} class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-base shadow-md hover:shadow-lg transition-all bg-amber-400 text-stone-900 hover:bg-amber-500">
           {ctaText || defaultCta} →
         </Aff>
+        <p class="mt-2 text-xs leading-relaxed text-muted-foreground">{note}</p>
       </div>
     </div>
   </div>

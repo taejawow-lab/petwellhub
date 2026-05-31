@@ -6,7 +6,7 @@ const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://example.com';
 const domain = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
 const editorEmail = `editor@${domain}`;
 const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
-const lastUpdated = '2026-05-08';
+const lastUpdated = '2026-05-31';
 ---
 
 <BaseLayout
@@ -58,7 +58,7 @@ const lastUpdated = '2026-05-08';
             <ul class="list-disc pl-6 space-y-1 mt-3">
               <li><strong>Google Analytics 4</strong> — 익명 트래픽 분석 (<a href="https://policies.google.com/privacy" class="underline">정책</a>)</li>
               <li><strong>Cloudflare</strong> — CDN·보안 (<a href="https://www.cloudflare.com/privacypolicy/" class="underline">정책</a>)</li>
-              <li><strong>Google AdSense</strong> — 광고 (활성 시, <a href="https://policies.google.com/technologies/ads" class="underline">정책</a>)</li>
+              <li><strong>Google AdSense</strong> — 광고 (승인 및 광고 코드 활성화 후, <a href="https://policies.google.com/technologies/ads" class="underline">정책</a>). 이용자는 <a href="https://myadcenter.google.com/" class="underline">내 광고 센터</a>에서 Google 광고 개인화를 관리할 수 있습니다.</li>
               <li><strong>제휴사 (쿠팡 파트너스, Amazon Associates 등)</strong> — 추천 링크 클릭 추적</li>
             </ul>
           </section>
@@ -123,7 +123,7 @@ const lastUpdated = '2026-05-08';
             <ul class="list-disc pl-6 space-y-1 mt-3">
               <li><strong>Google Analytics 4</strong> — 匿名トラフィック分析</li>
               <li><strong>Cloudflare</strong> — CDN・セキュリティ</li>
-              <li><strong>Google AdSense</strong> — 広告（有効時）</li>
+              <li><strong>Google AdSense</strong> — 広告（承認および広告コード有効化後）。利用者は <a href="https://myadcenter.google.com/" class="underline">My Ad Center</a> でGoogle広告のパーソナライズを管理できます。</li>
               <li><strong>アフィリエイト</strong> — Amazonアソシエイトなど</li>
             </ul>
           </section>
@@ -179,7 +179,7 @@ const lastUpdated = '2026-05-08';
             <ul class="list-disc pl-6 space-y-1 mt-3">
               <li><strong>Google Analytics 4</strong> — Anonymous traffic analytics (<a href="https://policies.google.com/privacy" class="underline">policy</a>)</li>
               <li><strong>Cloudflare</strong> — CDN and security (<a href="https://www.cloudflare.com/privacypolicy/" class="underline">policy</a>)</li>
-              <li><strong>Google AdSense</strong> — Advertising (when enabled, <a href="https://policies.google.com/technologies/ads" class="underline">policy</a>)</li>
+              <li><strong>Google AdSense</strong> — Advertising (after approval and ad-code activation, <a href="https://policies.google.com/technologies/ads" class="underline">policy</a>). Visitors can manage Google ad personalization in <a href="https://myadcenter.google.com/" class="underline">My Ad Center</a>.</li>
               <li><strong>Affiliate networks</strong> — Amazon Associates, Skimlinks, etc. for tracking referral clicks</li>
             </ul>
           </section>

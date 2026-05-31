@@ -19,6 +19,8 @@ export interface Props {
 
 const { href, region = 'us', subtag, rel = 'sponsored noopener nofollow', class: cls = '', target = '_blank' } = Astro.props;
 
+const defaultTag = import.meta.env.PUBLIC_AMAZON_TAG as string | undefined;
+
 const tagEnvMap: Record<string, string> = {
   us: 'PUBLIC_AMAZON_TAG_US',
   uk: 'PUBLIC_AMAZON_TAG_UK',
@@ -59,11 +61,11 @@ const composedSubtag = subtag ? `${base.combined}-${subtag}` : base.combined;
 const finalSubtag = sanitizeSubtag(composedSubtag);
 
 function buildAffUrl(url: string, reg: string, asc: string): string {
-  if (!url.includes('amazon.')) return url;
+  if (!url.includes('amazon.') && !url.includes('amzn.to')) return url;
   try {
     const u = new URL(url);
     const tagEnv = tagEnvMap[reg];
-    const tag = tagEnv ? (import.meta.env[tagEnv] as string | undefined) : undefined;
+    const tag = (tagEnv ? (import.meta.env[tagEnv] as string | undefined) : undefined) || defaultTag;
     if (tag) u.searchParams.set('tag', tag);
     if (asc) u.searchParams.set('ascsubtag', asc);
     return u.toString();
