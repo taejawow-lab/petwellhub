@@ -1,0 +1,184 @@
+{
+  "date": "2026-06-02",
+  "batch": "C",
+  "site": "petwellhub",
+  "host": "gti13-direct",
+  "endpoint": "http://192.168.50.29:8188",
+  "gate": {
+    "available": true,
+    "reason": "sentinel_unreachable_but_direct_comfyui_ok",
+    "sentinel_url": "http://192.168.50.30:9199/status",
+    "comfy_url": "http://192.168.50.29:8188",
+    "services": {
+      "comfyui_8188": true,
+      "sentinel_9199": false
+    },
+    "manual_pause": false,
+    "direct_fallback": true,
+    "comfyui_version": "0.20.1",
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17098519522,
+        "torch_vram_total": 6979321856,
+        "torch_vram_free": 31896546
+      }
+    ],
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    }
+  },
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.6,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, fake app interface, QR code, barcode, distorted hands, bad anatomy, extra fingers, unsafe animal handling, financial screen, medical procedure, fake warning label, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image"
+  },
+  "site_manifest": {
+    "slug": "pet-first-aid-temperature-transport-plan-2026",
+    "title": "Pet First-Aid, Temperature, and Transport Plan for Dogs and Cats",
+    "article": "src/content/posts/pet-first-aid-temperature-transport-plan-2026.mdx",
+    "source_validation": [
+      {
+        "url": "https://www.avma.org/resources-tools/pet-owners/emergencycare/pet-first-aid",
+        "ok": false,
+        "error": "<HTTPError 404: 'Not Found'>"
+      },
+      {
+        "url": "https://www.aspca.org/pet-care/general-pet-care/general-pet-care/first-aid-tips-pet-owners",
+        "ok": false,
+        "error": "<HTTPError 404: 'Not Found'>"
+      },
+      {
+        "url": "https://www.cdc.gov/healthy-pets/emergency-preparedness/index.html",
+        "ok": true,
+        "status": 200,
+        "final": "https://www.cdc.gov/healthy-pets/emergency-preparedness/index.html"
+      },
+      {
+        "url": "https://www.avma.org/resources/pet-owners/petcare/warm-weather-pet-safety",
+        "ok": true,
+        "status": 200,
+        "final": "https://www.avma.org/resources-tools/pet-owners/petcare/warm-weather-pet-safety"
+      },
+      {
+        "url": "https://www.avma.org/resources-tools/pet-owners/petcare/cold-weather-animal-safety",
+        "ok": true,
+        "status": 200,
+        "final": "https://www.avma.org/resources-tools/pet-owners/petcare/cold-weather-animal-safety"
+      },
+      {
+        "url": "https://www.aspca.org/pet-care/animal-poison-control",
+        "ok": true,
+        "status": 200,
+        "final": "https://www.aspca.org/pet-care/aspca-poison-control"
+      },
+      {
+        "url": "https://www.avma.org/resources-tools/pet-owners/petcare/traveling-your-pet",
+        "ok": false,
+        "error": "<HTTPError 404: 'Not Found'>"
+      },
+      {
+        "url": "https://www.aspca.org/pet-care/general-pet-care/disaster-preparedness",
+        "ok": true,
+        "status": 200,
+        "final": "https://www.aspca.org/pet-care/general-pet-care/disaster-preparedness"
+      }
+    ],
+    "assets": [
+      {
+        "file": "public/images/illustrations/pwh-pet-first-aid-transport-2026-hero.png",
+        "filename": "pwh-pet-first-aid-transport-2026-hero.png",
+        "suffix": "hero",
+        "seed": 202606020301,
+        "prompt": "realistic calm dog and cat emergency preparation scene with carrier, towel, water bowl, plain first aid pouch, no labels no text",
+        "prompt_id": "c7aca08c-b272-4b96-a783-7049d100ab6b",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_petwellhub_hero_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1730276
+      },
+      {
+        "file": "public/images/illustrations/pwh-pet-first-aid-transport-2026-02.png",
+        "filename": "pwh-pet-first-aid-transport-2026-02.png",
+        "suffix": "02",
+        "seed": 202606020303,
+        "prompt": "realistic owner checking a calm dog near shade with water bowl and towel, safe summer scene no text",
+        "prompt_id": "caac19c9-f5d5-4693-ad4f-6060cd1bc1b6",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_petwellhub_02_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1824114
+      },
+      {
+        "file": "public/images/illustrations/pwh-pet-first-aid-transport-2026-03.png",
+        "filename": "pwh-pet-first-aid-transport-2026-03.png",
+        "suffix": "03",
+        "seed": 202606020304,
+        "prompt": "realistic indoor warm pet recovery corner for cat with carrier, blanket, water bowl, no labels no words",
+        "prompt_id": "0b7ab485-7969-41f3-8936-f4b32935568c",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_petwellhub_03_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1669227
+      },
+      {
+        "file": "public/images/illustrations/pwh-pet-first-aid-transport-2026-04.png",
+        "filename": "pwh-pet-first-aid-transport-2026-04.png",
+        "suffix": "04",
+        "seed": 202606020305,
+        "prompt": "realistic safe car back seat with secured pet carrier, towel, water bottle without label, no text",
+        "prompt_id": "f9a66b27-1fc2-4463-b623-3d409582189d",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_petwellhub_04_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1800449
+      },
+      {
+        "file": "public/images/illustrations/pwh-pet-first-aid-transport-2026-05.png",
+        "filename": "pwh-pet-first-aid-transport-2026-05.png",
+        "suffix": "05",
+        "seed": 202606020306,
+        "prompt": "realistic veterinarian phone-call preparation desk with pet carrier, blank note card, calm pet, no readable writing",
+        "prompt_id": "888a81a9-09c0-4646-8c79-a88b19b20463",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_petwellhub_05_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1612552
+      }
+    ],
+    "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260602-petwellhub-contact-sheet.jpg",
+    "visual_qa": "Final contact sheet regenerated after QA replacements; pending final vision inspection.",
+    "contact_sheet_final": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260602-petwellhub-contact-sheet-final.jpg",
+    "published_asset_count": 5
+  },
+  "qa_note": "Final MDX excludes QA-rejected assets; only assets listed here are referenced for publication."
+}
