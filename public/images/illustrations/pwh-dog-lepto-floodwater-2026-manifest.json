@@ -1,0 +1,409 @@
+{
+  "generated_at": "2026-06-03T04:15:01Z",
+  "site": "petwellhub",
+  "slug": "dog-leptospirosis-floodwater-wildlife-risk-plan-2026",
+  "host": "gti13-direct",
+  "endpoint": "http://192.168.50.29:8188",
+  "gate": {
+    "available": true,
+    "reason": "sentinel_unreachable_but_direct_comfyui_ok",
+    "sentinel_url": "http://192.168.50.30:9199/status",
+    "comfy_url": "http://192.168.50.29:8188",
+    "services": {
+      "comfyui_8188": true,
+      "sentinel_9199": false
+    },
+    "manual_pause": false,
+    "direct_fallback": true,
+    "comfyui_version": "0.20.1",
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17098519522,
+        "torch_vram_total": 6979321856,
+        "torch_vram_free": 31896546
+      }
+    ],
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    }
+  },
+  "system_stats": {
+    "system": {
+      "os": "win32",
+      "ram_total": 68466884608,
+      "ram_free": 49553887232,
+      "comfyui_version": "0.20.1",
+      "required_frontend_version": "1.43.17",
+      "installed_templates_version": "0.9.72",
+      "required_templates_version": "0.9.72",
+      "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "pytorch_version": "2.6.0+cu124",
+      "embedded_python": false,
+      "argv": [
+        "main.py",
+        "--listen",
+        "0.0.0.0",
+        "--port",
+        "8188",
+        "--enable-cors-header",
+        "*"
+      ]
+    },
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17096196957,
+        "torch_vram_total": 7449083904,
+        "torch_vram_free": 499336029
+      }
+    ]
+  },
+  "queue_start": {
+    "queue_running": [
+      [
+        653,
+        "7c319897-ee11-4b28-a9eb-bfce62d5f203",
+        {
+          "1": {
+            "class_type": "CheckpointLoaderSimple",
+            "inputs": {
+              "ckpt_name": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+            }
+          },
+          "2": {
+            "class_type": "CLIPTextEncode",
+            "inputs": {
+              "clip": [
+                "1",
+                1
+              ],
+              "text": "realistic removal and cleanup concept for risky browser add-ons, plain blank cards being sorted into keep and remove piles without labels, closed notebook, laptop lid half closed, padlock, no words or logos, high quality realistic editorial photography, natural light, detailed but clean composition, 16:9, security education image, safe abstract cybersecurity, blank screens only, no text anywhere, no logos, no people"
+            }
+          },
+          "3": {
+            "class_type": "CLIPTextEncode",
+            "inputs": {
+              "clip": [
+                "1",
+                1
+              ],
+              "text": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, app screen, website, URL, address bar, QR code, barcode, credentials, forms, documents with writing, keyboard brand, fake interface, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image, distorted hands, bad anatomy, faces"
+            }
+          },
+          "4": {
+            "class_type": "EmptyLatentImage",
+            "inputs": {
+              "width": 1536,
+              "height": 864,
+              "batch_size": 1
+            }
+          },
+          "5": {
+            "class_type": "KSampler",
+            "inputs": {
+              "model": [
+                "1",
+                0
+              ],
+              "positive": [
+                "2",
+                0
+              ],
+              "negative": [
+                "3",
+                0
+              ],
+              "latent_image": [
+                "4",
+                0
+              ],
+              "seed": 202606031302,
+              "steps": 26,
+              "cfg": 5.2,
+              "sampler_name": "dpmpp_2m",
+              "scheduler": "karras",
+              "denoise": 1.0
+            }
+          },
+          "6": {
+            "class_type": "VAEDecode",
+            "inputs": {
+              "samples": [
+                "5",
+                0
+              ],
+              "vae": [
+                "1",
+                2
+              ]
+            }
+          },
+          "7": {
+            "class_type": "SaveImage",
+            "inputs": {
+              "images": [
+                "6",
+                0
+              ],
+              "filename_prefix": "hermes_securebyteguide_20260603_02"
+            }
+          }
+        },
+        {
+          "client_id": "hermes-securebyteguide-20260603",
+          "create_time": 1780460044782
+        },
+        [
+          "7"
+        ]
+      ]
+    ],
+    "queue_pending": [
+      [
+        654,
+        "995ee7ae-65f0-42f1-a52c-f27e4babd0d3",
+        {
+          "1": {
+            "class_type": "CheckpointLoaderSimple",
+            "inputs": {
+              "ckpt_name": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+            }
+          },
+          "2": {
+            "class_type": "CLIPTextEncode",
+            "inputs": {
+              "clip": [
+                "1",
+                1
+              ],
+              "text": "post smoke recovery home office ventilation scene after clean outdoor air returns, open window with fresh daylight, fan near window, purifier, organized desk, calm reset, ultra realistic editorial photography, premium remote work magazine style, natural light, clean modern home office, practical objects, no readable text, no logos, 16:9 composition, high detail, sharp focus, calm and safe scene"
+            }
+          },
+          "3": {
+            "class_type": "CLIPTextEncode",
+            "inputs": {
+              "clip": [
+                "1",
+                1
+              ],
+              "text": "text, letters, words, watermark, logo, brand logo, UI screenshot, people with distorted hands, bad anatomy, extra fingers, extra limbs, face closeup, medical scene, emergency gore, smoke inside room, fire, low quality, blurry, jpeg artifacts, oversaturated, cartoon, illustration"
+            }
+          },
+          "4": {
+            "class_type": "EmptyLatentImage",
+            "inputs": {
+              "width": 1536,
+              "height": 864,
+              "batch_size": 1
+            }
+          },
+          "5": {
+            "class_type": "KSampler",
+            "inputs": {
+              "model": [
+                "1",
+                0
+              ],
+              "positive": [
+                "2",
+                0
+              ],
+              "negative": [
+                "3",
+                0
+              ],
+              "latent_image": [
+                "4",
+                0
+              ],
+              "seed": 202606030506,
+              "steps": 22,
+              "cfg": 5.5,
+              "sampler_name": "dpmpp_2m",
+              "scheduler": "karras",
+              "denoise": 1.0
+            }
+          },
+          "6": {
+            "class_type": "VAEDecode",
+            "inputs": {
+              "samples": [
+                "5",
+                0
+              ],
+              "vae": [
+                "1",
+                2
+              ]
+            }
+          },
+          "7": {
+            "class_type": "SaveImage",
+            "inputs": {
+              "images": [
+                "6",
+                0
+              ],
+              "filename_prefix": "hermes_rwg_wildfire_air"
+            }
+          }
+        },
+        {
+          "client_id": "hermes-rwg-wildfire-air-2026",
+          "create_time": 1780460048118
+        },
+        [
+          "7"
+        ]
+      ]
+    ]
+  },
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 22,
+    "cfg": 5.5,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, sign, screen text, user interface, distorted hands, deformed anatomy, medical procedure, injection closeup, sick animal distress, unsafe handling, graphic urine, blood, feces, blurry, low resolution, generic stock art, placeholder, cartoon"
+  },
+  "post": "src/content/posts/dog-leptospirosis-floodwater-wildlife-risk-plan-2026.mdx",
+  "assets": [
+    {
+      "file": "public/images/illustrations/pwh-dog-lepto-floodwater-2026-hero.png",
+      "filename": "pwh-dog-lepto-floodwater-2026-hero.png",
+      "seed": 202606030401,
+      "prompt": "realistic editorial photo of healthy medium dog on leash avoiding a shallow muddy puddle after rain, owner guiding dog onto dry path, suburban park, no text, no logos, calm preventive safety scene",
+      "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, sign, screen text, user interface, distorted hands, deformed anatomy, medical procedure, injection closeup, sick animal distress, unsafe handling, graphic urine, blood, feces, blurry, low resolution, generic stock art, placeholder, cartoon",
+      "prompt_id": "6d1d147c-855c-4fe5-af99-cf1318ac7b15",
+      "raw_output": {
+        "filename": "hermes_pwh_20260603_hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 22,
+      "cfg": 5.5,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1930021
+    },
+    {
+      "file": "public/images/illustrations/pwh-dog-lepto-floodwater-2026-01.png",
+      "filename": "pwh-dog-lepto-floodwater-2026-01.png",
+      "seed": 202606030402,
+      "prompt": "realistic photo of dog owner drying paws with clean towel at home entry after rainy walk, leash and boots nearby, warm natural light, no labels, no text",
+      "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, sign, screen text, user interface, distorted hands, deformed anatomy, medical procedure, injection closeup, sick animal distress, unsafe handling, graphic urine, blood, feces, blurry, low resolution, generic stock art, placeholder, cartoon",
+      "prompt_id": "b6354230-59f8-4120-aa06-a633e8e46b0c",
+      "raw_output": {
+        "filename": "hermes_pwh_20260603_01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 22,
+      "cfg": 5.5,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1716479
+    },
+    {
+      "file": "public/images/illustrations/pwh-dog-lepto-floodwater-2026-02.png",
+      "filename": "pwh-dog-lepto-floodwater-2026-02.png",
+      "seed": 202606030403,
+      "prompt": "realistic editorial photo of covered trash bins and secured yard gate with dog watching from porch, wildlife risk prevention after storm, no readable signs, no logos",
+      "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, sign, screen text, user interface, distorted hands, deformed anatomy, medical procedure, injection closeup, sick animal distress, unsafe handling, graphic urine, blood, feces, blurry, low resolution, generic stock art, placeholder, cartoon",
+      "prompt_id": "3c23e76a-17d6-4d64-930d-46d704cb4f56",
+      "raw_output": {
+        "filename": "hermes_pwh_20260603_02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 22,
+      "cfg": 5.5,
+      "width": 1536,
+      "height": 864,
+      "bytes": 2135416
+    },
+    {
+      "file": "public/images/illustrations/pwh-dog-lepto-floodwater-2026-03.png",
+      "filename": "pwh-dog-lepto-floodwater-2026-03.png",
+      "seed": 202606030404,
+      "prompt": "realistic veterinary exam room conversation, veterinarian and dog owner discussing a prevention plan while calm dog sits on floor, blank papers turned away, no text, no logos",
+      "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, sign, screen text, user interface, distorted hands, deformed anatomy, medical procedure, injection closeup, sick animal distress, unsafe handling, graphic urine, blood, feces, blurry, low resolution, generic stock art, placeholder, cartoon",
+      "prompt_id": "d1b4c3fa-6f28-4035-a6e6-7285258aed2b",
+      "raw_output": {
+        "filename": "hermes_pwh_20260603_03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 22,
+      "cfg": 5.5,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1549992
+    },
+    {
+      "file": "public/images/illustrations/pwh-dog-lepto-floodwater-2026-04.png",
+      "filename": "pwh-dog-lepto-floodwater-2026-04.png",
+      "seed": 202606030405,
+      "prompt": "realistic photo of dog walking on elevated dry sidewalk beside storm drain area after heavy rain, owner keeps short leash, no signs or readable text, safe distance from standing water",
+      "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, sign, screen text, user interface, distorted hands, deformed anatomy, medical procedure, injection closeup, sick animal distress, unsafe handling, graphic urine, blood, feces, blurry, low resolution, generic stock art, placeholder, cartoon",
+      "prompt_id": "1df5d145-604d-4f01-aeae-823b248c9397",
+      "raw_output": {
+        "filename": "hermes_pwh_20260603_04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 22,
+      "cfg": 5.5,
+      "width": 1536,
+      "height": 864,
+      "bytes": 2219694
+    },
+    {
+      "file": "public/images/illustrations/pwh-dog-lepto-floodwater-2026-05.png",
+      "filename": "pwh-dog-lepto-floodwater-2026-05.png",
+      "seed": 202606030406,
+      "prompt": "realistic home preparedness station for dog after flood season, clean towels, fresh water bowl, leash, carrier, sealed pet records folder with blank cover, no text, no labels",
+      "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, sign, screen text, user interface, distorted hands, deformed anatomy, medical procedure, injection closeup, sick animal distress, unsafe handling, graphic urine, blood, feces, blurry, low resolution, generic stock art, placeholder, cartoon",
+      "prompt_id": "2088a693-bbf0-40b3-8881-a034f154c3eb",
+      "raw_output": {
+        "filename": "hermes_pwh_20260603_05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 22,
+      "cfg": 5.5,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1743335
+    }
+  ],
+  "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/petwellhub-20260603-lepto-contact-sheet.jpg"
+}
