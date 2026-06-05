@@ -1,0 +1,120 @@
+{
+  "site": "petwellhub",
+  "slug": "pet-medication-power-outage-emergency-plan-2026",
+  "generated_at": null,
+  "updated_at": "2026-06-05T04:18:41Z",
+  "endpoint": "http://192.168.50.29:8188",
+  "host": "gti13",
+  "dimensions": null,
+  "workflow": "SDXL RealVisXL minimal ComfyUI txt2img workflow",
+  "assets": [
+    {
+      "site": "petwellhub",
+      "slug": "pet-medication-power-outage-emergency-plan-2026",
+      "filename": "pwh-pet-med-outage-20260605-01.png",
+      "file": "public/images/illustrations/pwh-pet-med-outage-20260605-01.png",
+      "alt": "Pet owner checking a refill and care plan before storm season",
+      "prompt": "realistic kitchen table with pet medication organizer with blank compartments, phone with blank screen, notebook closed, dog collar, no readable text, no logos",
+      "seed": 202606050302,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "0369d6f7-99d4-4431-ba33-8f509fb42213",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00002_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1679983
+    },
+    {
+      "site": "petwellhub",
+      "slug": "pet-medication-power-outage-emergency-plan-2026",
+      "filename": "pwh-pet-med-outage-20260605-02.png",
+      "file": "public/images/illustrations/pwh-pet-med-outage-20260605-02.png",
+      "alt": "Insulated cooler and ice packs staged for veterinary medication transport",
+      "prompt": "realistic tabletop scene with two plain unlabeled white insulated coolers, blue ice packs, closed pet carrier in soft background, no bottles, no labels, no brands, no readable text, no logos",
+      "seed": 202606050401,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "replacement": true,
+      "prompt_id": "a9e55597-6957-416d-affb-9d89c357a3a9",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00021_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1181462
+    },
+    {
+      "site": "petwellhub",
+      "slug": "pet-medication-power-outage-emergency-plan-2026",
+      "filename": "pwh-pet-med-outage-20260605-03.png",
+      "file": "public/images/illustrations/pwh-pet-med-outage-20260605-03.png",
+      "alt": "Pet carrier and evacuation shelf organized for quick departure",
+      "prompt": "realistic mudroom shelf with pet carrier, harnesses, sealed food bin, water jug, towels, blank tags, no words, no logos",
+      "seed": 202606050304,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "ee527e25-ffe2-41ac-98b6-ae53aa2d56ba",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00004_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1706970
+    },
+    {
+      "site": "petwellhub",
+      "slug": "pet-medication-power-outage-emergency-plan-2026",
+      "filename": "pwh-pet-med-outage-20260605-04.png",
+      "file": "public/images/illustrations/pwh-pet-med-outage-20260605-04.png",
+      "alt": "Quiet pet recovery corner after an outage or evacuation",
+      "prompt": "realistic living room corner with pet bed, water bowl, battery lantern without labels, calm cat, no readable text, no logos",
+      "seed": 202606050305,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "08b1d739-a8c6-4ff3-84ce-88cd5c341409",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00005_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1757141
+    },
+    {
+      "site": "petwellhub",
+      "slug": "pet-medication-power-outage-emergency-plan-2026",
+      "filename": "pwh-pet-med-outage-20260605-hero.png",
+      "file": "public/images/illustrations/pwh-pet-med-outage-20260605-hero.png",
+      "alt": "Pet medication and storm go-bag prepared without readable labels",
+      "prompt": "premium realistic editorial photo of a calm dog and cat near a sealed pet emergency go bag, small cooler, leash, water bowl, blank medication containers turned away, warm natural light, no readable text, no logos",
+      "seed": 202606050301,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "76bc7dca-820f-4262-af5f-c43cd1e52bf9",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1803108
+    }
+  ],
+  "visual_qa": "Final contact sheet regenerated after replacing rejected logo/screen/wire/finance clutter images and an extra security screen image; all 20 published PNGs retained at 1536x864 with no readable text-heavy content.",
+  "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260605-gti13-contact-sheet-final.jpg"
+}
