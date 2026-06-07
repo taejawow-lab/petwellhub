@@ -1,0 +1,138 @@
+{
+  "date": "2026-06-07",
+  "batch": "C",
+  "host": "gti13-direct",
+  "endpoint": "http://192.168.50.29:8188",
+  "gate": {
+    "available": true,
+    "reason": "sentinel_unreachable_but_direct_comfyui_ok",
+    "sentinel_url": "http://192.168.50.30:9199/status",
+    "comfy_url": "http://192.168.50.29:8188",
+    "services": {
+      "comfyui_8188": true,
+      "sentinel_9199": false
+    },
+    "manual_pause": false,
+    "direct_fallback": true,
+    "comfyui_version": "0.20.1",
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17098519522,
+        "torch_vram_total": 6979321856,
+        "torch_vram_free": 31896546
+      }
+    ],
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    }
+  },
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.6,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "final_contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260607-final2-contact-sheet.jpg",
+  "visual_qa": "Initial contact sheet rejected 6 images for UI/text/topic mismatch; those files were regenerated and final contact sheet written.",
+  "site": "petwellhub",
+  "assets": [
+    {
+      "site": "petwellhub",
+      "slug": "cat-litter-box-problem-vet-triage-plan-2026",
+      "file": "public/images/illustrations/pwh-cat-litter-triage-20260607-hero.png",
+      "filename": "pwh-cat-litter-triage-20260607-hero.png",
+      "alt": "Calm cat beside clean litter box",
+      "prompt": "realistic calm cat near clean uncovered litter box in bright bathroom no labels no text",
+      "seed": 202606070701,
+      "prompt_id": "5ce32ceb-858b-4e7b-8c1b-ed822296a615",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1558379,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "site": "petwellhub",
+      "slug": "cat-litter-box-problem-vet-triage-plan-2026",
+      "file": "public/images/illustrations/pwh-cat-litter-triage-20260607-01.png",
+      "filename": "pwh-cat-litter-triage-20260607-01.png",
+      "alt": "Owner observing litter area safely",
+      "prompt": "realistic cat owner observing litter box area with notebook closed blank no writing",
+      "seed": 202606070702,
+      "prompt_id": "5a757f21-30fc-4a7f-a105-9ab98b08b3e3",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1801208,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_00002_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "site": "petwellhub",
+      "slug": "cat-litter-box-problem-vet-triage-plan-2026",
+      "file": "public/images/illustrations/pwh-cat-litter-triage-20260607-02.png",
+      "filename": "pwh-cat-litter-triage-20260607-02.png",
+      "alt": "Multi cat home with separate boxes",
+      "prompt": "realistic tidy multi cat home with two plain litter boxes in separate quiet corners no brands no text",
+      "seed": 202606070703,
+      "prompt_id": "048044b8-7317-488c-8051-5c328ae0b309",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1643139,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_00003_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "site": "petwellhub",
+      "slug": "cat-litter-box-problem-vet-triage-plan-2026",
+      "file": "public/images/illustrations/pwh-cat-litter-triage-20260607-03.png",
+      "filename": "pwh-cat-litter-triage-20260607-03.png",
+      "alt": "Veterinary call preparation for cat symptoms",
+      "prompt": "realistic veterinarian phone call preparation with cat carrier and blank paper no readable text",
+      "seed": 202606070704,
+      "prompt_id": "a791790c-a22b-4743-aefa-aa564f3f6308",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1782844,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_00004_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "site": "petwellhub",
+      "slug": "cat-litter-box-problem-vet-triage-plan-2026",
+      "file": "public/images/illustrations/pwh-cat-litter-triage-20260607-04.png",
+      "filename": "pwh-cat-litter-triage-20260607-04.png",
+      "alt": "Cat hydration comfort corner",
+      "prompt": "realistic cat hydration and comfort corner with water bowl soft bed litter box nearby no text no logos",
+      "seed": 202606070705,
+      "prompt_id": "628c1373-1c8b-4e8c-bb73-b29103e9bcb9",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1974715,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_00005_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ]
+}
