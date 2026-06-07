@@ -1,195 +1,72 @@
-/* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Quicksand:wght@400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,560;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap");
 @import './tokens.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    line-height: 1.6;
     font-feature-settings: 'rlig' 1, 'calt' 1;
     -webkit-font-smoothing: antialiased;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    @apply tracking-tight;
-  }
-
-  h1 { @apply text-4xl md:text-5xl font-bold; }
-  h2 { @apply text-3xl md:text-4xl font-semibold mt-12 mb-4; }
-  h3 { @apply text-2xl md:text-3xl font-semibold mt-8 mb-3; }
-  h4 { @apply text-xl md:text-2xl font-semibold mt-6 mb-2; }
-
-  /* Smooth scroll */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Focus visibility for accessibility */
-  *:focus-visible {
-    @apply outline-2 outline-offset-2 outline-ring;
-  }
-
-  /* Selection color follows accent */
-  ::selection {
-    background-color: var(--color-accent);
-    color: var(--color-accent-foreground);
-  }
-}
-
-@layer components {
-  /* 마이크로 인터랙션 */
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md
-           bg-primary text-primary-foreground font-medium
-           transition-all duration-200
-           hover:opacity-90 hover:scale-105
-           active:scale-95
-           focus-visible:outline-2 focus-visible:outline-ring;
-  }
-
-  .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md
-           border border-border bg-card text-card-foreground font-medium
-           transition-all duration-200
-           hover:bg-muted hover:scale-105
-           active:scale-95;
-  }
-
-  .card {
-    @apply bg-card text-card-foreground border border-border rounded-lg p-6
-           transition-all duration-200
-           hover:shadow-lg hover:-translate-y-1;
-  }
-
-  /* Article prose enhancements */
-  .prose-article {
-    @apply prose prose-lg max-w-none;
-  }
-
-  .prose-article a {
-    @apply text-primary underline decoration-1 underline-offset-2
-           hover:opacity-80 transition-opacity;
-  }
-
-  .prose-article blockquote {
-    @apply border-l-4 border-accent pl-6 italic text-muted-foreground;
-  }
-
-  .prose-article code:not(pre code) {
-    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
-  }
-
-  .prose-article pre {
-    @apply bg-muted rounded-lg p-4 overflow-x-auto;
-  }
-
-  /* Comparison table styling — v5.3 시각자료 #10 */
-  .comparison-table {
-    @apply w-full my-8 border-collapse rounded-lg overflow-hidden border border-border;
-  }
-
-  .comparison-table th {
-    @apply bg-primary text-primary-foreground px-4 py-3 text-left font-semibold;
-  }
-
-  .comparison-table td {
-    @apply px-4 py-3 border-t border-border;
-  }
-
-  .comparison-table tr:nth-child(even) {
-    @apply bg-muted/30;
-  }
-
-  /* Data chart container — v5.3 #11 */
-  .chart-container {
-    @apply my-8 p-6 bg-card border border-border rounded-lg;
-  }
-
-  /* Infographic container — v5.3 #9 */
-  .infographic {
-    @apply my-8 rounded-lg overflow-hidden shadow-lg;
-  }
-
-  /* Video embed — v5.3 #14 */
-  .video-embed {
-    @apply my-8 aspect-video rounded-lg overflow-hidden bg-muted;
-  }
-
-  /* Affiliate disclosure block */
-  .affiliate-disclosure {
-    @apply my-8 p-4 bg-muted/50 border-l-4 border-accent rounded-r-lg
-           text-sm text-muted-foreground;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .text-pretty {
-    text-wrap: pretty;
-  }
-
-  /* Glass morphism (선택적, 현대 디자인 트렌드) */
-  .glass {
-    @apply bg-background/80 backdrop-blur-md border border-border/50;
-  }
-}
-
-/* Portfolio UX modernization: accessible editorial rhythm, cards, and mobile ergonomics */
-@layer base {
-  body {
-    line-height: 1.65;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
-
-  a, button {
-    text-underline-offset: 0.18em;
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: .42;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
   }
+  [data-theme='dark'] body::before { mix-blend-mode: screen; opacity: .24; }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); @apply tracking-tight; color: var(--ink); }
+  h1 { @apply text-4xl md:text-5xl; font-weight: 500; }
+  h2 { @apply text-3xl md:text-4xl mt-12 mb-4; font-weight: 500; }
+  h3 { @apply text-2xl md:text-3xl mt-8 mb-3; font-weight: 500; }
+  h4 { @apply text-xl md:text-2xl mt-6 mb-2; font-weight: 500; }
+  a, button { text-underline-offset: .18em; }
+  *:focus-visible { @apply outline-2 outline-offset-2 outline-ring; }
+  ::selection { background-color: var(--clay); color: #fff; }
 }
 
 @layer components {
-  .editorial-card {
-    background-image:
-      linear-gradient(135deg, rgb(var(--color-primary) / 0.055), transparent 34%),
-      linear-gradient(180deg, rgb(var(--color-card) / 0.98), rgb(var(--color-card) / 0.9));
-  }
-
-  .prose-article {
-    @apply mx-auto max-w-[74ch] text-[1.05rem] leading-8 md:text-[1.1rem];
-  }
-
-  .prose-article :where(h2, h3, h4) {
-    @apply scroll-mt-28 text-balance;
-  }
-
-  .prose-article :where(p, ul, ol, blockquote, table, figure) {
-    @apply my-6;
-  }
-
-  .prose-article img {
-    @apply rounded-2xl border border-border/60 shadow-lg;
-  }
-
-  .affiliate-disclosure {
-    @apply mx-auto max-w-3xl rounded-2xl border border-accent/20 bg-accent/5 shadow-sm;
-  }
+  .wrap { max-width: 1240px; margin-inline: auto; padding-inline: 2rem; }
+  @media (max-width: 640px){ .wrap { padding-inline: 1.25rem; } }
+  .eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--clay); font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
+  .eyebrow .num { color: var(--ink-faint); }
+  .btn-primary { @apply inline-flex items-center justify-center gap-3 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200; background: var(--clay); color: #fff; box-shadow: var(--shadow-sm); }
+  .btn-primary:hover { background: var(--clay-deep); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+  .btn-secondary, .btn-ghost { @apply inline-flex items-center justify-center gap-3 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200; border: 1px solid var(--line-strong); background: var(--card-raised); color: var(--ink); }
+  .btn-secondary:hover, .btn-ghost:hover { border-color: var(--clay); color: var(--clay); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+  .editorial-card { background: linear-gradient(135deg, color-mix(in srgb, var(--clay) 9%, transparent), transparent 34%), var(--card-raised); border-color: var(--line); box-shadow: var(--shadow-sm); }
+  .editorial-card:hover { box-shadow: var(--shadow-lg); }
+  .prose-article { @apply prose prose-lg mx-auto max-w-[74ch] text-[1.05rem] leading-8 md:text-[1.1rem]; color: var(--ink-2); }
+  .prose-article a { color: var(--clay); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .prose-article :where(h2, h3, h4) { @apply scroll-mt-28 text-balance; color: var(--ink); }
+  .prose-article :where(p, ul, ol, blockquote, table, figure) { @apply my-6; }
+  .prose-article blockquote { border-left: 4px solid var(--clay); padding-left: 1.5rem; color: var(--ink-soft); font-style: italic; }
+  .prose-article code:not(pre code) { @apply rounded px-1.5 py-0.5 text-sm font-mono; background: var(--paper-2); }
+  .comparison-table { @apply w-full my-8 border-collapse overflow-hidden; border: 1px solid var(--line); border-radius: 14px; }
+  .comparison-table th { background: var(--forest); color: #fff; @apply px-4 py-3 text-left font-semibold; }
+  .comparison-table td { @apply px-4 py-3; border-top: 1px solid var(--line); }
+  .comparison-table tr:nth-child(even) { background: color-mix(in srgb, var(--paper-2) 60%, transparent); }
+  .chart-container, .infographic, .video-embed, .affiliate-disclosure { border: 1px solid var(--line); background: var(--card-raised); border-radius: 14px; box-shadow: var(--shadow-sm); }
+  .chart-container { @apply my-8 p-6; }
+  .infographic { @apply my-8 overflow-hidden; }
+  .video-embed { @apply my-8 aspect-video overflow-hidden; }
+  .affiliate-disclosure { @apply my-8 p-4 text-sm; border-left: 4px solid var(--clay); color: var(--ink-soft); }
 }
 
 @layer utilities {
-  .focus-ring-soft {
-    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
-  }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  .glass { @apply backdrop-blur-md; background: color-mix(in srgb, var(--card-raised) 78%, transparent); border: 1px solid var(--line); }
 }

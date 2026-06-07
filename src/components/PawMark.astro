@@ -1,0 +1,11 @@
+---
+export interface Props { class?: string; }
+const className = Astro.props.class || 'h-8 w-8';
+---
+<svg class={className} viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+  <ellipse cx="26" cy="43" rx="7.2" ry="9.4" transform="rotate(-20 26 43)" />
+  <ellipse cx="41.5" cy="31" rx="7.6" ry="10" transform="rotate(-7 41.5 31)" />
+  <ellipse cx="58.5" cy="31" rx="7.6" ry="10" transform="rotate(7 58.5 31)" />
+  <ellipse cx="74" cy="43" rx="7.2" ry="9.4" transform="rotate(20 74 43)" />
+  <path d="M50 84 C30 67 20 56 28.5 47.5 C35 41 45 44.5 50 53 C55 44.5 65 41 71.5 47.5 C80 56 70 67 50 84 Z" />
+</svg>

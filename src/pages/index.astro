@@ -11,7 +11,7 @@ const posts = (await getCollection('posts'))
 const featuredPosts = posts.slice(0, 3);
 const recentPosts = posts.slice(3, 12);
 
-const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'PetWellHub';
 const siteDescription = import.meta.env.PUBLIC_SITE_DESCRIPTION || '';
 const heroTitle = import.meta.env.PUBLIC_SITE_HERO_TITLE || siteName;
 const heroSubtitle = import.meta.env.PUBLIC_SITE_HERO_SUBTITLE || siteDescription;
@@ -21,6 +21,8 @@ const heroSubtitle = import.meta.env.PUBLIC_SITE_HERO_SUBTITLE || siteDescriptio
   <Hero
     title={heroTitle}
     subtitle={heroSubtitle}
+    illustration={featuredPosts[0]?.data.heroImage}
+    postCount={posts.length}
   />
 
   {featuredPosts.length > 0 && (

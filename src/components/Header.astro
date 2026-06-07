@@ -1,72 +1,47 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
+import PawMark from './PawMark.astro';
 
-const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
-const edition = import.meta.env.PUBLIC_SITE_EDITION || '';
-
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'PetWellHub';
 const navItems = [
+  { label: 'Dogs', href: '/category/dog-health/' },
+  { label: 'Cats', href: '/category/cat-health/' },
+  { label: 'Nutrition', href: '/category/pet-nutrition/' },
+  { label: 'When to Call the Vet', href: '/symptom-checker/' },
   { label: 'Posts', href: '/posts/' },
-  { label: 'Categories', href: '/categories/' },
-  { label: 'Search', href: '/search/' },
-  { label: 'About', href: '/about' },
-  { label: 'Editorial', href: '/editorial-process' },
+  { label: 'About', href: '/about/' },
 ];
 ---
-
-<!-- modern editorial header: token-driven, mobile discoverable, no client JS -->
-<header class="sticky top-0 z-50 backdrop-blur-xl bg-background/90 border-b border-border/70 shadow-[0_1px_0_rgba(15,23,42,0.03)]">
-  {edition && (
-    <div class="border-b border-border/50 bg-muted/25">
-      <div class="container mx-auto px-4 sm:px-6 md:px-10 min-h-8 flex items-center justify-between gap-3 text-[10px] uppercase tracking-[0.22em] text-muted-foreground font-mono">
-        <span class="truncate">{edition}</span>
-        <span class="hidden sm:inline">A data-grounded publication</span>
-      </div>
-    </div>
-  )}
-
-  <div class="container mx-auto px-4 sm:px-6 md:px-10 min-h-[68px] md:min-h-20 flex items-center justify-between gap-4">
-    <a href="/" class="group flex min-w-0 items-center gap-3 rounded-md py-2 focus-visible:outline-ring" aria-label={`${siteName} home`}>
-      <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm ring-1 ring-border/30" aria-hidden="true">
-        <span class="text-sm font-bold" style="font-family: var(--font-display);">{siteName.slice(0, 1).toUpperCase()}</span>
+<header class="sticky top-0 z-50 border-b bg-background/92 backdrop-blur-xl" style="border-color: var(--line);">
+  <div class="wrap flex min-h-[72px] items-center justify-between gap-4">
+    <a href="/" class="group flex min-w-0 items-center gap-3 rounded-full focus-visible:outline-ring" aria-label={`${siteName} home`}>
+      <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[var(--card-raised)] text-[var(--clay)] shadow-sm ring-1 ring-[var(--line)] transition-transform group-hover:-rotate-3 group-hover:scale-105">
+        <PawMark class="h-7 w-7" />
       </span>
-      <span
-        class="truncate text-2xl md:text-3xl font-bold tracking-[-0.025em] leading-none transition-colors group-hover:text-primary"
-        style="font-family: var(--font-display);"
-      >
-        {siteName}
+      <span class="truncate text-2xl tracking-[-0.02em]" style="font-family: var(--font-heading);">
+        Pet<b class="font-semibold">Well</b>Hub
       </span>
     </a>
 
-    <div class="flex items-center gap-3 md:gap-6">
-      <nav aria-label="Primary navigation" class="hidden md:block">
-        <ul class="flex items-center gap-1 text-xs lg:text-sm uppercase tracking-[0.12em]">
-          {navItems.map((item) => (
-            <li>
-              <a
-                href={item.href}
-                class="rounded-full px-3 py-2 text-foreground/72 hover:bg-muted hover:text-foreground focus-visible:outline-ring transition-colors"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <a href="/search/" class="hidden sm:inline-flex md:hidden min-h-10 items-center rounded-full border border-border bg-card px-4 text-xs font-semibold uppercase tracking-[0.12em] text-foreground/80 shadow-sm">
-        Search
+    <nav aria-label="Primary navigation" class="hidden lg:block">
+      <ul class="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-[0.12em]">
+        {navItems.map((item) => (
+          <li><a href={item.href} class="rounded-full px-3 py-2 text-[var(--ink-soft)] transition-colors hover:bg-[var(--paper-2)] hover:text-[var(--clay)] focus-visible:outline-ring">{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="/search/" class="grid h-10 w-10 place-items-center rounded-full border bg-[var(--card-raised)] text-[var(--ink-soft)] transition-colors hover:border-[var(--clay)] hover:text-[var(--clay)]" style="border-color: var(--line);" aria-label="Search">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       </a>
       <ThemeToggle />
     </div>
   </div>
-
-  <nav aria-label="Mobile primary navigation" class="md:hidden border-t border-border/55 bg-background/95">
-    <ul class="container mx-auto flex gap-2 overflow-x-auto px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] [-webkit-overflow-scrolling:touch]">
+  <nav aria-label="Mobile primary navigation" class="lg:hidden border-t bg-background/95" style="border-color: var(--line);">
+    <ul class="wrap flex gap-2 overflow-x-auto py-2 text-[11px] font-semibold uppercase tracking-[0.12em] [-webkit-overflow-scrolling:touch]">
       {navItems.map((item) => (
-        <li class="shrink-0">
-          <a href={item.href} class="inline-flex min-h-10 items-center rounded-full border border-border/70 bg-card px-4 text-foreground/75 shadow-sm transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-ring">
-            {item.label}
-          </a>
-        </li>
+        <li class="shrink-0"><a href={item.href} class="inline-flex min-h-10 items-center rounded-full border bg-[var(--card-raised)] px-4 text-[var(--ink-soft)] shadow-sm transition-colors hover:border-[var(--clay)] hover:text-[var(--clay)] focus-visible:outline-ring" style="border-color: var(--line);">{item.label}</a></li>
       ))}
     </ul>
   </nav>

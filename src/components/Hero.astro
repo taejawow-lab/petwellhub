@@ -1,122 +1,52 @@
 ---
-export interface Props {
-  title: string;
-  subtitle: string;
-  illustration?: string;
-  ctaText?: string;
-  ctaHref?: string;
-}
-
-const envIllustration = import.meta.env.PUBLIC_HAS_HERO_ILLUSTRATION === 'true'
-  ? '/images/illustrations/hero.png'
-  : undefined;
-
-const edition = import.meta.env.PUBLIC_SITE_EDITION || '';
-const tagline = import.meta.env.PUBLIC_SITE_TAGLINE || '';
-
-const {
-  title,
-  subtitle,
-  illustration = envIllustration,
-  ctaText = 'Read latest →',
-  ctaHref = '#latest',
-} = Astro.props;
-
-// 현재 날짜 포맷 (editorial dateline)
+import PawMark from './PawMark.astro';
+export interface Props { title: string; subtitle: string; illustration?: string; ctaText?: string; ctaHref?: string; postCount?: number; }
+const edition = import.meta.env.PUBLIC_SITE_EDITION || 'The Pet Wellness Dossier';
+const { title, subtitle, illustration, ctaText = 'Start reading', ctaHref = '/posts/', postCount = 0 } = Astro.props;
 const today = new Date();
 const dateline = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).toUpperCase();
 ---
-
-<section class="relative overflow-hidden bg-background">
-  <!-- 미세 격자 배경 (매거진 paper 느낌) -->
-  <div class="absolute inset-0 pointer-events-none opacity-[0.03]" aria-hidden="true"
-       style="background-image: linear-gradient(to right, rgb(var(--color-foreground)) 1px, transparent 1px), linear-gradient(to bottom, rgb(var(--color-foreground)) 1px, transparent 1px); background-size: 64px 64px;"></div>
-
-  <!-- accent 색상 거대 블록 (asymmetric) -->
-  <div class="absolute -top-24 -right-32 w-[520px] h-[520px] rounded-full pointer-events-none"
-       style="background: radial-gradient(circle, rgb(var(--color-accent) / 0.18) 0%, transparent 70%);"
-       aria-hidden="true"></div>
-  <div class="absolute -bottom-32 -left-24 w-[420px] h-[420px] rounded-full pointer-events-none"
-       style="background: radial-gradient(circle, rgb(var(--color-primary) / 0.20) 0%, transparent 70%);"
-       aria-hidden="true"></div>
-
-  <div class="container mx-auto px-6 md:px-10 pt-12 md:pt-16 pb-20 md:pb-32 relative">
-    <!-- editorial top bar — edition · dateline · 가는 가로선 -->
-    <div class="flex items-center gap-4 text-xs uppercase tracking-[0.18em] text-muted-foreground mb-12 md:mb-20">
-      {edition && (
-        <span class="font-mono">{edition}</span>
-      )}
-      <span class="flex-1 h-px bg-border"></span>
-      <span class="font-mono">{dateline}</span>
+<section class="relative overflow-hidden py-14 md:py-20">
+  <div class="absolute -right-36 -top-36 h-[520px] w-[520px] rounded-full opacity-30" style="background: radial-gradient(circle, var(--clay-wash), transparent 70%);" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="mb-10 flex items-center gap-4 text-[11px] uppercase tracking-[0.22em] text-[var(--ink-soft)]" style="font-family: var(--font-mono);">
+      <span>{edition}</span><span class="h-px flex-1 bg-[var(--line)]"></span><span>{dateline}</span>
     </div>
 
-    <!-- asymmetric 12-col grid: 텍스트 8col + 일러스트 5col with 1col 겹침 -->
-    <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 items-start">
-      <!-- 거대 헤딩 영역 (col 1-9, illustration과 의도적 겹침) -->
-      <div class="col-span-12 md:col-span-9 relative z-10">
-        <!-- ITEM № 표시 (매거진 디테일) -->
-        <p class="text-xs uppercase tracking-[0.2em] text-accent font-mono mb-4 md:mb-6">
-          № 01 · LEAD STORY
-        </p>
-
-        <!-- oversized display heading — 화면 폭의 절반 차지 -->
-        <h1
-          class="font-bold text-5xl md:text-7xl lg:text-[6.5rem] leading-[1.05] md:leading-[1.0] tracking-[-0.02em] mb-8 md:mb-10"
-          style="font-family: var(--font-display); word-break: keep-all; overflow-wrap: break-word;"
-        >
-          {title}
+    <div class="grid items-end gap-12 lg:grid-cols-[1.05fr_.95fr]">
+      <div>
+        <span class="eyebrow"><span class="num">№ 01</span> · Veterinarian-reviewed, source-backed care</span>
+        <h1 class="mt-5 max-w-4xl text-[clamp(46px,7vw,92px)] font-[420] leading-[.96] tracking-[-0.03em] text-balance" style="font-family: var(--font-heading);">
+          Pet care you can <em class="italic text-[var(--clay)]">actually</em> trust.
         </h1>
-
-        <!-- subtitle: 큰 sans-serif body, 분명한 leading -->
-        <p class="text-lg md:text-xl lg:text-2xl text-foreground/75 max-w-2xl leading-[1.4] mb-10 md:mb-12 font-light">
-          {subtitle}
-        </p>
-
-        <!-- CTA + 작은 사이드 메타 -->
-        <div class="flex flex-wrap items-center gap-6">
-          <a href={ctaHref} class="btn-primary group inline-flex items-center gap-3 px-7 py-3.5 text-sm uppercase tracking-[0.15em] font-semibold">
-            {ctaText}
-          </a>
-          {tagline && (
-            <span class="text-xs uppercase tracking-[0.18em] text-muted-foreground font-mono">
-              · {tagline}
-            </span>
-          )}
+        <p class="mt-7 max-w-[34ch] text-xl leading-relaxed text-[var(--ink-2)]">{subtitle}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="btn-primary" href={ctaHref}>{ctaText}<span aria-hidden="true">→</span></a>
+          <a class="btn-ghost" href="/symptom-checker/">Is this an emergency?</a>
         </div>
       </div>
 
-      <!-- 일러스트 (col 8-12, 텍스트와 1col 겹침으로 layered look) -->
-      <div class="col-span-12 md:col-span-5 md:-ml-12 lg:-ml-20 mt-10 md:-mt-8 relative">
+      <div class="relative lg:pl-6">
+        <div class="absolute inset-0 translate-x-5 translate-y-5 rounded-[20px] border border-[var(--clay)]/45" aria-hidden="true"></div>
         {illustration ? (
-          <div class="relative">
-            <!-- 일러스트 frame 효과 — 살짝 회전 + 그림자 -->
-            <div class="absolute inset-0 bg-accent/10 -rotate-1 rounded-sm" aria-hidden="true"></div>
-            <img
-              src={illustration}
-              alt=""
-              class="relative w-full h-auto rounded-sm shadow-[0_30px_80px_-30px_rgba(0,0,0,0.25)] rotate-[1deg] transition-transform hover:rotate-0 duration-700"
-              loading="eager"
-            />
-            <!-- 일러스트 caption (매거진 디테일) -->
-            <p class="absolute -bottom-7 right-0 text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-mono">
-              ↑ Cover illustration
-            </p>
-          </div>
+          <img src={illustration} alt="" loading="eager" decoding="async" class="relative aspect-[4/5] w-full rounded-[20px] object-cover shadow-[var(--shadow-lg)]" />
         ) : (
-          <!-- fallback: minimalist 추상 SVG -->
-          <svg class="w-full max-w-md h-auto rotate-[2deg]" viewBox="0 0 400 400" fill="none" aria-hidden="true">
-            <circle cx="200" cy="200" r="160" fill="rgb(var(--color-primary) / 0.12)"/>
-            <circle cx="160" cy="160" r="100" fill="rgb(var(--color-accent) / 0.18)"/>
-            <circle cx="240" cy="240" r="60" fill="rgb(var(--color-primary) / 0.25)"/>
-          </svg>
+          <div class="relative grid aspect-[4/5] place-items-center rounded-[20px] bg-[var(--paper-2)] shadow-[var(--shadow-lg)]"><PawMark class="h-28 w-28 text-[var(--clay)] opacity-80" /></div>
         )}
+        <span class="absolute bottom-4 left-4 rounded-full bg-[var(--card-raised)] px-4 py-2 text-[10px] uppercase tracking-[0.16em] text-[var(--ink)] shadow-sm" style="font-family: var(--font-mono);">Cover · Spring 2026</span>
+        <div class="absolute -right-4 -top-7 hidden h-28 w-28 animate-[spin_38s_linear_infinite] place-items-center rounded-full border bg-[var(--card-raised)] text-[var(--forest)] shadow-[var(--shadow-lg)] md:grid" style="border-color: var(--line);">
+          <PawMark class="h-12 w-12" />
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- 하단 thin label rail -->
-    <div class="mt-16 md:mt-24 pt-6 border-t border-border flex items-center justify-between text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
-      <span>Editorial · Curated · Cited</span>
-      <span class="hidden md:inline">Scroll to read ↓</span>
+  <div class="mt-14 border-y" style="border-color: var(--line);">
+    <div class="wrap grid grid-cols-2 md:grid-cols-4">
+      <div class="border-r py-7 md:py-8" style="border-color: var(--line);"><div class="text-4xl text-[var(--clay)]" style="font-family: var(--font-heading);">{postCount || '42'}</div><div class="mt-2 text-sm text-[var(--ink-soft)]">Preserved guides</div></div>
+      <div class="border-r px-6 py-7 md:py-8" style="border-color: var(--line);"><div class="text-4xl text-[var(--clay)]" style="font-family: var(--font-heading);">8+</div><div class="mt-2 text-sm text-[var(--ink-soft)]">Sources per new guide</div></div>
+      <div class="border-r py-7 md:px-6 md:py-8" style="border-color: var(--line);"><div class="text-4xl text-[var(--clay)]" style="font-family: var(--font-heading);">Vet</div><div class="mt-2 text-sm text-[var(--ink-soft)]">Safety-first framing</div></div>
+      <div class="px-6 py-7 md:py-8"><div class="text-4xl text-[var(--clay)]" style="font-family: var(--font-heading);">SEO</div><div class="mt-2 text-sm text-[var(--ink-soft)]">Routes and sitemap retained</div></div>
     </div>
   </div>
 </section>

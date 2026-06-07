@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PawMark from '../components/PawMark.astro';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'PetWellHub';
+---
+<BaseLayout title="When to Call the Vet" description="A plain-language triage guide for deciding when pet symptoms need emergency, same-day, or watchful follow-up care.">
+  <section class="wrap py-14 md:py-20">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="eyebrow justify-center">Emergency triage tool</span>
+      <h1 class="mt-5 text-[clamp(38px,6vw,64px)] font-[420] leading-[1.02] tracking-[-0.03em]">When to call the vet — <em class="italic text-[var(--clay)]">and when to breathe</em></h1>
+      <p class="mx-auto mt-5 max-w-[52ch] text-lg leading-relaxed text-[var(--ink-2)]">Use this as a quick, conservative safety guide. It is not a diagnosis. If your pet is collapsing, struggling to breathe, has blue/pale gums, severe bleeding, seizure, toxin exposure, or you are unsure, call an emergency clinic now.</p>
+    </div>
+
+    <div class="mx-auto mt-10 max-w-3xl rounded-[20px] border bg-[var(--card-raised)] p-6 shadow-[var(--shadow-md)] md:p-9" style="border-color: var(--line);">
+      <div class="flex items-start gap-4 rounded-2xl bg-[var(--paper-2)] p-4 text-sm leading-relaxed text-[var(--ink-2)]">
+        <PawMark class="mt-1 h-6 w-6 shrink-0 text-[var(--clay)]" />
+        <p><strong>Safety-first rule:</strong> breathing trouble, collapse, repeated unproductive vomiting/retching, severe pain, major trauma, suspected poisoning, heatstroke signs, or a cat not eating for 24 hours should be treated as urgent until a veterinarian says otherwise.</p>
+      </div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        <article class="rounded-2xl bg-[#B5392C] p-5 text-white">
+          <p class="text-[11px] uppercase tracking-[0.18em] opacity-80" style="font-family: var(--font-mono);">Emergency</p>
+          <h2 class="mt-2 text-2xl text-white">Go now</h2>
+          <p class="mt-3 text-sm text-white/85">Breathing difficulty, collapse, blue/pale gums, seizure, heatstroke signs, poisoning, major bleeding, blocked urination, or rapidly worsening symptoms.</p>
+        </article>
+        <article class="rounded-2xl bg-[#B5781F] p-5 text-white">
+          <p class="text-[11px] uppercase tracking-[0.18em] opacity-80" style="font-family: var(--font-mono);">Same day</p>
+          <h2 class="mt-2 text-2xl text-white">Call today</h2>
+          <p class="mt-3 text-sm text-white/85">Repeated vomiting/diarrhea, limping with pain, not eating, urinary accidents, eye issues, wounds, or behavior changes that are clear but stable.</p>
+        </article>
+        <article class="rounded-2xl bg-[var(--forest)] p-5 text-white">
+          <p class="text-[11px] uppercase tracking-[0.18em] opacity-80" style="font-family: var(--font-mono);">Monitor</p>
+          <h2 class="mt-2 text-2xl text-white">Watch closely</h2>
+          <p class="mt-3 text-sm text-white/85">Mild, improving, short-lived signs in an otherwise normal pet. Track appetite, water, energy, breathing, urination, stool, and temperature risk.</p>
+        </article>
+      </div>
+
+      <div class="mt-8 border-t pt-8" style="border-color: var(--line);">
+        <h2 class="mt-0 text-3xl">Before you call, prepare these details</h2>
+        <ul class="mt-4 grid gap-3 text-[var(--ink-2)] md:grid-cols-2">
+          <li class="rounded-xl bg-[var(--paper-2)] p-4">Species, age, weight, breed, and known conditions.</li>
+          <li class="rounded-xl bg-[var(--paper-2)] p-4">When symptoms started and whether they are getting worse.</li>
+          <li class="rounded-xl bg-[var(--paper-2)] p-4">Food, medication, toxin, plant, trash, or foreign-object exposure.</li>
+          <li class="rounded-xl bg-[var(--paper-2)] p-4">Photos/video of gait, breathing, vomit/stool, wound, or behavior if safe.</li>
+        </ul>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a class="btn-primary" href="/posts/">Read pet care guides</a>
+          <a class="btn-ghost" href="/category/health/">Browse health articles</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

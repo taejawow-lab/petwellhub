@@ -17,8 +17,8 @@ const dateline = pubDate.toLocaleDateString('en-US', { month: 'short', day: 'num
 const itemNum = String(index + 1).padStart(2, '0');
 ---
 
-<article class={`group h-full ${variant === 'feature' ? 'md:col-span-2' : ''}`}>
-  <a href={href} class="editorial-card block h-full rounded-[1.35rem] border border-border/70 bg-card/88 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 focus-visible:outline-ring sm:p-5">
+<article class={`group ${variant === 'standard' ? 'h-full' : ''} ${variant === 'feature' ? 'md:col-span-2' : ''}`}>
+  <a href={href} class={`editorial-card block ${variant === 'standard' ? 'h-full' : ''} rounded-[1.35rem] border border-border/70 bg-card/88 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 focus-visible:outline-ring sm:p-5`}>
     <div class="flex items-center gap-3 mb-4 text-[10px] uppercase tracking-[0.18em] font-mono text-muted-foreground">
       <span>№ {itemNum}</span>
       <span class="h-px w-6 bg-border"></span>

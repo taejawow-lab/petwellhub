@@ -1,10 +1,15 @@
 ---
-const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'PetWellHub';
 const description = import.meta.env.PUBLIC_SITE_DESCRIPTION || '';
 const edition = import.meta.env.PUBLIC_SITE_EDITION || '';
 const tagline = import.meta.env.PUBLIC_SITE_TAGLINE || '';
 const currentYear = new Date().getFullYear();
 const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
+const followLinks = [
+  { label: 'Pinterest', href: import.meta.env.PUBLIC_SITE_PINTEREST },
+  { label: 'Instagram', href: import.meta.env.PUBLIC_SITE_INSTAGRAM },
+  { label: 'YouTube', href: import.meta.env.PUBLIC_SITE_YOUTUBE },
+].filter((item) => item.href);
 
 const aiDisclosure = lang === 'ko'
   ? '본 사이트의 콘텐츠는 AI 도구의 보조를 받아 작성됩니다. 모든 데이터는 1차 자료에서 검증되며, 본문 인용 링크로 직접 확인할 수 있습니다.'
@@ -57,7 +62,10 @@ const affiliateDisclosure = lang === 'ko'
         <h4 class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono mb-5">Sections</h4>
         <ul class="space-y-3 text-sm">
           <li><a href="/" class="hover:underline underline-offset-4 decoration-from-font">Home</a></li>
-          <li><a href="/about" class="hover:underline underline-offset-4 decoration-from-font">About</a></li>
+          <li><a href="/posts/" class="hover:underline underline-offset-4 decoration-from-font">Posts</a></li>
+          <li><a href="/categories/" class="hover:underline underline-offset-4 decoration-from-font">Categories</a></li>
+          <li><a href="/symptom-checker/" class="hover:underline underline-offset-4 decoration-from-font">When to Call the Vet</a></li>
+          <li><a href="/about/" class="hover:underline underline-offset-4 decoration-from-font">About</a></li>
         </ul>
       </div>
       <div>
@@ -80,11 +88,15 @@ const affiliateDisclosure = lang === 'ko'
       </div>
       <div>
         <h4 class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono mb-5">Follow</h4>
-        <ul class="space-y-3 text-sm">
-          <li><a href={import.meta.env.PUBLIC_SITE_PINTEREST || '#'} class="hover:underline underline-offset-4">Pinterest →</a></li>
-          <li><a href={import.meta.env.PUBLIC_SITE_INSTAGRAM || '#'} class="hover:underline underline-offset-4">Instagram →</a></li>
-          <li><a href={import.meta.env.PUBLIC_SITE_YOUTUBE || '#'} class="hover:underline underline-offset-4">YouTube →</a></li>
-        </ul>
+        {followLinks.length ? (
+          <ul class="space-y-3 text-sm">
+            {followLinks.map((item) => (
+              <li><a href={item.href} class="hover:underline underline-offset-4">{item.label} →</a></li>
+            ))}
+          </ul>
+        ) : (
+          <p class="max-w-[18rem] text-sm leading-relaxed text-muted-foreground">Follow links will be added after official social channels are ready. Editorial corrections go through Contact.</p>
+        )}
       </div>
     </div>
 
