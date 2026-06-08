@@ -22,6 +22,7 @@ jobs:
       - run: npm run build
         env:
           PUBLIC_CF_BEACON_TOKEN: 99ba6713d0374f24a04fc6d737854c7b
+          PUBLIC_ADSENSE_CLIENT: ca-pub-3526385510396286
           PUBLIC_AMAZON_TAG_US: taekm33-20
           PUBLIC_AMAZON_TAG_JP: taekm33-22
           PUBLIC_AMAZON_TAG_UK: taekm33-21
