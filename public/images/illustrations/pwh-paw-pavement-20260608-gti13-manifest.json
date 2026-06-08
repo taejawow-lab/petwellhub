@@ -1,0 +1,94 @@
+{
+  "site": "petwellhub",
+  "slug": "dog-paw-burn-hot-pavement-summer-plan-2026",
+  "endpoint": "http://192.168.50.29:8188",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "images": [
+    {
+      "file": "public/images/illustrations/pwh-paw-pavement-20260608-hero.png",
+      "seed": 880608000,
+      "prompt": "dog and handler choosing shaded sidewalk beside grass on hot summer day",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "pwh-paw-pavement-20260608-hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-paw-pavement-20260608-01.png",
+      "seed": 880608001,
+      "prompt": "person testing shaded pavement near grass with calm dog",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "pwh-paw-pavement-20260608-01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-paw-pavement-20260608-02.png",
+      "seed": 880608002,
+      "prompt": "dog walking on grass beside sunlit pavement avoiding dark asphalt",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "pwh-paw-pavement-20260608-02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-paw-pavement-20260608-03.png",
+      "seed": 880608003,
+      "prompt": "dog wearing well fitted booties indoors on clean floor",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "pwh-paw-pavement-20260608-03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-paw-pavement-20260608-04.png",
+      "seed": 880608004,
+      "prompt": "owner gently inspecting dog paw pads on clean mat after walk",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "pwh-paw-pavement-20260608-04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-paw-pavement-20260608-05.png",
+      "seed": 880608005,
+      "prompt": "veterinary consultation room with dog paw care calm blank wall",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "pwh-paw-pavement-20260608-05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/pwh-paw-pavement-20260608-contact-sheet.jpg",
+  "visual_qa": "pending_contact_sheet_review"
+}
