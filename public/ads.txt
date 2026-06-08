@@ -1,3 +1,5 @@
+google.com, pub-3526385510396286, DIRECT, f08c47fec0942fa0
+
 # ads.txt — Authorized Digital Sellers
 # https://iabtechlab.com/ads-txt/
 #
