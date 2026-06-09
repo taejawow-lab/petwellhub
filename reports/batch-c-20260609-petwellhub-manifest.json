@@ -1,0 +1,146 @@
+{
+  "date": "2026-06-09",
+  "site": "petwellhub",
+  "slug": "pet-emergency-go-bag-medication-label-photo-plan-2026",
+  "host": "gti13",
+  "endpoint_redacted": "direct ComfyUI endpoint verified by gate",
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, handwriting, screen text, fake user interface, QR code, barcode, distorted hands, deformed anatomy, unsafe scene, exposed wiring, medication label text, financial statement text, login screen, forms, spreadsheets, calculator numbers, blurry, low resolution, generic stock art, placeholder, cartoon, plastic skin",
+    "steps": 26,
+    "cfg": 5.4,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "assets": [
+    {
+      "filename": "pwh-pet-go-bag-20260609-hero.png",
+      "path": "public/images/illustrations/pwh-pet-go-bag-20260609-hero.png",
+      "seed": 202606090300,
+      "prompt": "pet emergency go bag beside sturdy carrier with water bowl towel sealed food pouch blank record cards no text no logos",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.4,
+      "steps": 26,
+      "prompt_id": "286dea0c-f5ea-41fd-bdff-70b3059566d4",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_petwellhub_hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 2021592,
+      "status": "ok"
+    },
+    {
+      "filename": "pwh-pet-go-bag-20260609-01.png",
+      "path": "public/images/illustrations/pwh-pet-go-bag-20260609-01.png",
+      "seed": 202606090301,
+      "prompt": "pet medication photo setup with bottles turned away blank labels phone dark screen and notebook closed no readable text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.4,
+      "steps": 26,
+      "prompt_id": "ef4a5693-4de2-4dde-8724-f0075599b36a",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_petwellhub_01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1339755,
+      "status": "ok"
+    },
+    {
+      "filename": "pwh-pet-go-bag-20260609-02.png",
+      "path": "public/images/illustrations/pwh-pet-go-bag-20260609-02.png",
+      "seed": 202606090302,
+      "prompt": "calm cat and dog carrier training corner at home with blanket treats in plain bowl no text no logos",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.4,
+      "steps": 26,
+      "prompt_id": "a653b83d-4a85-4c5a-8dfc-f012ddbf8fb9",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_petwellhub_02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1790926,
+      "status": "ok"
+    },
+    {
+      "filename": "pwh-pet-go-bag-20260609-03.png",
+      "path": "public/images/illustrations/pwh-pet-go-bag-20260609-03.png",
+      "seed": 202606090303,
+      "prompt": "pet evacuation document folder microchip tag turned away carrier leash and blank papers no readable words",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.4,
+      "steps": 26,
+      "prompt_id": "9375f179-5223-4cdb-a14a-436c4c4d5339",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_petwellhub_03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 2328127,
+      "status": "ok"
+    },
+    {
+      "filename": "pwh-pet-go-bag-20260609-04.png",
+      "path": "public/images/illustrations/pwh-pet-go-bag-20260609-04.png",
+      "seed": 202606090304,
+      "prompt": "veterinary handoff kit on clean table with carrier towel water bowl blank forms no labels no medical text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.4,
+      "steps": 26,
+      "prompt_id": "b71103d9-33aa-47bf-8a02-eb094a950f44",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_petwellhub_04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1650736,
+      "status": "ok"
+    }
+  ],
+  "contact_sheet": "/home/taekm33/blog-ops/16-sites/petwellhub/reports/batch-c-20260609-petwellhub-contact-sheet.jpg",
+  "visual_qa": "passed by generated contact sheet review gate if parent confirms no visible text/UI/safety defects"
+}
