@@ -1,0 +1,93 @@
+{
+  "site": "petwellhub",
+  "slug": "cat-carrier-stress-vet-visit-prep-plan-2026",
+  "host": "gti13",
+  "endpoint": "direct ComfyUI redacted in final",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "dimensions": [
+    1536,
+    864
+  ],
+  "date": "2026-06-10",
+  "assets": [
+    {
+      "filename": "pwh-cat-carrier-20260610-hero.png",
+      "render_url": "/images/illustrations/pwh-cat-carrier-20260610-hero.png",
+      "prompt": "calm cat beside open carrier in quiet home corner with soft blanket no text",
+      "seed": 202606100300,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "5085fceb-5fbd-4666-820f-d52183c9cad1",
+      "bytes": 1915061,
+      "comfy_output_filename": "pwh-cat-carrier-20260610_00001_.png"
+    },
+    {
+      "filename": "pwh-cat-carrier-20260610-01.png",
+      "render_url": "/images/illustrations/pwh-cat-carrier-20260610-01.png",
+      "prompt": "cat carrier acclimation setup with treats in plain bowl and open carrier door no labels",
+      "seed": 202606100301,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "876bf198-b15a-4a4e-86f7-dbfbb540662c",
+      "bytes": 1712174,
+      "comfy_output_filename": "pwh-cat-carrier-20260610_00002_.png"
+    },
+    {
+      "filename": "pwh-cat-carrier-20260610-02.png",
+      "render_url": "/images/illustrations/pwh-cat-carrier-20260610-02.png",
+      "prompt": "owner preparing vet visit records in blank folder beside carrier no readable papers",
+      "seed": 202606100302,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "83a420fc-f752-4008-9664-e098e5e4ffc7",
+      "bytes": 1781756,
+      "comfy_output_filename": "pwh-cat-carrier-20260610_00003_.png"
+    },
+    {
+      "filename": "pwh-cat-carrier-20260610-03.png",
+      "render_url": "/images/illustrations/pwh-cat-carrier-20260610-03.png",
+      "prompt": "safe car back seat cat carrier secured with calm neutral lighting no logos",
+      "seed": 202606100303,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "7d065388-1df9-451c-966f-968f1c6d8c37",
+      "bytes": 2071873,
+      "comfy_output_filename": "pwh-cat-carrier-20260610_00004_.png"
+    },
+    {
+      "filename": "pwh-cat-carrier-20260610-04.png",
+      "render_url": "/images/illustrations/pwh-cat-carrier-20260610-04.png",
+      "prompt": "veterinary exam room with cat carrier open and blank wall calm scene no labels",
+      "seed": 202606100304,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "e5d5b40f-42b5-4beb-98af-82de31122555",
+      "bytes": 1492873,
+      "comfy_output_filename": "pwh-cat-carrier-20260610_00005_.png"
+    },
+    {
+      "filename": "pwh-cat-carrier-20260610-05.png",
+      "render_url": "/images/illustrations/pwh-cat-carrier-20260610-05.png",
+      "prompt": "post visit recovery corner for cat with carrier blanket and water bowl no text",
+      "seed": 202606100305,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "c7edd617-0242-40ac-88c8-6fc825e3c437",
+      "bytes": 1851593,
+      "comfy_output_filename": "pwh-cat-carrier-20260610_00006_.png"
+    }
+  ],
+  "negative_prompt": "text words letters numbers watermark logo brand name readable labels screen text fake user interface QR code barcode credentials official forms receipts medical labels financial statements distorted hands deformed anatomy unsafe scene exposed wiring blurry low resolution generic stock art placeholder cartoon"
+}
