@@ -39,28 +39,30 @@
     {
       "filename": "pwh-cat-carrier-20260610-02.png",
       "render_url": "/images/illustrations/pwh-cat-carrier-20260610-02.png",
-      "prompt": "owner preparing vet visit records in blank folder beside carrier no readable papers",
-      "seed": 202606100302,
+      "prompt": "cat owner preparing vet visit record folder beside closed cat carrier with calm cat nearby, blank papers only, no dog, no readable text, no labels, veterinary prep scene",
+      "seed": 202606101002,
       "dimensions": [
         1536,
         864
       ],
-      "prompt_id": "83a420fc-f752-4008-9664-e098e5e4ffc7",
-      "bytes": 1781756,
-      "comfy_output_filename": "pwh-cat-carrier-20260610_00003_.png"
+      "prompt_id": "241f470f-b6e2-4432-9a0f-de2a81b3a5af",
+      "bytes": 1836917,
+      "comfy_output_filename": "pwh-cat-carrier-20260610-regen_00001_.png",
+      "qa_regenerated": true
     },
     {
       "filename": "pwh-cat-carrier-20260610-03.png",
       "render_url": "/images/illustrations/pwh-cat-carrier-20260610-03.png",
-      "prompt": "safe car back seat cat carrier secured with calm neutral lighting no logos",
-      "seed": 202606100303,
+      "prompt": "safe car back seat with cat fully inside secured carrier, carrier level on seat, calm travel setup, no loose pets, no people, no text, no logos",
+      "seed": 202606101003,
       "dimensions": [
         1536,
         864
       ],
-      "prompt_id": "7d065388-1df9-451c-966f-968f1c6d8c37",
-      "bytes": 2071873,
-      "comfy_output_filename": "pwh-cat-carrier-20260610_00004_.png"
+      "prompt_id": "280728a2-bcda-4f65-9219-b92b565b96b5",
+      "bytes": 1999578,
+      "comfy_output_filename": "pwh-cat-carrier-20260610-regen_00002_.png",
+      "qa_regenerated": true
     },
     {
       "filename": "pwh-cat-carrier-20260610-04.png",
@@ -89,5 +91,6 @@
       "comfy_output_filename": "pwh-cat-carrier-20260610_00006_.png"
     }
   ],
-  "negative_prompt": "text words letters numbers watermark logo brand name readable labels screen text fake user interface QR code barcode credentials official forms receipts medical labels financial statements distorted hands deformed anatomy unsafe scene exposed wiring blurry low resolution generic stock art placeholder cartoon"
+  "negative_prompt": "text words letters numbers watermark logo brand name readable labels screen text fake user interface QR code barcode credentials official forms receipts medical labels financial statements distorted hands deformed anatomy unsafe scene exposed wiring blurry low resolution generic stock art placeholder cartoon",
+  "final_visual_qa_note": "Final contact sheet regenerated after replacing QA-rejected images; retained images are the published assets."
 }
