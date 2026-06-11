@@ -1,0 +1,159 @@
+{
+  "generated_at": "2026-06-11T04:14:39Z",
+  "host": "gti13",
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 28,
+    "cfg": 5.2,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable label, UI screenshot, fake app screen, QR code, barcode, credential, medical label, payment card, bank statement, tax form, receipt text, warning sign, distorted hands, bad anatomy, unsafe scene, exposed wiring, blurry, low resolution, generic stock art, placeholder, cartoon, plastic skin, child face closeup"
+  },
+  "assets": [
+    {
+      "site": "petwellhub",
+      "slug": "tick-removal-yard-check-pet-safety-plan-2026",
+      "filename": "pwh-tick-yard-check-20260611-hero.png",
+      "path": "public/images/illustrations/pwh-tick-yard-check-20260611-hero.png",
+      "prompt": "calm dog after outdoor walk on shaded porch with tick check kit tweezers sealed small container blank note cards no text",
+      "seed": 202606110001,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "54c2a2f5-cff3-47eb-99b2-31d9c47aea04",
+      "comfy_output": {
+        "filename": "pwh-tick-yard-check-20260611_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 2008047,
+      "status": "ok"
+    },
+    {
+      "site": "petwellhub",
+      "slug": "tick-removal-yard-check-pet-safety-plan-2026",
+      "filename": "pwh-tick-yard-check-20260611-01.png",
+      "path": "public/images/illustrations/pwh-tick-yard-check-20260611-01.png",
+      "prompt": "pet owner gently checking dog ear and collar area in bright natural light no visible tick closeup no text",
+      "seed": 202606110002,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "97b2df2c-8baa-4c23-86e3-f7dbfb3c8962",
+      "comfy_output": {
+        "filename": "pwh-tick-yard-check-20260611_00002_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1846813,
+      "status": "ok"
+    },
+    {
+      "site": "petwellhub",
+      "slug": "tick-removal-yard-check-pet-safety-plan-2026",
+      "filename": "pwh-tick-yard-check-20260611-02.png",
+      "path": "public/images/illustrations/pwh-tick-yard-check-20260611-02.png",
+      "prompt": "backyard path trimmed grass and brush edge with dog leash water bowl no signs no labels",
+      "seed": 202606110003,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "e9ebc937-40fd-45de-ab76-7672a096de8c",
+      "comfy_output": {
+        "filename": "pwh-tick-yard-check-20260611_00003_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 2469701,
+      "status": "ok"
+    },
+    {
+      "site": "petwellhub",
+      "slug": "tick-removal-yard-check-pet-safety-plan-2026",
+      "filename": "pwh-tick-yard-check-20260611-03.png",
+      "path": "public/images/illustrations/pwh-tick-yard-check-20260611-03.png",
+      "prompt": "fine tipped tweezers and sealed clear container on clean towel beside pet first aid pouch no readable labels",
+      "seed": 202606110004,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "db73f930-f115-4684-a7ac-e4662557fa0d",
+      "comfy_output": {
+        "filename": "pwh-tick-yard-check-20260611_00004_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 2174138,
+      "status": "ok"
+    },
+    {
+      "site": "petwellhub",
+      "slug": "tick-removal-yard-check-pet-safety-plan-2026",
+      "filename": "pwh-tick-yard-check-20260611-04.png",
+      "path": "public/images/illustrations/pwh-tick-yard-check-20260611-04.png",
+      "prompt": "cat carrier and veterinarian call prep folder with blank papers phone dark screen no text",
+      "seed": 202606110005,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "3e1f647a-e498-4b3c-b184-db26d16fb8ff",
+      "comfy_output": {
+        "filename": "pwh-tick-yard-check-20260611_00005_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1590450,
+      "status": "ok"
+    },
+    {
+      "site": "petwellhub",
+      "slug": "tick-removal-yard-check-pet-safety-plan-2026",
+      "filename": "pwh-tick-yard-check-20260611-05.png",
+      "path": "public/images/illustrations/pwh-tick-yard-check-20260611-05.png",
+      "prompt": "calendar-free reminder setup with pet preventive box turned away blank cards no words no logos",
+      "seed": 202606110006,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "6c732620-285a-49e4-974a-290d73f7d6a1",
+      "comfy_output": {
+        "filename": "pwh-tick-yard-check-20260611_00006_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1547320,
+      "status": "ok"
+    }
+  ],
+  "qa_replacements": [
+    {
+      "site": "petwellhub",
+      "filename": "pwh-tick-yard-check-20260611-03.png",
+      "path": "public/images/illustrations/pwh-tick-yard-check-20260611-03.png",
+      "prompt": "plain stainless tweezers beside a sealed empty clear vial and unbranded pet brush on a clean towel, no first aid words, no labels, no text, no packaging, realistic editorial photo",
+      "seed": 202606119001,
+      "prompt_id": "e27087b9-488d-4027-8829-a56c9fd4ae4a",
+      "comfy_output": {
+        "filename": "pwh-tick-yard-check-20260611-03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1738103,
+      "status": "ok",
+      "reason": "visual QA replacement for text/UI/labels/numbers"
+    }
+  ],
+  "final_contact_sheet": "/mnt/c/Users/k8plus/AppData/Local/hermes/scripts/batch_c_20260611_report/batch-c-20260611-contact-sheet-final.jpg"
+}
