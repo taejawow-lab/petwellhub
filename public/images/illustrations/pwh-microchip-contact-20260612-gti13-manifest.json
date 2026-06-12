@@ -1,0 +1,137 @@
+{
+  "site": "petwellhub",
+  "slug": "pet-microchip-emergency-contact-update-travel-plan-2026",
+  "generated_at": "2026-06-12T04:18:29Z",
+  "host": "gti13",
+  "endpoint": "direct ComfyUI endpoint redacted in user reports",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "width": 1536,
+  "height": 864,
+  "negative_prompt": "readable text, words, letters, numbers, logos, brand marks, watermark, signature, UI screenshot, app screen, login screen, QR code, barcode, fake labels, documents with text, receipts, forms, distorted hands, bad anatomy, extra fingers, child face closeup, unsafe scene, low detail, blurry, cartoon, generic stock art, placeholder",
+  "assets": [
+    {
+      "file": "public/images/illustrations/pwh-microchip-contact-20260612-hero.png",
+      "seed": 202606120000,
+      "prompt": "calm dog and cat travel prep table with pet carrier, blank tags, phone dark screen, no text no logos",
+      "prompt_id": "23e62e6b-7a44-4253-8f64-2d2ebb0b55af",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1804076
+    },
+    {
+      "file": "public/images/illustrations/pwh-microchip-contact-20260612-01.png",
+      "seed": 202606120001,
+      "prompt": "veterinary clinic desk with scanner-like device, calm pet carrier, blank clipboard no readable writing",
+      "prompt_id": "8c3341d5-9906-46e0-98ba-f32e1362448a",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1665650
+    },
+    {
+      "file": "public/images/illustrations/pwh-microchip-contact-20260612-02.png",
+      "seed": 202606120002,
+      "prompt": "owner checking pet microchip registry on laptop with dark blank screen and blank paper, no UI",
+      "prompt_id": "a7938e91-8abe-439d-a211-c23c6a5ce201",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1578913
+    },
+    {
+      "file": "public/images/illustrations/pwh-microchip-contact-20260612-03.png",
+      "seed": 202606120003,
+      "prompt": "two emergency contact cards face down beside leash and carrier, no readable text",
+      "prompt_id": "189a5346-3298-4604-a6b0-b960681b94aa",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 2351396
+    },
+    {
+      "file": "public/images/illustrations/pwh-microchip-contact-20260612-04.png",
+      "seed": 202606120004,
+      "prompt": "pet travel go bag with carrier, water bowl, plain folder, blank labels, no brand marks",
+      "prompt_id": "671cfcbe-6dc9-4dfa-b190-336751693a26",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1772425
+    },
+    {
+      "file": "public/images/illustrations/pwh-microchip-contact-20260612-05.png",
+      "seed": 202606120005,
+      "prompt": "lost pet prevention station by front door with leash, carrier, dark phone screen, blank tag",
+      "prompt_id": "4e8be830-5577-459f-bcab-cdec9c57e5c4",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1880134
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/pwh-microchip-contact-20260612-contact-sheet-final.jpg",
+  "visual_qa": "final contact sheet regenerated after QA replacements; parent run visually inspected final sheet",
+  "qa_replacements": [
+    {
+      "site": "petwellhub",
+      "file": "public/images/illustrations/pwh-microchip-contact-20260612-02.png",
+      "seed": 202606129001,
+      "prompt": "owner reviewing pet recovery plan at desk with laptop completely closed, cat beside carrier, blank paper face down, no screens no text no logos",
+      "prompt_id": "6a5b3b65-eae5-443a-be77-c9eecaa24df0",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "reason": "visual QA replacement"
+    },
+    {
+      "site": "petwellhub",
+      "file": "public/images/illustrations/pwh-microchip-contact-20260612-03.png",
+      "seed": 202606129002,
+      "prompt": "two blank emergency contact cards face down beside leash and pet carrier tag, no writing no letters no numbers no labels",
+      "prompt_id": "13f4ce9f-ba66-4048-870f-43b077d14989",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "reason": "visual QA replacement"
+    }
+  ]
+}
