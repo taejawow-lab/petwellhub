@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-06-13T04:15:51Z",
+  "finalized_at": "2026-06-13T04:26:42Z",
+  "site": "petwellhub",
+  "host": "gti13",
+  "endpoint_redacted": "direct GTI13 ComfyUI endpoint verified by gate",
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.6,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, fake app interface, QR code, barcode, credentials, financial document text, medical label, prescription label, distorted hands, bad anatomy, extra fingers, low quality, blurry, cartoon, placeholder, generic stock image, handwriting, calendar grid, fake warning label"
+  },
+  "assets": [
+    {
+      "site": "petwellhub",
+      "slug": "senior-cat-hydration-litter-box-monitoring-plan-2026",
+      "filename": "pwh-senior-cat-hydration-20260613-hero.png",
+      "git_path": "public/images/illustrations/pwh-senior-cat-hydration-20260613-hero.png",
+      "alt": "Senior cat hydration station with clean bowls",
+      "prompt": "realistic senior cat near clean water fountain and ceramic bowls, calm home, blank wall, no text no labels",
+      "seed": 202606130301,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "8462f4b3-1aca-41cb-a155-22afecc3d0ae",
+      "status": "published_candidate_final",
+      "bytes": 1674478
+    },
+    {
+      "site": "petwellhub",
+      "slug": "senior-cat-hydration-litter-box-monitoring-plan-2026",
+      "filename": "pwh-senior-cat-hydration-20260613-01.png",
+      "git_path": "public/images/illustrations/pwh-senior-cat-hydration-20260613-01.png",
+      "alt": "Senior cat litter box observation area",
+      "prompt": "realistic senior cat litter box area with clean mat and scoop, no waste closeup, no labels no text",
+      "seed": 202606130302,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "c4cc42ae-b661-4759-886f-fbcabcecd559",
+      "status": "published_candidate_final",
+      "bytes": 2193051
+    },
+    {
+      "site": "petwellhub",
+      "slug": "senior-cat-hydration-litter-box-monitoring-plan-2026",
+      "filename": "pwh-senior-cat-hydration-20260613-02.png",
+      "git_path": "public/images/illustrations/pwh-senior-cat-hydration-20260613-02.png",
+      "alt": "Senior cat weight and hydration check",
+      "prompt": "realistic owner gently weighing senior cat on plain pet scale with display turned away, no numbers no text",
+      "seed": 202606130303,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "8024638f-821e-437c-b2e2-c365fc53d570",
+      "status": "published_candidate_final",
+      "bytes": 1716381
+    },
+    {
+      "site": "petwellhub",
+      "slug": "senior-cat-hydration-litter-box-monitoring-plan-2026",
+      "filename": "pwh-senior-cat-hydration-20260613-03.png",
+      "git_path": "public/images/illustrations/pwh-senior-cat-hydration-20260613-03.png",
+      "alt": "Veterinary consultation for senior cat changes",
+      "prompt": "realistic veterinary consultation scene with senior cat carrier, blank notebook closed, no readable documents",
+      "seed": 202606130304,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "1348ce2a-ad14-46c0-b96d-76216cc4ab58",
+      "status": "published_candidate_final",
+      "bytes": 1470027
+    },
+    {
+      "site": "petwellhub",
+      "slug": "senior-cat-hydration-litter-box-monitoring-plan-2026",
+      "filename": "pwh-senior-cat-hydration-20260613-04.png",
+      "git_path": "public/images/illustrations/pwh-senior-cat-hydration-20260613-04.png",
+      "alt": "Multiple water stations for an older cat",
+      "prompt": "realistic quiet hydration station with multiple bowls and wet food dish, packaging turned away no labels",
+      "seed": 202606130305,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "e707bc28-141a-4a61-86e7-92f5bf18546b",
+      "status": "published_candidate_final",
+      "bytes": 1425568
+    },
+    {
+      "site": "petwellhub",
+      "slug": "senior-cat-hydration-litter-box-monitoring-plan-2026",
+      "filename": "pwh-senior-cat-hydration-20260613-05.png",
+      "git_path": "public/images/illustrations/pwh-senior-cat-hydration-20260613-05.png",
+      "alt": "Household senior cat care station",
+      "prompt": "realistic household care shelf with cat carrier, towel, water bowl, blank cards no writing",
+      "seed": 202606130306,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "84bf33c8-19d0-4cb9-82cc-ed71e17789c8",
+      "status": "published_candidate_final",
+      "bytes": 1658124
+    }
+  ],
+  "visual_qa": "Final contact sheets inspected; rejected screen/form/UI/text-risk assets were regenerated before commit. Published raster count: 6."
+}
