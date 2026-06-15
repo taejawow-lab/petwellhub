@@ -1,0 +1,143 @@
+{
+  "date": "2026-06-15",
+  "site": "petwellhub",
+  "slug": "dog-toxic-algae-swim-water-safety-plan-2026",
+  "endpoint_host": "gti13-direct-comfyui",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "images": [
+    {
+      "file": "public/images/illustrations/pwh-toxic-algae-20260615-hero.png",
+      "render_url": "/images/illustrations/pwh-toxic-algae-20260615-hero.png",
+      "seed": 90615000,
+      "prompt_id": "95130f5c-1999-4caa-aa7e-99002895be15",
+      "prompt": "calm leashed dog standing far back from a lakeshore with visible green scum in distance, owner choosing a safer path, no text, no signs, safety editorial photograph",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "pwh-toxic-algae-20260615-hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-toxic-algae-20260615-01.png",
+      "render_url": "/images/illustrations/pwh-toxic-algae-20260615-01.png",
+      "seed": 90615001,
+      "prompt_id": "67e6e022-10c6-4544-9ff9-642966344962",
+      "prompt": "close view of dog water-safety kit on picnic blanket: clean water bottle, plain towel, leash, sealed waste bags, blank cards, no text no labels",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "pwh-toxic-algae-20260615-01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-toxic-algae-20260615-02.png",
+      "render_url": "/images/illustrations/pwh-toxic-algae-20260615-02.png",
+      "seed": 90615002,
+      "prompt_id": "571b4141-075a-4586-8f08-62b29256accf",
+      "prompt": "family choosing a clear shaded walking trail away from pond water, dog on leash, safe distance from water, no readable signs",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "pwh-toxic-algae-20260615-02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-toxic-algae-20260615-03.png",
+      "render_url": "/images/illustrations/pwh-toxic-algae-20260615-03.png",
+      "seed": 90615003,
+      "prompt_id": "990186ef-6e06-4395-b16e-2a8a368f847d",
+      "prompt": "owner gently rinsing dog paws with clean water beside outdoor tap after avoiding pond, no labels, no readable text",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "pwh-toxic-algae-20260615-03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-toxic-algae-20260615-04.png",
+      "render_url": "/images/illustrations/pwh-toxic-algae-20260615-04.png",
+      "seed": 90615004,
+      "prompt_id": "98c85285-1290-4117-a156-1130fb894576",
+      "prompt": "veterinary triage still life with plain phone face down, leash, towel, blank notebook, clean bowl, no screen text",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "pwh-toxic-algae-20260615-04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-toxic-algae-20260615-05.png",
+      "render_url": "/images/illustrations/pwh-toxic-algae-20260615-05.png",
+      "seed": 90615005,
+      "prompt_id": "6194d2b7-f2e5-47bd-b7a7-25445f6c2671",
+      "prompt": "safe summer outing scene with dog resting in shade near fresh clean water bowl, no lake contact, no logos no text",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "pwh-toxic-algae-20260615-05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/pwh-toxic-algae-20260615-contact-sheet.jpg",
+  "visual_qa": "pending_human_or_vision_review"
+}
