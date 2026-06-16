@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-06-16T04:13:05Z",
+  "host": "gti13",
+  "endpoint": "direct ComfyUI on LAN (redacted in final)",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "dimensions": [
+    1536,
+    864
+  ],
+  "steps": 26,
+  "cfg": 5.3,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "negative_prompt": "readable text, letters, words, numbers, logo, watermark, brand marks, QR code, barcode, fake UI, app screen, login screen, payment screen, receipt text, labels, handwriting, calendar grid, distorted hands, deformed animals, unsafe handling, low resolution, blurry, cartoon, placeholder, stock art",
+  "slug": "cat-flea-tick-product-safety-dog-household-plan-2026",
+  "assets": [
+    {
+      "filename": "pwh-cat-flea-tick-20260616-hero.png",
+      "render_url": "/images/illustrations/pwh-cat-flea-tick-20260616-hero.png",
+      "prompt": "calm cat on clean mat with sealed blank pet care package stored away from dog items, no labels, no readable text",
+      "seed": 202606160400,
+      "status": "ok",
+      "prompt_id": "b06aabb0-4293-4452-8600-ad1f52470290",
+      "file": "public/images/illustrations/pwh-cat-flea-tick-20260616-hero.png",
+      "bytes": 1742116,
+      "comfy_output": {
+        "filename": "pwh-cat-flea-tick-20260616_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "pwh-cat-flea-tick-20260616-01.png",
+      "render_url": "/images/illustrations/pwh-cat-flea-tick-20260616-01.png",
+      "prompt": "separate cat and dog care bins on high shelf with plain blank containers and closed cabinet, no text, no logos",
+      "seed": 202606160401,
+      "status": "ok",
+      "prompt_id": "1d5df163-bef4-4413-8ef5-22a76b5787be",
+      "file": "public/images/illustrations/pwh-cat-flea-tick-20260616-01.png",
+      "bytes": 1207720,
+      "comfy_output": {
+        "filename": "pwh-cat-flea-tick-20260616_00002_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "pwh-cat-flea-tick-20260616-02.png",
+      "render_url": "/images/illustrations/pwh-cat-flea-tick-20260616-02.png",
+      "prompt": "pet owner checking cat fur with flea comb on towel while calm cat sits safely, no labels or text",
+      "seed": 202606160402,
+      "status": "ok",
+      "prompt_id": "1b105234-c457-4902-8d68-e0f37aab532c",
+      "file": "public/images/illustrations/pwh-cat-flea-tick-20260616-02.png",
+      "bytes": 1798070,
+      "comfy_output": {
+        "filename": "pwh-cat-flea-tick-20260616_00003_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "pwh-cat-flea-tick-20260616-03.png",
+      "render_url": "/images/illustrations/pwh-cat-flea-tick-20260616-03.png",
+      "prompt": "veterinary consultation table with cat carrier, blank instruction cards, plain topical package turned away, no text",
+      "seed": 202606160403,
+      "status": "ok",
+      "prompt_id": "60392b43-2d8f-4eb6-bb77-d5700f59aad7",
+      "file": "public/images/illustrations/pwh-cat-flea-tick-20260616-03.png",
+      "bytes": 1501903,
+      "comfy_output": {
+        "filename": "pwh-cat-flea-tick-20260616_00004_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "pwh-cat-flea-tick-20260616-04.png",
+      "render_url": "/images/illustrations/pwh-cat-flea-tick-20260616-04.png",
+      "prompt": "hand washing station after topical pet product use with blank soap bottle and towel, no labels",
+      "seed": 202606160404,
+      "status": "ok",
+      "prompt_id": "453d65a4-43c8-48bc-830a-1b92a44fb33c",
+      "file": "public/images/illustrations/pwh-cat-flea-tick-20260616-04.png",
+      "bytes": 1495290,
+      "comfy_output": {
+        "filename": "pwh-cat-flea-tick-20260616_00005_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "pwh-cat-flea-tick-20260616-05.png",
+      "render_url": "/images/illustrations/pwh-cat-flea-tick-20260616-05.png",
+      "prompt": "emergency call prep scene with calm cat in carrier, phone dark blank screen, product package face down no text",
+      "seed": 202606160405,
+      "status": "ok",
+      "prompt_id": "2da2d0e8-041b-4c4d-b085-a227a412ca48",
+      "file": "public/images/illustrations/pwh-cat-flea-tick-20260616-05.png",
+      "bytes": 1490772,
+      "comfy_output": {
+        "filename": "pwh-cat-flea-tick-20260616_00006_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "final_visual_qa": "PASS after contact-sheet inspection; regenerated/replaced any earlier text/form/photo-label concerns before article integration.",
+  "published_asset_count": 6
+}
