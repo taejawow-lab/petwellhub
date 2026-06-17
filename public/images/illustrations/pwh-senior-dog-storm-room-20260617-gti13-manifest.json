@@ -1,0 +1,215 @@
+{
+  "batch": "C 20260617 cron",
+  "date": "2026-06-17",
+  "host": "gti13",
+  "endpoint": "redacted-direct-gti13",
+  "gate": {
+    "available": true,
+    "reason": "sentinel_unreachable_but_direct_comfyui_ok",
+    "sentinel_url": "http://192.168.50.30:9199/status",
+    "comfy_url": "http://192.168.50.29:8188",
+    "services": {
+      "comfyui_8188": true,
+      "sentinel_9199": false
+    },
+    "manual_pause": false,
+    "direct_fallback": true,
+    "comfyui_version": "0.20.1",
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17098519522,
+        "torch_vram_total": 6979321856,
+        "torch_vram_free": 31896546
+      }
+    ],
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    }
+  },
+  "workflow": {
+    "steps": 24,
+    "cfg": 5.1,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, words, letters, numbers, logo, watermark, brand name, readable labels, screen text, UI screenshot, distorted interface, fake labels, fake forms, documents with text, calculator, currency, coins, credit cards, QR code, login form, payment screen, dashboard, calendar grid, handwriting, bad hands, bad anatomy, extra fingers, low quality, blurry, cartoon, placeholder, generic stock art, unsafe pet restraint, dog face distress closeup, medical chart, medicine label, router admin UI, smart TV UI, app screen, credentials, public Wi-Fi login page, legal document, tax form, IRS form, exposed wires, unsafe cables"
+  },
+  "site": "petwellhub",
+  "data": {
+    "slug": "senior-dog-thunderstorm-anxiety-safe-room-plan-2026",
+    "title": "Senior Dog Thunderstorm Anxiety Safe Room Plan 2026",
+    "post": "src/content/posts/senior-dog-thunderstorm-anxiety-safe-room-plan-2026.mdx",
+    "assets": [
+      {
+        "file": "public/images/illustrations/pwh-senior-dog-storm-room-20260617-hero.png",
+        "filename": "pwh-senior-dog-storm-room-20260617-hero.png",
+        "prompt": "realistic calm senior dog resting on soft bed in interior safe room, closed curtains, soft blanket, water bowl, no labels, no text, no medication bottles, gentle wide shot",
+        "seed": 202606170301,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "3ad6ce40-5196-45eb-96b8-d7c1d48c3aee",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_petwellhub_hero_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1668987,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/pwh-senior-dog-storm-room-20260617-01.png",
+        "filename": "pwh-senior-dog-storm-room-20260617-01.png",
+        "prompt": "realistic storm safe room setup for senior dog with covered crate door open, soft bedding, water bowl, no labels no text",
+        "seed": 202606170302,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "90bda59a-bbde-4950-b598-fed1524d39b3",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_petwellhub_01_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1898596,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/pwh-senior-dog-storm-room-20260617-02.png",
+        "filename": "pwh-senior-dog-storm-room-20260617-02.png",
+        "prompt": "realistic pet parent preparing calm room with blanket, fan turned away, closed curtains, no screens no labels",
+        "seed": 202606170303,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "c65e53dc-dd80-4f48-bccc-b4e99b6a1054",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_petwellhub_02_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1877864,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/pwh-senior-dog-storm-room-20260617-03.png",
+        "filename": "pwh-senior-dog-storm-room-20260617-03.png",
+        "prompt": "realistic senior dog enrichment mat and familiar toys on clean floor, no packaging labels, no text",
+        "seed": 202606170304,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "993728fe-19b4-400e-b2db-1c1298f7fdff",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_petwellhub_03_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 2293423,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/pwh-senior-dog-storm-room-20260617-04.png",
+        "filename": "pwh-senior-dog-storm-room-20260617-04.png",
+        "prompt": "realistic calm senior dog sleeping indoors on dry soft bed after thunderstorm, water bowl nearby, closed curtains, clean safe room, no outdoor mud, no labels, no text, no medication",
+        "seed": 202606170801,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "356fbd17-104f-4f1b-9060-1b435bfa05af",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_qa_petwellhub_pwh-senior-dog-storm-room-20260617-04_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "qa_regenerated",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1784869,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 26,
+        "cfg": 5.0,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/pwh-senior-dog-storm-room-20260617-05.png",
+        "filename": "pwh-senior-dog-storm-room-20260617-05.png",
+        "prompt": "realistic vet-call preparation still life with blank notebook, leash, plain folder, no readable text no phone UI",
+        "seed": 202606170306,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "e5c4d479-c0d3-4b01-8b2d-374a6b494ca9",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_petwellhub_05_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1895372,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      }
+    ],
+    "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260617-petwellhub-contact-sheet.jpg",
+    "contact_sheet_windows": "/mnt/c/Users/k8plus/AppData/Local/hermes/scripts/batch_c_20260617_reports/batch-c-20260617-petwellhub-contact-sheet.jpg",
+    "sources": [
+      "https://www.avma.org/resources-tools/pet-owners/petcare/noise-aversion-dogs",
+      "https://www.aspca.org/pet-care/dog-care/general-dog-care",
+      "https://vcahospitals.com/know-your-pet/storm-phobias-in-dogs",
+      "https://www.aaha.org/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats/",
+      "https://www.akc.org/expert-advice/health/dog-thunderstorm-anxiety/",
+      "https://www.fearfreehappyhomes.com/noise-aversion/",
+      "https://www.fda.gov/animal-veterinary/animal-drugs/animal-drugs-fda",
+      "https://www.dacvb.org/page/AnimalOwners"
+    ],
+    "visual_qa_summary": "Contact sheet generated; requires visual QA before commit.",
+    "contact_sheet_final": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260617-petwellhub-contact-sheet-final.jpg",
+    "contact_sheet_final_windows": "/mnt/c/Users/k8plus/AppData/Local/hermes/scripts/batch_c_20260617_reports/batch-c-20260617-petwellhub-contact-sheet-final.jpg"
+  },
+  "visual_qa_summary": "Initial QA rejected one pet outdoor/mud recovery image, one remote-work fake security form, and four finance/tax images with calculator/calendar/coins/tax-form risks. All were regenerated through GTI13 and final contact sheets were written."
+}
