@@ -1,0 +1,145 @@
+{
+  "site": "petwellhub",
+  "slug": "cat-hairball-vomiting-vet-triage-plan-2026",
+  "title": "Cat Hairball or Vomiting? A Vet-Triage Home Plan for 2026",
+  "date": "2026-06-18",
+  "host": "gti13",
+  "endpoint": "redacted-direct-gti13",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "images": [
+    {
+      "file": "public/images/illustrations/pwh-cat-hairball-triage-20260618-hero.png",
+      "render_url": "/images/illustrations/pwh-cat-hairball-triage-20260618-hero.png",
+      "prompt": "realistic calm adult cat resting near grooming brush on clean floor, no labels, no medicine, no vomit closeup, soft natural light",
+      "seed": 202606180000,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "34b56fb3-9455-44c8-95f4-a02b933b196e",
+      "comfy_output": {
+        "filename": "batch_c_20260618_petwellhub_hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-hairball-triage-20260618-01.png",
+      "render_url": "/images/illustrations/pwh-cat-hairball-triage-20260618-01.png",
+      "prompt": "realistic pet parent observing cat behavior with blank notebook and water bowl, no readable text, no phone screen",
+      "seed": 202606180001,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "29e1d3e5-7b20-4875-a14d-ac6d40e7a781",
+      "comfy_output": {
+        "filename": "batch_c_20260618_petwellhub_01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-hairball-triage-20260618-02.png",
+      "render_url": "/images/illustrations/pwh-cat-hairball-triage-20260618-02.png",
+      "prompt": "realistic tidy cat feeding station with plain bowls and measuring scoop, no brand labels, no package text",
+      "seed": 202606180002,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "1277ebfd-1152-480d-980b-2cd2d2763ca4",
+      "comfy_output": {
+        "filename": "batch_c_20260618_petwellhub_02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-hairball-triage-20260618-03.png",
+      "render_url": "/images/illustrations/pwh-cat-hairball-triage-20260618-03.png",
+      "prompt": "realistic veterinarian exam room with calm cat carrier closed, blank walls, no charts no labels",
+      "seed": 202606180003,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "cbbb8c6f-192a-44f4-b863-d6cf4b07ed0c",
+      "comfy_output": {
+        "filename": "batch_c_20260618_petwellhub_03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-hairball-triage-20260618-04.png",
+      "render_url": "/images/illustrations/pwh-cat-hairball-triage-20260618-04.png",
+      "prompt": "realistic safe home cleanup kit with plain towels and closed trash bag, no chemical labels no text",
+      "seed": 202606180004,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "739ecb12-0647-4c51-92ad-71dc3f5f1506",
+      "comfy_output": {
+        "filename": "batch_c_20260618_petwellhub_04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-hairball-triage-20260618-05.png",
+      "render_url": "/images/illustrations/pwh-cat-hairball-triage-20260618-05.png",
+      "prompt": "realistic cat resting comfortably after vet-approved home monitoring, blanket, water bowl, clean room, no medical props",
+      "seed": 202606180005,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "320bca40-e81c-42e0-9a64-54b14cbb5404",
+      "comfy_output": {
+        "filename": "batch_c_20260618_petwellhub_05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/pwh-cat-hairball-triage-20260618-contact-sheet.jpg",
+  "visual_qa": "contact_sheet_created_pending_human_or_vision_review"
+}
