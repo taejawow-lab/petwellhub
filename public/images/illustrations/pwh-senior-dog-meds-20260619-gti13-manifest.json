@@ -1,0 +1,99 @@
+{
+  "date": "2026-06-19",
+  "site": "petwellhub",
+  "slug": "senior-dog-medication-refill-emergency-travel-kit-2026",
+  "host": "gti13-direct",
+  "endpoint_redacted": true,
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 26,
+    "cfg": 5.3,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "assets": [
+    {
+      "file": "public/images/illustrations/pwh-senior-dog-meds-20260619-hero.png",
+      "seed": 202606191001,
+      "prompt": "senior dog travel preparation still life with soft blanket, leash, water bowl, sealed plain unlabeled containers turned away, no medicine labels, no text, warm kitchen, dog calm nearby",
+      "prompt_id": "031daa77-ba69-4203-864b-c6fea5c5017b",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "raw_output": {
+        "filename": "pwh-senior-dog-meds-20260619-hero-regen_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "regenerated": true
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-dog-meds-20260619-01.png",
+      "seed": 202606190001,
+      "prompt": "calm senior dog near travel bag and water bowl, owner checking blank checklist card, no medicine labels, no text",
+      "prompt_id": "dbbdd8d8-ef84-42bc-9ef9-4e6c55afbd2e",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "pwh-senior-dog-meds-20260619-01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-dog-meds-20260619-02.png",
+      "seed": 202606191002,
+      "prompt": "veterinary planning desk with senior dog nearby, closed blank folder, plain pouch, water bowl, no pill bottles, no labels, no readable text",
+      "prompt_id": "f5099809-408c-465d-95f9-7d69814a4202",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "raw_output": {
+        "filename": "pwh-senior-dog-meds-20260619-02-regen_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "regenerated": true
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-dog-meds-20260619-03.png",
+      "seed": 202606191003,
+      "prompt": "temperature safe pet travel storage scene with insulated plain pouch, ice pack, towel, water bowl, no medicine bottles, no labels, no text",
+      "prompt_id": "d2e99dc4-eae7-4c85-a1b4-19e965bd67dd",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "raw_output": {
+        "filename": "pwh-senior-dog-meds-20260619-03-regen_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "regenerated": true
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-dog-meds-20260619-04.png",
+      "seed": 202606190004,
+      "prompt": "emergency evacuation pet bag with leash, towel, food container, blank folder, no labels or logos",
+      "prompt_id": "30a046b0-8e53-4273-bcb5-1d81fca0d573",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "pwh-senior-dog-meds-20260619-04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/pwh-senior-dog-meds-20260619-contact-sheet.jpg",
+  "visual_qa": "PASS: final contact sheet reviewed after targeted regenerations; retained 5 topic-accurate 1536x864 GTI13 raster images with no readable text/UI/risky object artifacts.",
+  "regeneration_note": "Replaced QA-risk images with prompts excluding labels, UI, logos, calculators, tape measures, and exposed wiring."
+}
