@@ -1,0 +1,72 @@
+{
+  "site": "petwellhub",
+  "slug": "senior-pet-heat-wave-cooling-plan-2026",
+  "date": "2026-06-20",
+  "endpoint_host": "gti13-direct",
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.4,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "assets": [
+    {
+      "file": "public/images/illustrations/pwh-senior-pet-heat-20260620-hero.png",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1881754,
+      "accepted": true
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-pet-heat-20260620-01.png",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1900807,
+      "accepted": true
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-pet-heat-20260620-02.png",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1732057,
+      "accepted": true
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-pet-heat-20260620-03.png",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1876276,
+      "accepted": true
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-pet-heat-20260620-04.png",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 2057352,
+      "accepted": true
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-pet-heat-20260620-05.png",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1483635,
+      "accepted": true
+    }
+  ],
+  "visual_qa": "PASS after contact-sheet review; rejected smartcashflow -02 excluded; securebyteguide skipped due QA; no rejected assets staged."
+}
