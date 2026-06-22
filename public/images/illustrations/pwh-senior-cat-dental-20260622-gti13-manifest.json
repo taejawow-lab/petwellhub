@@ -1,0 +1,98 @@
+{
+  "site": "petwellhub",
+  "slug": "senior-cat-dental-pain-eating-change-vet-triage-plan-2026",
+  "generated_at": "2026-06-22T04:17:18Z",
+  "host": "gti13",
+  "direct_comfyui": true,
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "workflow": {
+    "width": 1536,
+    "height": 864,
+    "steps": 26,
+    "cfg": 5.4,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, words, letters, numbers, watermark, logo, brand mark, label, readable screen, app UI, login UI, document text, receipt, form, calendar grid, calculator digits, keyboard closeup, QR code, barcode, child face closeup, distorted anatomy, deformed hands, unsafe scene, medical procedure, stock photo cliché, low resolution, blurry"
+  },
+  "assets": [
+    {
+      "file": "public/images/illustrations/pwh-senior-cat-dental-20260622-hero.png",
+      "seed": 202606220000,
+      "prompt": "senior cat eating from shallow bowl in calm kitchen, owner observing from respectful distance, no text, no labels",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "7d86f645-d574-4113-8720-c76545b10e76",
+      "comfy_output": {
+        "filename": "pwh-senior-cat-dental-20260622-hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-cat-dental-20260622-02.png",
+      "seed": 202606220002,
+      "prompt": "close still life of cat meal log with blank notebook pages and pen, cat bowl nearby, no readable writing",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "1856c828-e690-4d7e-a941-94d6b921d646",
+      "comfy_output": {
+        "filename": "pwh-senior-cat-dental-20260622-02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-cat-dental-20260622-03.png",
+      "seed": 202606220003,
+      "prompt": "owner preparing softened cat food in plain ceramic bowl, warm home light, no labels, no text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "eca95604-1b8c-40f7-8368-e028301f2fe8",
+      "comfy_output": {
+        "filename": "pwh-senior-cat-dental-20260622-03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-cat-dental-20260622-04.png",
+      "seed": 202606220004,
+      "prompt": "veterinary exam room with calm senior cat carrier on table, blank wall, no medical labels",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "6b0e467e-757f-42ff-84b3-e595c3ea2d7b",
+      "comfy_output": {
+        "filename": "pwh-senior-cat-dental-20260622-04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/pwh-senior-cat-dental-20260622-05.png",
+      "seed": 202606220005,
+      "prompt": "organized pet care folder with blank tabs, cat toy and plain bowl, no readable text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "cef2788e-990d-4c76-9b86-7255ee8f305f",
+      "comfy_output": {
+        "filename": "pwh-senior-cat-dental-20260622-05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/pwh-senior-cat-dental-20260622-contact-sheet-final.jpg",
+  "visual_qa": "passed_after_excluding_rejected_assets",
+  "visual_qa_notes": "Rejected/excluded: public/images/illustrations/pwh-senior-cat-dental-20260622-01.png",
+  "contact_sheet_final": "public/images/illustrations/pwh-senior-cat-dental-20260622-contact-sheet-final.jpg"
+}
