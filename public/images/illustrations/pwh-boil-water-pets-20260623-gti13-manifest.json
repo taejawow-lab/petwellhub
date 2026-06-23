@@ -1,0 +1,186 @@
+{
+  "generated_at": "2026-06-23T04:15:44Z",
+  "date": "2026-06-23",
+  "batch": "C",
+  "endpoint": "redacted-gti13-direct",
+  "host": "gti13-direct",
+  "gate_reason": "sentinel_unreachable_but_direct_comfyui_ok",
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.6,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, app screen, QR code, barcode, distorted hands, bad anatomy, extra fingers, unsafe handling, medical procedure, fake warning label, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image, receipt, form, currency, calculator numbers, passport, license plate"
+  },
+  "queue_before": {
+    "queue_running": [],
+    "queue_pending": []
+  },
+  "system_stats_seen": true,
+  "site": "petwellhub",
+  "slug": "pet-boil-water-advisory-water-bowl-safety-plan-2026",
+  "title": "Pet Boil-Water Advisory Water Bowl Safety Plan for 2026",
+  "article": "src/content/posts/pet-boil-water-advisory-water-bowl-safety-plan-2026.mdx",
+  "source_validation": [
+    {
+      "url": "https://www.cdc.gov/water-emergency/about/make-water-safe.html",
+      "ok": false,
+      "status": null,
+      "final": null,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://www.cdc.gov/healthy-pets/emergency-preparedness/index.html",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.cdc.gov/healthy-pets/emergency-preparedness/index.html",
+      "error": null
+    },
+    {
+      "url": "https://www.ready.gov/pets",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.ready.gov/pets",
+      "error": "<HTTPError 403: 'Forbidden'>"
+    },
+    {
+      "url": "https://www.avma.org/resources-tools/pet-owners/emergency-care/pets-and-disasters",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.avma.org/resources-tools/pet-owners/emergency-care/pets-and-disasters",
+      "error": null
+    },
+    {
+      "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "error": null
+    },
+    {
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+      "ok": false,
+      "status": null,
+      "final": null,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/pet-disaster-preparedness.html",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/pet-disaster-preparedness.html",
+      "error": "<HTTPError 403: 'Forbidden'>"
+    },
+    {
+      "url": "https://www.cdc.gov/healthy-pets/about/dogs.html",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.cdc.gov/healthy-pets/about/dogs.html",
+      "error": null
+    }
+  ],
+  "assets": [
+    {
+      "file": "public/images/illustrations/pwh-boil-water-pets-20260623-hero.png",
+      "filename": "pwh-boil-water-pets-20260623-hero.png",
+      "suffix": "hero",
+      "seed": 202606230301,
+      "prompt": "calm dog and cat beside clean ceramic water bowls and sealed water jug, realistic home kitchen, no labels no text",
+      "prompt_id": "cc6d47b7-5ca2-4e23-9cd1-9788e71f89ed",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_petwellhub_hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1547237
+    },
+    {
+      "file": "public/images/illustrations/pwh-boil-water-pets-20260623-01.png",
+      "filename": "pwh-boil-water-pets-20260623-01.png",
+      "suffix": "01",
+      "seed": 202606230302,
+      "prompt": "pet owner rinsing simple water bowl at sink with blank counter, calm dog nearby, no text no logos",
+      "prompt_id": "dc886f4a-666c-48c9-89e6-073e14752257",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_petwellhub_01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1646703
+    },
+    {
+      "file": "public/images/illustrations/pwh-boil-water-pets-20260623-02.png",
+      "filename": "pwh-boil-water-pets-20260623-02.png",
+      "suffix": "02",
+      "seed": 202606230303,
+      "prompt": "cat fountain unplugged and cleaned beside plain towel and sealed water jug, no labels no words",
+      "prompt_id": "d94f5f8f-fd87-43c6-b0f7-2802d7ccaa54",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_petwellhub_02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1730904
+    },
+    {
+      "file": "public/images/illustrations/pwh-boil-water-pets-20260623-03.png",
+      "filename": "pwh-boil-water-pets-20260623-03.png",
+      "suffix": "03",
+      "seed": 202606230304,
+      "prompt": "pet medication prep scene with clean bowl, sealed water, blank syringe without markings, no text no logos",
+      "prompt_id": "01d28733-3ae1-4040-8735-cd86c22c77c9",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_petwellhub_03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1340962
+    },
+    {
+      "file": "public/images/illustrations/pwh-boil-water-pets-20260623-04.png",
+      "filename": "pwh-boil-water-pets-20260623-04.png",
+      "suffix": "04",
+      "seed": 202606230305,
+      "prompt": "emergency pet shelf with water jug, carrier, leashes, bowls, plain containers turned away, no labels",
+      "prompt_id": "7c4a4f07-8198-4fbc-97e5-c94602211c42",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_petwellhub_04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1466296
+    },
+    {
+      "file": "public/images/illustrations/pwh-boil-water-pets-20260623-05.png",
+      "filename": "pwh-boil-water-pets-20260623-05.png",
+      "suffix": "05",
+      "seed": 202606230306,
+      "prompt": "veterinary phone call scene with calm pet carrier and blank notepad closed, phone screen dark no UI",
+      "prompt_id": "a0c2aeb2-0dbc-4c6d-90bf-f823f92ab608",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_petwellhub_05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1289106
+    }
+  ],
+  "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260623-petwellhub-contact-sheet.jpg",
+  "contact_sheet_windows": "/mnt/c/Users/k8plus/AppData/Local/hermes/scripts/batch_c_20260623_petwellhub_contact_sheet.jpg",
+  "visual_qa": "pending external visual inspection before commit"
+}
