@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-06-24T04:26:56Z",
+  "gate": {
+    "host": "gti13",
+    "time": 1782274546,
+    "available": true,
+    "reason": "ok",
+    "manual_pause": false,
+    "gaming_detected": false,
+    "game_processes": [],
+    "gpu": {
+      "available": true,
+      "name": "NVIDIA GeForce RTX 4090",
+      "vram_total_mb": 24564,
+      "vram_free_mb": 15378,
+      "utilization_percent": 0
+    },
+    "services": {
+      "comfyui_8188": true,
+      "ollama_11434": true
+    }
+  },
+  "endpoint_host": "gti13",
+  "workflow_checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "assets": [
+    {
+      "site": "petwellhub",
+      "file": "public/images/illustrations/pwh-foster-handoff-20260624-1.png",
+      "render_url": "/images/illustrations/pwh-foster-handoff-20260624-1.png",
+      "seed": 202606240000,
+      "prompt_id": "c0a30a1c-3190-4cb1-aedb-302cc273b094",
+      "prompt": "healthy dog and cat beside an open travel crate, tidy home entry, leash, bowls, sealed folders, calm foster handoff scene",
+      "negative": "text, letters, words, watermark, logo, signature, readable screen, UI screenshot, app interface, fake labels, forms, receipts, currency, QR code, brand mark, distorted anatomy, extra limbs, bad hands, low quality, blurry, oversaturated, cartoon",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "bytes": 1830587
+    },
+    {
+      "site": "petwellhub",
+      "file": "public/images/illustrations/pwh-foster-handoff-20260624-2.png",
+      "render_url": "/images/illustrations/pwh-foster-handoff-20260624-2.png",
+      "seed": 202606240001,
+      "prompt_id": "c2de1e3c-87c7-4c2f-9457-a17891e76a47",
+      "prompt": "flat lay of pet care kit with bowls, leash, medication organizer without labels, towel, carrier, neutral background",
+      "negative": "text, letters, words, watermark, logo, signature, readable screen, UI screenshot, app interface, fake labels, forms, receipts, currency, QR code, brand mark, distorted anatomy, extra limbs, bad hands, low quality, blurry, oversaturated, cartoon",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "bytes": 1566989
+    },
+    {
+      "site": "petwellhub",
+      "file": "public/images/illustrations/pwh-foster-handoff-20260624-3.png",
+      "render_url": "/images/illustrations/pwh-foster-handoff-20260624-3.png",
+      "seed": 202606240002,
+      "prompt_id": "6668ffd0-37c6-496b-a3b2-5852dff74d6a",
+      "prompt": "calm adult handing a pet carrier to trusted neighbor at doorway, no faces closeup, warm editorial photo",
+      "negative": "text, letters, words, watermark, logo, signature, readable screen, UI screenshot, app interface, fake labels, forms, receipts, currency, QR code, brand mark, distorted anatomy, extra limbs, bad hands, low quality, blurry, oversaturated, cartoon",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "bytes": 1836685
+    },
+    {
+      "site": "petwellhub",
+      "file": "public/images/illustrations/pwh-foster-handoff-20260624-4.png",
+      "render_url": "/images/illustrations/pwh-foster-handoff-20260624-4.png",
+      "seed": 202606249003,
+      "prompt_id": "45941e48-cf8f-4cd4-9f31-6ccc52fc1774",
+      "prompt": "veterinary records concept with closed blank folder, pet collar, carrier tag with no writing, phone face down, calm pet care desk, no medical device, no screens, no forms, no labels",
+      "negative": "text, letters, words, watermark, logo, signature, readable screen, UI screenshot, app interface, fake labels, forms, receipts, currency, QR code, brand mark, distorted anatomy, extra limbs, bad hands, low quality, blurry, oversaturated, cartoon",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "bytes": 1762122,
+      "status": "regenerated_after_visual_qa"
+    },
+    {
+      "site": "petwellhub",
+      "file": "public/images/illustrations/pwh-foster-handoff-20260624-5.png",
+      "render_url": "/images/illustrations/pwh-foster-handoff-20260624-5.png",
+      "seed": 202606240004,
+      "prompt_id": "d5934495-1b8d-48a0-9b54-4826b26eae20",
+      "prompt": "quiet guest room prepared for temporary pet foster care, washable bed, water bowl, toys, safe closed window",
+      "negative": "text, letters, words, watermark, logo, signature, readable screen, UI screenshot, app interface, fake labels, forms, receipts, currency, QR code, brand mark, distorted anatomy, extra limbs, bad hands, low quality, blurry, oversaturated, cartoon",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "bytes": 1808081
+    }
+  ],
+  "visual_qa": "Final contact sheet visually inspected; targeted regenerations removed screen/face/calendar/calculator risks; accepted for publication."
+}
