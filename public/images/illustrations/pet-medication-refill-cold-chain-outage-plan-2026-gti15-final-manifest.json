@@ -1,0 +1,48 @@
+{
+  "site": "petwellhub",
+  "slug": "pet-medication-refill-cold-chain-outage-plan-2026",
+  "gate": "passed",
+  "date": "2026-06-26",
+  "assets": [
+    {
+      "url": "/images/illustrations/pet-pet-medication-refill-cold-chain-outage-plan-2026-gti15-1.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626\\petwellhub\\58083697\\20260626_131152_krea_2789946138.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    },
+    {
+      "url": "/images/illustrations/pet-pet-medication-refill-cold-chain-outage-plan-2026-gti15-2.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626\\petwellhub\\58083697\\20260626_131227_realvis_2789946139.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    },
+    {
+      "url": "/images/illustrations/pet-pet-medication-refill-cold-chain-outage-plan-2026-gti15-3.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626_regen\\petwellhub\\45220783\\20260626_132151_krea_1095097166.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    },
+    {
+      "url": "/images/illustrations/pet-pet-medication-refill-cold-chain-outage-plan-2026-gti15-4.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626_regen\\petwellhub\\72575437\\20260626_132327_realvis_1370687652.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    },
+    {
+      "url": "/images/illustrations/pet-pet-medication-refill-cold-chain-outage-plan-2026-gti15-5.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626\\petwellhub\\56837778\\20260626_131340_realvis_208461618.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    }
+  ]
+}
