@@ -1,0 +1,31 @@
+{
+  "date": "2026-06-27",
+  "site": "petwellhub",
+  "slug": "dog-tick-borne-disease-symptom-log-vet-visit-plan-2026",
+  "endpoint": "GTI15 direct ComfyUI endpoint (redacted)",
+  "dimensions": "1536x864",
+  "source": "C:/Users/k8plus/gti15_setup/generate_natural_blog_candidates.py",
+  "accepted_images": [
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/petwellhub_01/20260627_131357_realvis_3849427395.png",
+      "to": "public/images/illustrations/pwh-dog-tick-symptom-log-20260627-hero.png"
+    },
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/petwellhub_01/20260627_131415_juggernaut_3849427396.png",
+      "to": "public/images/illustrations/pwh-dog-tick-symptom-log-20260627-01.png"
+    },
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/petwellhub_02/20260627_131433_krea_1424655698.png",
+      "to": "public/images/illustrations/pwh-dog-tick-symptom-log-20260627-02.png"
+    },
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/petwellhub_02/20260627_131525_juggernaut_1424655700.png",
+      "to": "public/images/illustrations/pwh-dog-tick-symptom-log-20260627-03.png"
+    },
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/petwellhub_repair_09/20260627_132336_krea_3617245884.png",
+      "to": "public/images/illustrations/pwh-dog-tick-symptom-log-20260627-04.png"
+    }
+  ],
+  "visual_qa": "accepted after contact sheet inspection; rejected originals not referenced"
+}
