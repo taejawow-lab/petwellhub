@@ -1,0 +1,38 @@
+{
+  "site": "petwellhub",
+  "slug": "cat-litter-box-emergency-odor-control-small-apartment-2026",
+  "gti15_endpoint": "redacted LAN endpoint (gate passed)",
+  "accepted": [
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260628_gti15/petwellhub/cat-litter-box-emergency-odor-control-small-apartment-2026/1/20260628_131201_krea_1595068545.png",
+      "file": "pwh-cat-litter-box-emergency-odor-control-small-apartment-2026-01.png",
+      "dimensions": "1536x864",
+      "qa": "PASS visual QA"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260628_gti15/petwellhub/cat-litter-box-emergency-odor-control-small-apartment-2026/1/20260628_131237_realvis_1595068546.png",
+      "file": "pwh-cat-litter-box-emergency-odor-control-small-apartment-2026-02.png",
+      "dimensions": "1536x864",
+      "qa": "PASS visual QA"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260628_gti15/petwellhub/cat-litter-box-emergency-odor-control-small-apartment-2026/1/20260628_131313_krea_943320850.png",
+      "file": "pwh-cat-litter-box-emergency-odor-control-small-apartment-2026-03.png",
+      "dimensions": "1536x864",
+      "qa": "PASS visual QA"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260628_gti15/petwellhub/cat-litter-box-emergency-odor-control-small-apartment-2026/1/20260628_131407_juggernaut_943320852.png",
+      "file": "pwh-cat-litter-box-emergency-odor-control-small-apartment-2026-04.png",
+      "dimensions": "1536x864",
+      "qa": "PASS visual QA"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260628_gti15/petwellhub/cat-litter-box-emergency-odor-control-small-apartment-2026/regen1/20260628_132233_krea_1830269423.png",
+      "file": "pwh-cat-litter-box-emergency-odor-control-small-apartment-2026-05.png",
+      "dimensions": "1536x864",
+      "qa": "PASS visual QA"
+    }
+  ],
+  "rejected_summary": "Rejected candidates with fake text/labels, hands/gloves, currency/calculators, plugged-USB risk, or nonsensical cat-in-bin scenes."
+}
