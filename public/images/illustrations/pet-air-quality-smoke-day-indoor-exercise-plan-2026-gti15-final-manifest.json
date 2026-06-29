@@ -1,0 +1,48 @@
+{
+  "site": "petwellhub",
+  "slug": "pet-air-quality-smoke-day-indoor-exercise-plan-2026",
+  "date": "2026-06-29",
+  "endpoint_host": "GTI15 direct ComfyUI endpoint (redacted in report)",
+  "accepted": [
+    {
+      "slot": 1,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629/petwellhub/run1/20260629_131235_krea_1500453512.png",
+      "filename": "pwh-pwh-air-quality-smoke-day-indoor-exercise-plan-2026-01.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_131235_krea_1500453512.png",
+      "status": "accepted_visual_QA"
+    },
+    {
+      "slot": 2,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629/petwellhub/run1/20260629_131308_realvis_1500453513.png",
+      "filename": "pwh-pwh-air-quality-smoke-day-indoor-exercise-plan-2026-02.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_131308_realvis_1500453513.png",
+      "status": "accepted_visual_QA"
+    },
+    {
+      "slot": 3,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629/petwellhub/run1/20260629_131323_juggernaut_1500453514.png",
+      "filename": "pwh-pwh-air-quality-smoke-day-indoor-exercise-plan-2026-03.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_131323_juggernaut_1500453514.png",
+      "status": "accepted_visual_QA"
+    },
+    {
+      "slot": 4,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629/petwellhub/run2/20260629_131411_realvis_3316440023.png",
+      "filename": "pwh-pwh-air-quality-smoke-day-indoor-exercise-plan-2026-04.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_131411_realvis_3316440023.png",
+      "status": "accepted_visual_QA"
+    },
+    {
+      "slot": 5,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629/petwellhub/run2/20260629_131427_juggernaut_3316440024.png",
+      "filename": "pwh-pwh-air-quality-smoke-day-indoor-exercise-plan-2026-05.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_131427_juggernaut_3316440024.png",
+      "status": "accepted_visual_QA"
+    }
+  ]
+}
