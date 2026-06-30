@@ -1,0 +1,50 @@
+{
+  "site": "petwellhub",
+  "slug": "dog-fireworks-noise-safe-room-medication-vet-plan-2026",
+  "date": "2026-06-30",
+  "endpoint": "GTI15 ComfyUI endpoint (redacted in public report)",
+  "dimensions": "1536x864",
+  "accepted_count": 5,
+  "assets": [
+    {
+      "slot": 1,
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260630/petwellhub/run1/20260630_131326_krea_597936557.png",
+      "filename": "pwh-fireworks-noise-safe-room-20260630-01.png",
+      "width": 1536,
+      "height": 864,
+      "accepted": true
+    },
+    {
+      "slot": 2,
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260630/petwellhub/run1/20260630_131359_realvis_597936558.png",
+      "filename": "pwh-fireworks-noise-safe-room-20260630-02.png",
+      "width": 1536,
+      "height": 864,
+      "accepted": true
+    },
+    {
+      "slot": 3,
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260630/petwellhub/run1/20260630_131414_juggernaut_597936559.png",
+      "filename": "pwh-fireworks-noise-safe-room-20260630-03.png",
+      "width": 1536,
+      "height": 864,
+      "accepted": true
+    },
+    {
+      "slot": 4,
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260630/petwellhub/run2/20260630_131430_krea_161104900.png",
+      "filename": "pwh-fireworks-noise-safe-room-20260630-04.png",
+      "width": 1536,
+      "height": 864,
+      "accepted": true
+    },
+    {
+      "slot": 5,
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260630/petwellhub/run2/20260630_131502_realvis_161104901.png",
+      "filename": "pwh-fireworks-noise-safe-room-20260630-05.png",
+      "width": 1536,
+      "height": 864,
+      "accepted": true
+    }
+  ]
+}
