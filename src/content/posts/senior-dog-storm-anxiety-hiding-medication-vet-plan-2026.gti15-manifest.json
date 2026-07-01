@@ -1,0 +1,44 @@
+{
+  "site": "petwellhub",
+  "slug": "senior-dog-storm-anxiety-hiding-medication-vet-plan-2026",
+  "date": "2026-07-01",
+  "endpoint_host": "GTI15 ComfyUI (internal endpoint redacted in report)",
+  "accepted": [
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/petwellhub/prompt1/20260701_131240_krea_3435390823.png",
+      "published": "/home/taekm33/blog-ops/16-sites/petwellhub/public/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-01.png",
+      "url": "/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-01.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/petwellhub/prompt1/20260701_131316_realvis_3435390824.png",
+      "published": "/home/taekm33/blog-ops/16-sites/petwellhub/public/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-02.png",
+      "url": "/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-02.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/petwellhub/prompt1/20260701_131334_juggernaut_3435390825.png",
+      "published": "/home/taekm33/blog-ops/16-sites/petwellhub/public/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-03.png",
+      "url": "/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-03.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/petwellhub/repair1/20260701_132320_realvis_2685468435.png",
+      "published": "/home/taekm33/blog-ops/16-sites/petwellhub/public/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-04.png",
+      "url": "/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-04.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/petwellhub/repair1/20260701_132337_juggernaut_2685468436.png",
+      "published": "/home/taekm33/blog-ops/16-sites/petwellhub/public/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-05.png",
+      "url": "/images/illustrations/pwh-senior-dog-storm-anxiety-hiding-medication-vet-plan-2026-gti15-05.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    }
+  ],
+  "visual_qa": "passed after rejecting unsafe/text/UI/currency/medicine/document candidates as applicable"
+}
