@@ -28,7 +28,7 @@ const { page, totalPages, posts, totalPosts } = Astro.props;
 const siteName = import.meta.env.PUBLIC_SITE_NAME || '';
 ---
 
-<BaseLayout title={`All Posts — Page ${page}`} description={`Page ${page} of the ${siteName} article archive, with ${totalPosts} published guides.`}>
+<BaseLayout noindex={true} title={`All Posts — Page ${page}`} description={`Page ${page} of the ${siteName} article archive, with ${totalPosts} published guides.`}>
   <section class="container mx-auto px-6 md:px-10 py-16 md:py-24">
     <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 mb-12 md:mb-16 border-b border-border pb-12">
       <div class="col-span-12 md:col-span-4">
