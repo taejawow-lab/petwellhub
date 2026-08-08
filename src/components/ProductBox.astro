@@ -59,10 +59,10 @@ function productSlug(value: string): string {
 
 const productSubtag = productSlug(name);
 const note = lang === 'ko'
-  ? '가격·재고·평점은 변동될 수 있으니 구매 전 상세 페이지에서 다시 확인하세요.'
+  ? '제휴 링크(유료 링크)입니다. 가격·재고·평점은 변동될 수 있으니 구매 전 상세 페이지에서 다시 확인하세요.'
   : lang === 'ja'
-    ? '価格・在庫・評価は変動するため、購入前に詳細ページで再確認してください。'
-    : 'Price, availability, and ratings can change; verify details on the retailer page before buying.';
+    ? 'アフィリエイトリンク（paid link）です。価格・在庫・評価は変動するため、購入前に詳細ページで再確認してください。'
+    : 'Paid affiliate link. Price, availability, and ratings can change; verify details on the retailer page before buying.';
 
 ---
 
