@@ -28,7 +28,7 @@ const labels = {
 };
 ---
 
-<BaseLayout title={`${category} — ${labels.archive}`} description={labels.desc}>
+<BaseLayout title={`${category} — ${labels.archive}`} description={labels.desc} noindex={posts.length < 3}>
   <section class="container mx-auto px-6 md:px-10 py-16 md:py-24">
     <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 mb-12 md:mb-16 border-b border-border pb-12">
       <div class="col-span-12 md:col-span-4">
