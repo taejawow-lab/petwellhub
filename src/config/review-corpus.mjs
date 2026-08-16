@@ -22,7 +22,8 @@ export const REVIEW_POSTS = [
   "pet-microchip-id-data",
   "pet-separation-anxiety-tested",
   "raw-food-pets-safety-risks",
-  "senior-dog-joint-comfort-home-plan"
+  "senior-dog-joint-comfort-home-plan",
+  "dog-weight-loss-calorie-budget-body-condition-plan"
 ];
 export const REVIEW_POST_SET = new Set(REVIEW_POSTS);
 export const REVIEW_MIN_EQUIVALENT_WORDS = 850;

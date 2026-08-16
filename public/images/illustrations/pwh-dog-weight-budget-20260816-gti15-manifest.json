@@ -1,0 +1,95 @@
+{
+  "site": "petwellhub",
+  "slug_prefix": "pwh-dog-weight-budget-20260816",
+  "generated_at": "2026-08-16",
+  "assets": [
+    {
+      "prompt_id": "f6ef628d-614d-49f0-bcb0-a92cd53ecafb",
+      "seed": 916260000,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "calm healthy adult dog standing squarely on a plain low veterinary platform scale in an empty clean room with completely bare walls",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "pwh-dog-weight-budget-20260816-hero.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    },
+    {
+      "prompt_id": "a811b2c9-6cff-44ca-9e2f-563764c70a7b",
+      "seed": 1016260000,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "top-down view of two plain ceramic dog food bowls, one full portion and one small portion, beside three completely blank wooden tokens",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "pwh-dog-weight-budget-20260816-01.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    },
+    {
+      "prompt_id": "23368511-7604-495c-bfcb-3eae51720c5d",
+      "seed": 816260002,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "healthy adult dog viewed safely from side in neutral standing pose on plain studio floor, natural canine anatomy, no measurement markings",
+      "negative_policy": ", realistic editorial photography, natural perspective, physically plausible objects, coherent clean scene, soft natural light, premium magazine quality, accurate proportions, text-free, logo-free, watermark-free, no people, no hands, no faces, no readable labels, no screens or user interface, no papers with markings",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "pwh-dog-weight-budget-20260816-02.png",
+      "status": "ACCEPTED_VISUAL_QA"
+    },
+    {
+      "prompt_id": "19caff41-451e-40d3-990f-bcf0467528ce",
+      "seed": 816260003,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "two ceramic bowls showing main dog ration and a very small separate treat portion, top-down composition, no packaging",
+      "negative_policy": ", realistic editorial photography, natural perspective, physically plausible objects, coherent clean scene, soft natural light, premium magazine quality, accurate proportions, text-free, logo-free, watermark-free, no people, no hands, no faces, no readable labels, no screens or user interface, no papers with markings",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "pwh-dog-weight-budget-20260816-03.png",
+      "status": "ACCEPTED_VISUAL_QA"
+    },
+    {
+      "prompt_id": "b9cb9595-e7ba-4eeb-a27e-8c959374667a",
+      "seed": 1016260001,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "plain leash coiled beside a ceramic dog bowl and three groups of completely blank wooden tokens representing weekly tracking",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "pwh-dog-weight-budget-20260816-04.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    },
+    {
+      "prompt_id": "0a8ad283-330e-4003-bac6-394f806dad8c",
+      "seed": 1016260002,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "ceramic dog bowl beside closed plain storage box and a plain leash in a clean veterinary room with completely bare walls",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "pwh-dog-weight-budget-20260816-05.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    }
+  ],
+  "contact_sheet": "pwh-dog-weight-budget-20260816-contact-sheet-published.jpg",
+  "visual_qa": "PASS: strict final contact-sheet inspection; only accepted published assets retained.",
+  "publish_policy": "Only listed assets may be transferred after final contact-sheet visual QA.",
+  "published_asset_count": 6
+}
