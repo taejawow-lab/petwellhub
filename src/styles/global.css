@@ -70,3 +70,11 @@
   .text-pretty { text-wrap: pretty; }
   .glass { @apply backdrop-blur-md; background: color-mix(in srgb, var(--card-raised) 78%, transparent); border: 1px solid var(--line); }
 }
+/* Batch C mobile publisher QA: contain narrow-viewport overflow. */
+@media (max-width: 640px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  nav[aria-label="Mobile primary navigation"] { max-width: 100vw; overflow: hidden; }
+  nav[aria-label="Mobile primary navigation"] > ul { max-width: 100%; }
+  .prose-article { max-width: 100%; overflow-wrap: anywhere; }
+  article section li, article section a { min-width: 0; max-width: 100%; }
+}
