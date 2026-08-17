@@ -1,0 +1,208 @@
+{
+  "site": "petwellhub",
+  "slug": "cat-diabetes-home-monitoring-insulin-glucose-hypoglycemia-plan",
+  "title": "Cat Diabetes Home Monitoring Plan: Insulin Timing, Glucose Logs, and Hypoglycemia Safety",
+  "date": "2026-08-17",
+  "engine": "GTI15 FLUX.1 Krea dev",
+  "visual_qa": "PASS: all five final published assets reviewed; no readable/fake text, logos, UI, people/hands/faces, unsafe or wrong-domain imagery. Risky candidates were replaced before staging.",
+  "assets": [
+    {
+      "file": "public/images/illustrations/pwh-cat-diabetes-20260817-hero.png",
+      "render_url": "/images/illustrations/pwh-cat-diabetes-20260817-hero.png",
+      "suffix": "hero",
+      "seed": 202608170300,
+      "prompt": "rear-view domestic cat beside a plain ceramic water bowl and closed unlabeled supply box, calm home setting",
+      "engine": "krea",
+      "source_manifest": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "rear-view domestic cat beside a plain ceramic water bowl and closed unlabeled supply box, calm home setting, realistic editorial stock photography, natural soft light, physically plausible clean still life, restrained colors, no people, no hands, no human faces, no readable text, no letters, no numbers, no logos, no watermark, no screen UI, no document-like surfaces, no labels, no brand marks, 16:9",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "e475b811-619e-491d-a65c-a64981dde879",
+            "remote": {
+              "filename": "gti15_natural_krea_00369_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817\\petwellhub\\hero\\20260817_132513_krea_202608170300.png",
+            "bytes": 1548359,
+            "seconds": 37,
+            "engine": "krea",
+            "seed": 202608170300,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817\\petwellhub\\hero\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1548359,
+      "accepted": true,
+      "qa_status": "PASS",
+      "qa_checked": "2026-08-17 strict final contact-sheet/individual review"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-diabetes-20260817-01.png",
+      "render_url": "/images/illustrations/pwh-cat-diabetes-20260817-01.png",
+      "suffix": "01",
+      "seed": 202608170301,
+      "prompt": "side silhouette of a domestic cat near two plain ceramic bowls and an unmarked storage container, quiet feeding routine",
+      "engine": "krea",
+      "source_manifest": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "side silhouette of a domestic cat near two plain ceramic bowls and an unmarked storage container, quiet feeding routine, realistic editorial stock photography, natural soft light, physically plausible clean still life, restrained colors, no people, no hands, no human faces, no readable text, no letters, no numbers, no logos, no watermark, no screen UI, no document-like surfaces, no labels, no brand marks, 16:9",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "cf195363-340f-4892-b0b3-5858bbd76071",
+            "remote": {
+              "filename": "gti15_natural_krea_00370_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817\\petwellhub\\01\\20260817_132551_krea_202608170301.png",
+            "bytes": 1385693,
+            "seconds": 13,
+            "engine": "krea",
+            "seed": 202608170301,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817\\petwellhub\\01\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1385693,
+      "accepted": true,
+      "qa_status": "PASS",
+      "qa_checked": "2026-08-17 strict final contact-sheet/individual review"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-diabetes-20260817-02.png",
+      "render_url": "/images/illustrations/pwh-cat-diabetes-20260817-02.png",
+      "suffix": "02",
+      "seed": 202608170302,
+      "prompt": "rear-view domestic cat walking between a plain water station and a clean litter station, uncluttered room",
+      "engine": "krea",
+      "source_manifest": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "rear-view domestic cat walking between a plain water station and a clean litter station, uncluttered room, realistic editorial stock photography, natural soft light, physically plausible clean still life, restrained colors, no people, no hands, no human faces, no readable text, no letters, no numbers, no logos, no watermark, no screen UI, no document-like surfaces, no labels, no brand marks, 16:9",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "2fe1d501-5e80-4942-95ca-8e98f87bd948",
+            "remote": {
+              "filename": "gti15_natural_krea_00371_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817\\petwellhub\\02\\20260817_132605_krea_202608170302.png",
+            "bytes": 1446822,
+            "seconds": 14,
+            "engine": "krea",
+            "seed": 202608170302,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817\\petwellhub\\02\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1446822,
+      "accepted": true,
+      "qa_status": "PASS",
+      "qa_checked": "2026-08-17 strict final contact-sheet/individual review"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-diabetes-20260817-03.png",
+      "render_url": "/images/illustrations/pwh-cat-diabetes-20260817-03.png",
+      "suffix": "03",
+      "seed": 202608172000,
+      "prompt": "plain closed pet carrier, three neatly folded solid-color towels, small closed rectangular storage box, soft cat-shaped shadow on wall",
+      "engine": "krea",
+      "source_manifest": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "plain closed pet carrier, three neatly folded solid-color towels, small closed rectangular storage box, soft cat-shaped shadow on wall, realistic minimalist editorial stock photograph, soft natural window light, physically plausible clean still life, muted neutral colors, simple unmarked objects only, no people, no animals except explicit cat shadow, no hands, no faces, no text, no typography, no letters, no digits, no logos, no icons, no symbols, no marks, no watermark, no screen, no computer, no phone, no router, no keyboard, no documents, no paper, no envelope, no receipt, no form, no calculator, no coins, no currency, no medicine, no label, no QR code, no barcode, 16:9",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "ffb4b4c7-67df-4126-b99b-3b82304fead6",
+            "remote": {
+              "filename": "gti15_natural_krea_00402_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817-replacements2\\petwellhub\\03\\20260817_133711_krea_202608172000.png",
+            "bytes": 1357501,
+            "seconds": 14,
+            "engine": "krea",
+            "seed": 202608172000,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817-replacements2\\petwellhub\\03\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1357501,
+      "accepted": true,
+      "replacement_reason": "Strict parent visual QA rejected the initial candidate.",
+      "qa_status": "PASS",
+      "qa_checked": "2026-08-17 strict final contact-sheet/individual review"
+    },
+    {
+      "file": "public/images/illustrations/pwh-cat-diabetes-20260817-04.png",
+      "render_url": "/images/illustrations/pwh-cat-diabetes-20260817-04.png",
+      "suffix": "04",
+      "seed": 202608170304,
+      "prompt": "five blank colored wooden tokens beside a plain cat-shaped silhouette and closed storage box, monitoring routine concept",
+      "engine": "krea",
+      "source_manifest": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "five blank colored wooden tokens beside a plain cat-shaped silhouette and closed storage box, monitoring routine concept, realistic editorial stock photography, natural soft light, physically plausible clean still life, restrained colors, no people, no hands, no human faces, no readable text, no letters, no numbers, no logos, no watermark, no screen UI, no document-like surfaces, no labels, no brand marks, 16:9",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "1d1f1bef-61ec-4572-8538-0bee04b0de79",
+            "remote": {
+              "filename": "gti15_natural_krea_00373_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817\\petwellhub\\04\\20260817_132634_krea_202608170304.png",
+            "bytes": 1288088,
+            "seconds": 14,
+            "engine": "krea",
+            "seed": 202608170304,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch-c-20260817\\petwellhub\\04\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1288088,
+      "accepted": true,
+      "qa_status": "PASS",
+      "qa_checked": "2026-08-17 strict final contact-sheet/individual review"
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/pwh-cat-diabetes-20260817-contact-sheet-final.jpg",
+  "final_contact_sheet": "public/images/illustrations/pwh-cat-diabetes-20260817-contact-sheet-final.jpg"
+}
