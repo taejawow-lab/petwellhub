@@ -24,7 +24,8 @@ export const REVIEW_POSTS = [
   "raw-food-pets-safety-risks",
   "senior-dog-joint-comfort-home-plan",
   "dog-weight-loss-calorie-budget-body-condition-plan",
-  "cat-diabetes-home-monitoring-insulin-glucose-hypoglycemia-plan"
+  "cat-diabetes-home-monitoring-insulin-glucose-hypoglycemia-plan",
+  "dog-gdv-bloat-emergency-gastropexy-decision-plan"
 ];
 export const REVIEW_POST_SET = new Set(REVIEW_POSTS);
 export const REVIEW_MIN_EQUIVALENT_WORDS = 850;

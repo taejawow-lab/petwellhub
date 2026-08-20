@@ -1,0 +1,64 @@
+{
+  "site": "petwellhub",
+  "date": "2026-08-20",
+  "assets": [
+    {
+      "filename": "pwh-dog-gdv-20260820-hero.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820\\petwellhub\\01\\20260820_141900_krea_2704845422.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "ed88f4cd-458d-44df-82af-c5830add715b",
+      "seed": 2704845422,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    },
+    {
+      "filename": "pwh-dog-gdv-20260820-01.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820\\petwellhub\\02\\20260820_141900_krea_2826801359.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "6a93158d-6a19-4388-b3a1-899c207f4f78",
+      "seed": 2826801359,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    },
+    {
+      "filename": "pwh-dog-gdv-20260820-02.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820_replacements3\\petwellhub\\03\\20260820_143441_krea_533030338.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "c9af1499-ae36-4c15-83b4-859263fff79d",
+      "seed": 533030338,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    },
+    {
+      "filename": "pwh-dog-gdv-20260820-03.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820\\petwellhub\\04\\20260820_141945_krea_3539557173.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "15f3e7d8-5f0e-49f1-948e-cf4b131bc5ee",
+      "seed": 3539557173,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    },
+    {
+      "filename": "pwh-dog-gdv-20260820-04.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820\\petwellhub\\05\\20260820_141957_krea_3583585033.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "a1e162f8-a94b-4e2d-addd-f33058eb81d0",
+      "seed": 3583585033,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    }
+  ],
+  "rejected_excluded": [
+    "pwh-dog-gdv-20260820-05.png"
+  ]
+}
