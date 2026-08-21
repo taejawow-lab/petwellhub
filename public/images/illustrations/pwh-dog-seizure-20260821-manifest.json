@@ -1,0 +1,189 @@
+{
+  "site": "petwellhub",
+  "created_at": "2026-08-21",
+  "backend": "GTI15 ComfyUI",
+  "endpoint": "REDACTED",
+  "model_family": "Krea",
+  "assets": [
+    {
+      "filename": "pwh-dog-seizure-20260821-hero.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run0\\20260821_134507_krea_2026082100.png",
+      "prompt": "calm realistic editorial photograph of an adult family dog resting safely on a clear floor beside a moved-away chair, owner visible only as distant lower body keeping space, seizure first-aid preparedness metaphor, natural home light, no hands touching dog, no distress, no text, no labels, no logos, no screens, no medical devices",
+      "seed": 2026082100,
+      "dimensions": "1536x864",
+      "engine": "krea",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "calm realistic editorial photograph of an adult family dog resting safely on a clear floor beside a moved-away chair, owner visible only as distant lower body keeping space, seizure first-aid preparedness metaphor, natural home light, no hands touching dog, no distress, no text, no labels, no logos, no screens, no medical devices",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "0d04ca80-827a-412b-8133-041244cc65fd",
+            "remote": {
+              "filename": "gti15_natural_krea_00581_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run0\\20260821_134507_krea_2026082100.png",
+            "bytes": 1518319,
+            "seconds": 32,
+            "engine": "krea",
+            "seed": 2026082100,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run0\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_status": "PASS"
+    },
+    {
+      "filename": "pwh-dog-seizure-20260821-01.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\regen_01\\20260821_140343_krea_2026089000.png",
+      "prompt": "realistic veterinary editorial still life of a plain sand timer with completely opaque sides so no markings are visible, folded towel, leash and empty pet carrier, closed blank notebook, seizure timing preparation, absolutely no clocks, no numbers, no writing, no labels, no logos, no screens, no medication, no people",
+      "seed": 2026089000,
+      "dimensions": "1536x864",
+      "engine": "krea",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic veterinary editorial still life of a plain analog stopwatch with blank face turned away, folded towel, leash and empty pet carrier beside a closed notebook, seizure timing and transport preparation, no readable numbers, no writing, no labels, no logos, no screens, no medication",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "12e8a50e-50bd-4121-b2bc-0083b8b6dcff",
+            "remote": {
+              "filename": "gti15_natural_krea_00582_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run1\\20260821_134540_krea_2026082101.png",
+            "bytes": 1609449,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082101,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run1\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_note": "regenerated after strict contact-sheet rejection",
+      "qa_status": "PASS"
+    },
+    {
+      "filename": "pwh-dog-seizure-20260821-02.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\regen3_02\\20260821_141008_realvis_2026095000.png",
+      "prompt": "minimal realistic editorial photograph of an empty uncluttered living room with a large plain soft rug and cushions moved to the wall, open clear floor for pet safety, no animals, no people, no electronics of any kind, no phone, no laptop, no furniture screens, no writing, no text, no labels, no logos",
+      "seed": 2026095000,
+      "dimensions": "1536x864",
+      "engine": "realvis",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic overhead editorial photo of a cleared living-room safety zone for a dog, cushions moved away, soft rug and open path, calm preparation, no people, no text, no labels, no logos, no screens, no sharp objects",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "3740b80d-a237-4055-a9e2-01c7375cd8c2",
+            "remote": {
+              "filename": "gti15_natural_krea_00583_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run2\\20260821_134552_krea_2026082102.png",
+            "bytes": 2440164,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082102,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run2\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_note": "second strict regeneration",
+      "qa_status": "PASS"
+    },
+    {
+      "filename": "pwh-dog-seizure-20260821-03.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run3\\20260821_134605_krea_2026082103.png",
+      "prompt": "realistic veterinary consultation room with calm adult dog sitting beside owner whose face is out of frame, veterinarian shown from shoulders down holding a completely blank closed folder, no examination procedure, no readable text, no logos, natural editorial photography",
+      "seed": 2026082103,
+      "dimensions": "1536x864",
+      "engine": "krea",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic veterinary consultation room with calm adult dog sitting beside owner whose face is out of frame, veterinarian shown from shoulders down holding a completely blank closed folder, no examination procedure, no readable text, no logos, natural editorial photography",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "703d3b38-6f45-4248-8233-055eb1d840bc",
+            "remote": {
+              "filename": "gti15_natural_krea_00584_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run3\\20260821_134605_krea_2026082103.png",
+            "bytes": 1519060,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082103,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run3\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_status": "PASS"
+    },
+    {
+      "filename": "pwh-dog-seizure-20260821-04.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run4\\20260821_134618_krea_2026082104.png",
+      "prompt": "realistic editorial photo of a safely parked vehicle rear area prepared with nonslip mat, plain blanket, leash and empty pet carrier for veterinary transport, no people, no license plate, no dashboard, no text, no labels, no logos",
+      "seed": 2026082104,
+      "dimensions": "1536x864",
+      "engine": "krea",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic editorial photo of a safely parked vehicle rear area prepared with nonslip mat, plain blanket, leash and empty pet carrier for veterinary transport, no people, no license plate, no dashboard, no text, no labels, no logos",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "f439f9a6-05ea-4806-bd81-97988602fb56",
+            "remote": {
+              "filename": "gti15_natural_krea_00585_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run4\\20260821_134618_krea_2026082104.png",
+            "bytes": 1646989,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082104,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\run4\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_status": "PASS"
+    }
+  ],
+  "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\petwellhub\\pwh-dog-seizure-20260821-contact-sheet-accepted-final.jpg",
+  "qa_status": "PASS",
+  "qa_summary": "Five published raster assets visually inspected after targeted regenerations; no rejected assets remain in the published set."
+}
