@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-08-26",
+  "backend": "GTI15 ComfyUI",
+  "endpoint": "redacted",
+  "article_slug": "dog-red-eye-emergency-squinting-cloudiness-trauma-transport",
+  "accepted_count": 5,
+  "assets": [
+    {
+      "filename": "pwh-dog-eye-20260826-hero.png",
+      "engine": "krea",
+      "seed": 3110142675,
+      "prompt_id": "ce98d909-8e4f-4c14-a29b-41cb40141092",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1594882,
+      "prompt": "Natural editorial veterinary photography for a dog red-eye emergency observation guide: calm adult dog in profile near soft window light, normal symmetrical eyes, plain pet carrier, folded towel and leash nearby, no people, no hands, no readable text, no labels, no logos, no screens, no blood or injury detail, anatomically correct, documentary realism, horizontal composition",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    },
+    {
+      "filename": "pwh-dog-eye-20260826-01.png",
+      "engine": "realvis",
+      "seed": 3110142676,
+      "prompt_id": "aa59c6ff-0d81-4bfc-99cb-ddac991b76dd",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1558199,
+      "prompt": "Natural editorial veterinary photography for a dog red-eye emergency observation guide: calm adult dog in profile near soft window light, normal symmetrical eyes, plain pet carrier, folded towel and leash nearby, no people, no hands, no readable text, no labels, no logos, no screens, no blood or injury detail, anatomically correct, documentary realism, horizontal composition",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    },
+    {
+      "filename": "pwh-dog-eye-20260826-02.png",
+      "engine": "krea",
+      "seed": 1866060489,
+      "prompt_id": "b7100287-9669-48e0-b4dd-7e175773bc48",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1468829,
+      "prompt": "Natural veterinary editorial still life for safe dog eye-issue transport: open plain carrier with clean towel, transparent protective cone, leash, dark quiet room, dog softly out of focus with normal anatomy, no people, no hands, no text, no labels, no logos, no screens, no fake medical equipment, horizontal 16 by 9",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    },
+    {
+      "filename": "pwh-dog-eye-20260826-03.png",
+      "engine": "realvis",
+      "seed": 1866060490,
+      "prompt_id": "7179978d-132f-4dd3-af68-01a44bde6f74",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1563255,
+      "prompt": "Natural veterinary editorial still life for safe dog eye-issue transport: open plain carrier with clean towel, transparent protective cone, leash, dark quiet room, dog softly out of focus with normal anatomy, no people, no hands, no text, no labels, no logos, no screens, no fake medical equipment, horizontal 16 by 9",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    },
+    {
+      "filename": "pwh-dog-eye-20260826-04.png",
+      "engine": "juggernaut",
+      "seed": 1866060491,
+      "prompt_id": "04d861ab-c9e6-4ba8-a4fb-1864c67ec792",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1619262,
+      "prompt": "Natural veterinary editorial still life for safe dog eye-issue transport: open plain carrier with clean towel, transparent protective cone, leash, dark quiet room, dog softly out of focus with normal anatomy, no people, no hands, no text, no labels, no logos, no screens, no fake medical equipment, horizontal 16 by 9",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    }
+  ],
+  "qa": "Final selected assets visually inspected; rejected candidates excluded."
+}
