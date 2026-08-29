@@ -27,7 +27,8 @@ export const REVIEW_POSTS = [
   "cat-diabetes-home-monitoring-insulin-glucose-hypoglycemia-plan",
   "dog-gdv-bloat-emergency-gastropexy-decision-plan",
   "recognizing-dog-seizures-timing-record-vet-guide",
-  "dog-red-eye-emergency-squinting-cloudiness-trauma-transport"
+  "dog-red-eye-emergency-squinting-cloudiness-trauma-transport",
+  "pet-human-medicine-ingestion-first-hour-poison-hotline-checklist"
 ];
 export const REVIEW_POST_SET = new Set(REVIEW_POSTS);
 export const REVIEW_MIN_EQUIVALENT_WORDS = 850;

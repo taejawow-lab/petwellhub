@@ -1,0 +1,81 @@
+{
+  "site": "petwellhub",
+  "slug": "pet-human-medicine-ingestion-first-hour-poison-hotline-checklist",
+  "generated_at": "2026-08-29T17:00:00+09:00",
+  "generator": "GTI15 ComfyUI",
+  "generator_endpoint": "http://192.168.50.31:8188",
+  "visual_qa": "PASS after iterative contact-sheet review; rejected candidates excluded",
+  "contact_sheet": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_pet_crops/petwellhub-final-cropped-contact-sheet.jpg",
+  "assets": [
+    {
+      "engine": "krea",
+      "seed": 2026082971,
+      "prompt_id": "f4353cd0-e617-4b76-97a0-2f7686a957eb",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_pet_final3/00/20260829_170915_krea_2026082971.png",
+      "prompt": "realistic editorial photograph of a clean empty home entryway with a plain closed pet carrier beside the door, soft daylight. only plain unmarked surfaces, absolutely no text, no letters, no numbers, no symbols, no QR patterns, no barcode, no label, no logo, no brand, no watermark, no bottle, no medicine, no pill, no package, no paper, no document, no form, no calculator, no phone, no computer, no screen, no cable, no tools, no people, no hands, no human faces, no distorted geometry",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "pwh-pet-medicine-20260829-hero.png",
+      "bytes": 807497,
+      "transform": "crop (0,0,760,427) + resize"
+    },
+    {
+      "engine": "krea",
+      "seed": 2026082972,
+      "prompt_id": "081a9689-ffa8-4438-b9b4-4a9a4f4ac040",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_pet_final3/01/20260829_170928_krea_2026082972.png",
+      "prompt": "realistic editorial photograph of a tall wall cabinet with every door firmly closed above an entirely empty counter, calm home interior. only plain unmarked surfaces, absolutely no text, no letters, no numbers, no symbols, no QR patterns, no barcode, no label, no logo, no brand, no watermark, no bottle, no medicine, no pill, no package, no paper, no document, no form, no calculator, no phone, no computer, no screen, no cable, no tools, no people, no hands, no human faces, no distorted geometry",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "pwh-pet-medicine-20260829-01.png",
+      "bytes": 1404329,
+      "transform": "crop (400,0,1536,639) + resize"
+    },
+    {
+      "engine": "krea",
+      "seed": 2026082973,
+      "prompt_id": "b6d65bf9-63d1-44e9-b6b1-83b64fe2dc7c",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_pet_final3/02/20260829_170941_krea_2026082973.png",
+      "prompt": "realistic editorial photograph of an empty veterinary examination room with a plain closed pet carrier on the floor and a bare stainless examination table, no people. only plain unmarked surfaces, absolutely no text, no letters, no numbers, no symbols, no QR patterns, no barcode, no label, no logo, no brand, no watermark, no bottle, no medicine, no pill, no package, no paper, no document, no form, no calculator, no phone, no computer, no screen, no cable, no tools, no people, no hands, no human faces, no distorted geometry",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "pwh-pet-medicine-20260829-02.png",
+      "bytes": 1082965,
+      "transform": "crop (0,330,900,836) + resize"
+    },
+    {
+      "engine": "krea",
+      "seed": 2026082944,
+      "prompt_id": "bbe16611-75dd-45b5-99d4-157bd2abd6fc",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_final2/petwellhub/03/20260829_170259_krea_2026082944.png",
+      "prompt": "realistic editorial still life of a sturdy unlabeled lockbox closed on a high wooden shelf above an empty clean counter, neutral home interior. only plain unlabeled objects, absolutely no text, no letters, no numbers, no symbols, no QR patterns, no barcode, no label, no logo, no brand, no watermark, no screen, no user interface, no document, no paper, no form, no bottle, no medicine, no calculator, no currency, no card, no keyboard, no smartphone, no people, no hands, no faces, no distorted geometry",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "pwh-pet-medicine-20260829-03.png",
+      "bytes": 1462940,
+      "transform": "none"
+    },
+    {
+      "engine": "krea",
+      "seed": 2026083003,
+      "prompt_id": "c1b2c363-4406-4d1b-91e7-823472a36268",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_regen/petwellhub/02/20260829_165120_krea_2026083003.png",
+      "prompt": "realistic household safety photograph of a small dog bed and empty pet bowl far below a securely closed high cabinet, clean simple room. no text, no letters, no numbers, no words, no labels, no logo, no watermark, no QR code, no screen, no UI, no phone, no computer, no paper, no document, no form, no calculator, no money, no cards, no hands, no faces, no people, no medicine bottle",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "pwh-pet-medicine-20260829-04.png",
+      "bytes": 1049042,
+      "transform": "crop (0,0,900,506) + resize"
+    }
+  ]
+}
