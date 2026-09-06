@@ -1,12 +1,10 @@
 ---
-// v5.3 #8 - References 섹션 자동
 export interface Props {
   sources: Array<{ title: string; url: string; author?: string; year?: string; publication?: string }>;
 }
 
 const { sources } = Astro.props;
-const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
-const heading = lang === 'ko' ? '참고 자료' : 'References';
+const heading = 'References';
 ---
 
 <aside class="mt-12 pt-8 border-t border-border">

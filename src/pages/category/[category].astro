@@ -20,12 +20,7 @@ export async function getStaticPaths() {
 
 const { category, posts } = Astro.props;
 const siteName = import.meta.env.PUBLIC_SITE_NAME || '';
-const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
-const labels = {
-  archive: lang === 'ko' ? '카테고리' : lang === 'ja' ? 'カテゴリー' : 'Category',
-  articles: lang === 'ko' ? '글' : lang === 'ja' ? '記事' : 'articles',
-  desc: lang === 'ko' ? `${category} 카테고리의 ${posts.length}개 글` : `Every ${category} article on ${siteName}`,
-};
+const labels = { archive: 'Category', articles: 'articles', desc: `All ${category} articles on ${siteName}` };
 ---
 
 <BaseLayout title={`${category} — ${labels.archive}`} description={labels.desc} noindex={posts.length < 3}>
@@ -64,7 +59,7 @@ const labels = {
 
     <div class="mt-16 pt-12 border-t border-border">
       <a href="/posts/" class="inline-flex items-center gap-3 text-sm uppercase tracking-[0.15em] font-mono hover:text-accent transition-colors">
-        ← {lang === 'ko' ? '전체 글 보기' : lang === 'ja' ? '全記事' : 'View all articles'}
+        ← View all articles
       </a>
     </div>
   </section>

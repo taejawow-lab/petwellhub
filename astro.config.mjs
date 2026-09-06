@@ -15,7 +15,11 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         const { pathname } = new URL(page);
-        return !pathname.startsWith('/tags/') && pathname !== '/search/' && !pathname.startsWith('/posts/page/');
+        const excludedRoutes = new Set(['/404/', '/search/']);
+        const indexableCategories = new Set(['/category/dog-health/', '/category/pet-safety/']);
+        if (excludedRoutes.has(pathname) || pathname.startsWith('/tags/') || pathname.startsWith('/posts/page/')) return false;
+        if (pathname.startsWith('/category/')) return indexableCategories.has(pathname);
+        return true;
       },
     }),
     mdx(),

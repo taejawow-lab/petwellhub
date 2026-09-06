@@ -1,5 +1,4 @@
 ---
-// v5.3 시각자료 #11 - 데이터 차트 (Chart.js)
 export interface Props {
   id: string;
   type: 'bar' | 'line' | 'pie' | 'doughnut' | 'radar';
@@ -37,14 +36,12 @@ const optionsString = JSON.stringify({
     const ctx = document.getElementById(id);
     if (!ctx) return;
 
-    // 사이트 컬러 토큰을 차트에 자동 적용
     const styles = getComputedStyle(document.documentElement);
     const primary = styles.getPropertyValue('--color-primary').trim();
     const accent = styles.getPropertyValue('--color-accent').trim();
     const muted = styles.getPropertyValue('--color-muted-foreground').trim();
 
     const data = JSON.parse(dataString);
-    // 데이터셋에 사이트 컬러 자동 적용
     if (data.datasets) {
       data.datasets.forEach((ds, i) => {
         if (!ds.backgroundColor) {

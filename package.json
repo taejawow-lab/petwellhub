@@ -9,8 +9,8 @@
     "build": "npm run qa:adsense && astro build && npm run qa:adsense:dist",
     "preview": "astro preview",
     "astro": "astro",
-    "qa:adsense": "node scripts/portfolio-adsense-gate.mjs",
-    "qa:adsense:dist": "node scripts/portfolio-adsense-gate.mjs --dist"
+    "qa:adsense": "node scripts/adsense-corpus-qa.mjs",
+    "qa:adsense:dist": "node scripts/adsense-corpus-qa.mjs --dist"
   },
   "dependencies": {
     "astro": "^5.0.0",

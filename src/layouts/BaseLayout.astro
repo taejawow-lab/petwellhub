@@ -31,7 +31,6 @@ const siteName = import.meta.env.PUBLIC_SITE_NAME || 'PetWellHub';
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://petwellhub.org';
 const fullImageUrl = new URL(image, siteUrl).href;
 
-// Default schema — 사이트 자체 NewsMediaOrganization
 const defaultSchema = {
   '@context': 'https://schema.org',
   '@type': 'NewsMediaOrganization',
@@ -92,7 +91,6 @@ const finalSchema = schema || defaultSchema;
     {import.meta.env.PUBLIC_NAVER_VERIFICATION && (
       <meta name="naver-site-verification" content={import.meta.env.PUBLIC_NAVER_VERIFICATION} />
     )}
-    <!-- Theme color (사이트 primary 자동) -->
     <meta name="theme-color" content="var(--color-primary)" />
 
     <!-- Preconnect to fonts -->
@@ -102,7 +100,6 @@ const finalSchema = schema || defaultSchema;
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
 
-    <!-- AdSense (환경변수 있으면 자동 삽입) -->
     {import.meta.env.PUBLIC_ADSENSE_CLIENT && (
       <script
         async
@@ -128,7 +125,6 @@ const finalSchema = schema || defaultSchema;
     <script defer src="https://taekm33.org/assets/taekm33-analytics-v4.js"></script>
 
 
-    <!-- Theme toggle script (FOUC 방지) -->
     <script is:inline>
       (function () {
         const theme = localStorage.getItem('theme') ||

@@ -4,29 +4,23 @@ const description = import.meta.env.PUBLIC_SITE_DESCRIPTION || '';
 const edition = import.meta.env.PUBLIC_SITE_EDITION || '';
 const tagline = import.meta.env.PUBLIC_SITE_TAGLINE || '';
 const currentYear = new Date().getFullYear();
-const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
 const followLinks = [
   { label: 'Pinterest', href: import.meta.env.PUBLIC_SITE_PINTEREST },
   { label: 'Instagram', href: import.meta.env.PUBLIC_SITE_INSTAGRAM },
   { label: 'YouTube', href: import.meta.env.PUBLIC_SITE_YOUTUBE },
 ].filter((item) => item.href);
 
-const aiDisclosure = lang === 'ko'
-  ? '본 사이트의 콘텐츠는 AI 도구의 보조를 받아 작성됩니다. 모든 데이터는 1차 자료에서 검증되며, 본문 인용 링크로 직접 확인할 수 있습니다.'
-  : 'Content on this site is produced with AI assistance. All data points are verified against primary sources, and all sources are linked inline for direct verification.';
-
-const affiliateDisclosure = lang === 'ko'
-  ? '쿠팡파트너스 활동의 일환으로 일정액의 수수료를 제공받습니다. As an Amazon Associate I earn from qualifying purchases.'
-  : 'As an Amazon Associate I earn from qualifying purchases. Other affiliate partnerships may also generate commissions.';
+const aiDisclosure = 'AI tools may assist research organization and drafting. This does not imply veterinary review, hands-on testing, or complete accuracy; see Editorial Process for the site standard.';
+const affiliateDisclosure = 'Some pages may contain clearly disclosed affiliate links. A commercial relationship does not replace veterinary advice or imply hands-on product testing.';
 ---
 
 <footer class="border-t border-border mt-24 md:mt-32 relative overflow-hidden">
-  <!-- 미세 grain texture -->
+  <!-- subtle grain texture -->
   <div class="absolute inset-0 pointer-events-none opacity-[0.04]" aria-hidden="true"
        style="background-image: linear-gradient(to right, rgb(var(--color-foreground)) 1px, transparent 1px); background-size: 64px 100%;"></div>
 
   <div class="container mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-12 relative">
-    <!-- masthead — 거대 wordmark -->
+    <!-- masthead wordmark -->
     <div class="grid grid-cols-12 gap-x-6 md:gap-x-8 mb-16 md:mb-20 items-end">
       <div class="col-span-12 md:col-span-8">
         {edition && (
@@ -56,7 +50,7 @@ const affiliateDisclosure = lang === 'ko'
       </div>
     </div>
 
-    <!-- nav 그리드 — 더 미니멀 -->
+    <!-- navigation grid -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 pt-12 md:pt-16 border-t border-border">
       <div>
         <h4 class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground font-mono mb-5">Sections</h4>
@@ -100,7 +94,7 @@ const affiliateDisclosure = lang === 'ko'
       </div>
     </div>
 
-    <!-- AI disclosure — editorial styled -->
+    <!-- disclosures -->
     <div class="mt-16 pt-8 border-t border-border">
       <div class="grid grid-cols-12 gap-6 md:gap-8">
         <div class="col-span-12 md:col-span-4">
@@ -120,7 +114,7 @@ const affiliateDisclosure = lang === 'ko'
       <span>© {currentYear} {siteName} · All rights reserved</span>
       <span>Set in {' '}
         <span style="font-family: var(--font-display);" class="normal-case tracking-tight text-sm">
-          {/* fontDisplay 이름은 CSS variable이라 표시 어려우니 일반 표기 */}
+          {/* Typeface name is represented through a CSS variable. */}
           serif &amp; sans
         </span>
         {' '} · Built with Astro

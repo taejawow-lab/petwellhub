@@ -66,7 +66,7 @@ const faqSchema = faq.length > 0 ? {
   })),
 } : null;
 
-const siteUrlBC = (Astro.site ? Astro.site.toString().replace(/\/$/, '') : (import.meta.env.PUBLIC_SITE_URL || 'https://yookahplus.org'));
+const siteUrlBC = (Astro.site ? Astro.site.toString().replace(/\/$/, '') : (import.meta.env.PUBLIC_SITE_URL || 'https://petwellhub.org'));
 const siteNameBC = import.meta.env.PUBLIC_SITE_NAME || 'Editorial';
 const postUrlBC = `${siteUrlBC}${Astro.url.pathname}`;
 const categorySlug = category ? category.toLowerCase().trim().replace(/\s+/g, '-') : '';
@@ -84,15 +84,8 @@ const schema = faqSchema ? {
   '@graph': [articleSchema, breadcrumbSchema, faqSchema],
 } : { '@context': 'https://schema.org', '@graph': [articleSchema, breadcrumbSchema] };
 
-const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
-const localeMap: Record<string, string> = { ko: 'ko-KR', ja: 'ja-JP', en: 'en-US' };
-const tMap: Record<string, { published: string; updated: string; sources: string; visuals: string; video: string; related: string; explore: string }> = {
-  ko: { published: '발행일', updated: '갱신', sources: '건 1차 자료', visuals: '종 시각 자료', video: '영상 요약', related: '함께 읽으면 좋은 글', explore: '관련 경로 열기' },
-  ja: { published: '公開', updated: '更新', sources: '件の出典', visuals: '点のビジュアル', video: '動画要約', related: 'あわせて読みたい', explore: '関連ページを開く' },
-  en: { published: 'Published', updated: 'Updated', sources: 'sources cited', visuals: 'visuals', video: 'Video summary', related: 'Related Reading', explore: 'Open related path' },
-};
-const t = tMap[lang] || tMap.en;
-const locale = localeMap[lang] || 'en-US';
+const t = { published: 'Published', updated: 'Updated', sources: 'sources cited', visuals: 'visuals', video: 'Video summary', related: 'Related Reading', explore: 'Open related path' };
+const locale = 'en-US';
 ---
 
 <BaseLayout

@@ -1,10 +1,9 @@
 ---
-// v5.3 시각자료 #10 - 비교표 컴포넌트
 export interface Props {
   caption?: string;
   headers: string[];
   rows: Array<Array<string | { value: string; highlight?: boolean }>>;
-  highlightRow?: number; // 추천 옵션 행 강조
+  highlightRow?: number;
 }
 
 const { caption, headers, rows, highlightRow } = Astro.props;

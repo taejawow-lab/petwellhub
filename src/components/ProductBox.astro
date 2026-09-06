@@ -35,13 +35,8 @@ const {
   ctaText,
 } = Astro.props;
 
-const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
-const defaultCta = lang === 'ko' ? 'Amazon에서 보기' : lang === 'ja' ? 'Amazonで見る' : 'View on Amazon';
-const labels = {
-  pros: lang === 'ko' ? '장점' : lang === 'ja' ? '長所' : 'Pros',
-  cons: lang === 'ko' ? '단점' : lang === 'ja' ? '短所' : 'Cons',
-  price: lang === 'ko' ? '가격대' : lang === 'ja' ? '価格帯' : 'Price',
-};
+const defaultCta = 'View on Amazon';
+const labels = { pros: 'Pros', cons: 'Cons', price: 'Price' };
 
 // Grid layout depends on image presence — single column when no image to avoid empty 1fr cell
 const gridClass = image
@@ -58,11 +53,7 @@ function productSlug(value: string): string {
 }
 
 const productSubtag = productSlug(name);
-const note = lang === 'ko'
-  ? '제휴 링크(유료 링크)입니다. 가격·재고·평점은 변동될 수 있으니 구매 전 상세 페이지에서 다시 확인하세요.'
-  : lang === 'ja'
-    ? 'アフィリエイトリンク（paid link）です。価格・在庫・評価は変動するため、購入前に詳細ページで再確認してください。'
-    : 'Paid affiliate link. Price, availability, and ratings can change; verify details on the retailer page before buying.';
+const note = 'Paid affiliate link. Price, availability, and ratings can change; verify details on the retailer page before buying.';
 
 ---
 

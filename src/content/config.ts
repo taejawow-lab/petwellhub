@@ -1,4 +1,3 @@
-// Astro Content Collections - 글 데이터 스키마 (v5.3 14항목 + v5.4 5항목 추적)
 import { defineCollection, z } from 'astro:content';
 
 const posts = defineCollection({
@@ -13,7 +12,6 @@ const posts = defineCollection({
     tags: z.array(z.string()).default([]),
     category: z.string(),
 
-    // v5.3 품질 기준 추적
     sources: z
       .array(
         z.object({
@@ -24,16 +22,14 @@ const posts = defineCollection({
           publication: z.string().optional(),
         })
       )
-      .min(8, '최소 8건의 1차 자료 인용 필요 (v5.3 #1)'),
-    visualsCount: z.number().min(5, '시각 자료 5종 의무 (v5.3 #9-#13)'),
+      .min(8, 'At least 8 source entries are required'),
+    visualsCount: z.number().min(5, 'At least 5 editorial visuals are required'),
     hasVideo: z.boolean().default(false), // v5.3 #14
-    wordCount: z.number().min(1500, '최소 1500단어 / 한국어 3000자 (v5.3 #3)'),
+    wordCount: z.number().min(1500, 'At least 1500 English body words are required'),
 
-    // 어필리에이트
     affiliate: z.boolean().default(false),
 
-    // v5.4 페널티 회피 추적
-    aiDisclosed: z.boolean().default(true), // 자동 footer
+    aiDisclosed: z.boolean().default(true),
     schemaType: z.enum(['Article', 'Review', 'HowTo', 'NewsArticle']).default('Article'),
 
     // FAQ (v5.4 #11)
